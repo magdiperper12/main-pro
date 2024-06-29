@@ -1,0 +1,35 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "@fontsource/poppins";
+
+* {
+  user-select: none;
+}
+.carousel-container {
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease; /* Updated transition */
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* Maintain size */
+  min-width: 100%; /* Ensure each item occupies full width */
+  transition: transform 0.5s ease; /* Individual item transition */
+}
+
+/* App direction */
+.app {
+  text-align: left;
+}
+
+.app.ltr {
+  direction: ltr;
+}
+
+.app.rtl {
+  direction: rtl;
+}
