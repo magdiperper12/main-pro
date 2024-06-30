@@ -1,7 +1,7 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-@import "@fontsource/poppins";
+/* src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   user-select: none;

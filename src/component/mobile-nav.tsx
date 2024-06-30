@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function NavigationMenu() {
+function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -100,4 +100,4 @@ function NavigationMenu() {
   );
 }
 
-export default NavigationMenu;
+export default MobileNav;

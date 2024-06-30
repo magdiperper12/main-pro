@@ -16,7 +16,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@fontsource/poppins": "^5.0.14",
     "autoprefixer": "^10.4.19",
     "gatsby": "^5.13.5",
     "gatsby-plugin-image": "^3.13.1",
@@ -37,6 +36,7 @@
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@types/react-helmet": "^6.1.11",
+    "tailwindcss-rtl": "^0.9.0",
     "typescript": "^5.3.3"
   }
 }

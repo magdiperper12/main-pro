@@ -1,10 +1,9 @@
-import React from "react";
-import { useState } from "react";
+import React ,{ useState } from "react";
 
-const Dropdown = () => {
+const ActionsDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => {
+  const toggleActionsDropdown = () => {
     setIsOpen(!isOpen);
   };
 
@@ -14,7 +13,7 @@ const Dropdown = () => {
       <button
         type='button'
         className='inline-flex sm:hidden rounded-lg bg-blue-700 px-2 lg:px-4 md:px-4 py-1 lg:py-2 md:py-2 text-sm font-medium uppercase leading-normal text-white shadow-blue-700 transition duration-150 ease-in-out hover:bg-blue-800 hover:shadow-blue-900 my-2 mx-2'
-        onClick={toggleDropdown}
+        onClick={toggleActionsDropdown}
       >
         Actions{" "}
         <svg
@@ -31,14 +30,14 @@ const Dropdown = () => {
         </svg>
       </button>
 
-      {/* Dropdown content */}
+      {/* ActionsDropdown content */}
       {isOpen && (
         <ul className='absolute right-0 mt-2 w-48 z-10 sm:hidden'>
           <li>
             <button
               type='button'
               className='block w-full rounded-lg bg-blue-700 px-4 py-2 text-sm font-medium uppercase leading-normal text-white shadow-blue-700 transition duration-150 ease-in-out hover:bg-blue-800 hover:shadow-blue-900'
-              onClick={toggleDropdown}
+              onClick={toggleActionsDropdown}
             >
               Action 1
             </button>
@@ -73,4 +72,4 @@ const Dropdown = () => {
   );
 };
 
-export default Dropdown;
+export default ActionsDropdown;
