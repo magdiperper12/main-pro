@@ -36,7 +36,7 @@ function Channels() {
                 <item.icon className={`w-full text-4xl md:text-5xl lg:text-6xl ${item.color}`} />
               </div>
               <div className="mt-2">
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">
+                <h2 className="text-md md:text-xl lg:text-2xl font-bold text-gray-900">
                   {item.text}
                 </h2>
               </div>

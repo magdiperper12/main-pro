@@ -10,6 +10,20 @@ const MainFeatures = () => {
   return (
     <section className="bg-gray-100 py-20">
       <div className="container mx-auto px-4">
+
+      <div className='text-center pb-20'>
+        <p className='text-lg md:text-xl lg:text-2xl font-extrabold'>
+          FEATURES
+        </p>
+        <h1 className='text-3xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-tight'>
+          Streamline Your Workflow with Our Product
+        </h1>
+        <p className='text-base md:text-lg lg:text-xl mt-5 flex w-3/4 m-auto'>
+          Build Event Driven Flows and Bots to automate your communication
+          workload. Connect your apps and services with Botbat and automate your
+          communication workload.
+        </p>
+      </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
 
           <div className="text-center">

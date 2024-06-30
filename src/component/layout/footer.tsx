@@ -11,7 +11,7 @@ import React from "react";
  
 function Footer() {
   return (
-    <div className='bg-slate-800 text-blue-50 relative min-h-screen'>
+    <div className='bg-slate-800 text-blue-10 relative min-h-screen'>
       
       <div className='container flex w-11/12 text-center m-auto'>
         <div className='w-full  p-2 md:p-4 m-auto'>

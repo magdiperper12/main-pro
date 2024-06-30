@@ -82,14 +82,15 @@ function MainCarousel() {
               Empower Your Customer Engagement with Botbat
             </h1>
             <p className='text-lg md:text-xl mt-6'> Transforming your communication Experience with AI-powered solutions. Connect effortlessly across omni-channel platforms, and automate your communication workload. </p>
-            <div className='mt-8 md:mt-10 flex flex-col md:flex-row items-center'>
-              <button className='bg-blue-700 text-blue-50 rounded-md px-4 py-3 mb-2 md:mb-0 md:mr-3 w-full lg:w-1/2 md:w-1/2 sm:w-auto'>
-                Join us Know for Free
+            <div className="mt-8 md:mt-10 flex flex-col md:flex-row justify-end items-end space-y-4 md:space-y-0 md:space-x-4">
+              <button className="bg-blue-700 hover:bg-blue-800 text-white rounded-md px-4 py-3 md:px-6 md:py-4 w-full lg:w-auto md:w-auto transition duration-300 ease-in-out">
+                Join Now for Free
               </button>
-              <button className='bg-white text-blue-900 border-blue-600 rounded-md px-4 py-3 mb-2 md:mb-0 md:mr-3 w-full lg:w-1/2 md:w-1/2 sm:w-auto border-2'>
+              <button className="bg-white hover:bg-blue-50 text-blue-900 border border-blue-600 rounded-md px-4 py-3 md:px-6 md:py-4 w-full lg:w-auto md:w-auto transition duration-300 ease-in-out">
                 Contact an Expert
               </button>
             </div>
+
           </div>
         </div>
         <div className='flex w-full md:w-1/2 lg:w-1/2 order-1 md:order-2 rtl:order-1'>

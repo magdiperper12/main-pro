@@ -10,7 +10,6 @@ import Channels from "../component/home/channels";
 import CallToSubscribe from "../component/home/call-to-subscribe";
 import Carousel from "../component/home/main-carousel";
 import MainFeatures from "../component/home/main-features";
-import CallToAction from "../component/home/call-to-action";
 import Testimonial from "../component/home/testomonial";
 import News from "../component/home/news";
 
