@@ -3,7 +3,7 @@ import React, { ReactNode, useState } from "react";
 import { Helmet } from "react-helmet";
 import "../../styles/global.css";
 import Header from "./header";
-import { Footer } from "./footer";
+import Footer from "./footer";
 // import React from "react";
 
 

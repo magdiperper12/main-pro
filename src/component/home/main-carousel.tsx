@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import icon from "../../images/icon.png";
 import image from "../../images/header.jpg";
@@ -72,77 +73,32 @@ function MainCarousel() {
 
   return (
     <div>
-      {/* <Draggable>
-        <div className='fixed flex justify-end bottom-12 right-12 mt-4 md:mt-6 z-10 gap-1'>
-          {isVisible && (
-            <div className='flex items-center bg-blue-200 rounded-full px-3 py-1 md:px-4 md:py-2 shadow-lg mx-0 md:mx-4'>
-              <h1 className='text-center text-xs md:text-sm'>
-                Hello, I'm Botbat. How can I assist you today?
-              </h1>
+      <div className='flex item-center w-full my-24 lg:my-24 md:my-24 sm:my-24 mx-auto lg:px-12 py-2 lg:pt-12'>
+        <div className='flex w-full md:w-1/2 lg:w-1/2 order-2 md:order-1 rtl:order-2'>
+          <div className='w-full p-2 md:p-4'>
+            <p>Introducing the Omni-Channel AI Bot Platform</p>
+            <h1 className='text-4xl md:text-6xl font-bold mt-10 '>
+              {/* {item.heading} */}
+              Empower Your Customer Engagement with Botbat
+            </h1>
+            <p className='text-lg md:text-xl mt-6'> Transforming your communication Experience with AI-powered solutions. Connect effortlessly across omni-channel platforms, and automate your communication workload. </p>
+            <div className='mt-8 md:mt-10 flex flex-col md:flex-row items-center'>
+              <button className='bg-blue-700 text-blue-50 rounded-md px-4 py-3 mb-2 md:mb-0 md:mr-3 w-full lg:w-1/2 md:w-1/2 sm:w-auto'>
+                Join us Know for Free
+              </button>
+              <button className='bg-white text-blue-900 border-blue-600 rounded-md px-4 py-3 mb-2 md:mb-0 md:mr-3 w-full lg:w-1/2 md:w-1/2 sm:w-auto border-2'>
+                Contact an Expert
+              </button>
             </div>
-          )}
-          <div className='flex mx-0 lg:mx-0 md:mx-0 items-center bg-blue-200 rounded-full p-1 md:p-2 shadow-lg'>
-            <img
-              src={icon}
-              alt='Icon'
-              className='w-10 h-10 md:w-12 md:h-12 cursor-pointer'
-              onClick={toggleVisibility}
-            />
           </div>
         </div>
-      </Draggable> */}
-      <div className='carousel-container'>
-        <div
-          className='carousel-slide'
-          style={{
-            transform: `translateX(${
-              direction === "rtl" ? activeIndex * 100 : -activeIndex * 100
-            }%)`,
-            direction: direction === "rtl" ? "rtl" : "ltr",
-          }}
-        >
-          {carouselItems.map((item, index) => (
-            <div key={index} className='carousel-item'>
-              <div className='flex item-center mt-24 lg:mt-24 md:mt-24 sm:mt-24 mx-auto px-4 py-2 lg:pt-12'>
-                <div className='-m-1 flex flex-wrap md:-m-2'>
-                  <div className='flex w-full md:w-1/2 lg:w-1/2 order-2 md:order-1 rtl:order-2'>
-                    <div className='w-full p-2 md:p-4'>
-                      <h1 className='text-4xl md:text-6xl font-bold mt-10 '>
-                        {item.heading}
-                      </h1>
-                      <p className='text-lg md:text-xl mt-6'>{item.text}</p>
-                      <div className='mt-8 md:mt-10 flex flex-col md:flex-row items-center'>
-                        <button className='bg-blue-700 text-blue-50 rounded-md px-4 py-3 mb-2 md:mb-0 md:mr-3 w-full lg:w-1/2 md:w-1/2 sm:w-auto'>
-                          {item.buttonText}
-                        </button>
-                        <button className='bg-white text-blue-900 border-blue-600 rounded-md px-4 py-3 mb-2 md:mb-0 md:mr-3 w-full lg:w-1/2 md:w-1/2 sm:w-auto border-2'>
-                          {item.buttonText2}
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='flex w-full md:w-1/2 lg:w-1/2 order-1 md:order-2 rtl:order-1'>
-                    <div className='w-full p-2 md:p-4'>
-                      <img
-                        alt='Gallery'
-                        className='block h-full w-full rounded-lg object-cover object-center transition-opacity duration-500'
-                        src={item.image}
-                        style={{ opacity: index === activeIndex ? 1 : 0 }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className='flex w-full md:w-1/2 lg:w-1/2 order-1 md:order-2 rtl:order-1'>
+          <div className='w-full p-2 md:p-4'>
+            <iframe src="https://www.youtube.com/embed/7e90gBu4pas" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className='w-full h-96 md:h-96 lg:h-96'></iframe>
+
+          </div>
         </div>
       </div>
-      <button
-        className='fixed bottom-4 hidden right-4 bg-blue-500 text-white px-4 py-2 rounded-md shadow-lg'
-        onClick={handleDirectionChange}
-      >
-        Toggle Direction
-      </button>
     </div>
   );
 }

@@ -54,20 +54,18 @@ const ActionsDropdown = () => {
       )}
 
       {/* Full view buttons for larger screens */}
-      <div className=' items-center gap-2 hidden sm:flex'>
-        <button
-          type='button'
-          className='rounded-lg bg-blue-700 px-4 py-2 text-sm font-medium uppercase leading-normal text-white shadow-blue-700 transition duration-150 ease-in-out hover:bg-blue-800 hover:shadow-blue-900 my-2 sm:my-0 sm:mx-2'
-        >
-          Action 1
+      <div className="flex items-center space-x-4 font-bold">
+        <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300">
+          Book a Demo
         </button>
-        <button
-          type='button'
-          className='rounded-lg bg-blue-700 px-4 py-2 text-sm font-medium uppercase leading-normal text-white shadow-blue-700 transition duration-150 ease-in-out hover:bg-blue-800 hover:shadow-blue-900 my-2 sm:my-0 sm:mx-2'
-        >
-          Action 2
+        <button className="bg-transparent border border-blue-500 text-blue-500 hover:text-white hover:bg-blue-500 py-2 px-4 rounded-md transition duration-300">
+          Join for Free
+        </button>
+        <button className="text-blue-500 hover:text-gray-400 transition duration-300">
+          Login
         </button>
       </div>
+
     </div>
   );
 };
