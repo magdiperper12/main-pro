@@ -15,6 +15,16 @@ module.exports = {
       transitionDuration: {
         2000: "2000ms",
       },
+      fontFamily: {
+        'font-cairo': ['Cairo', 'sans-serif'],
+      },
+      fontSize: {
+        'base': '1rem', // Adjust as needed
+        'lg': '1.125rem',
+        'xl': '1.25rem',
+        '2xl': '1.5rem',
+        // Add other sizes as needed
+      },
 
     },
   },
