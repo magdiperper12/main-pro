@@ -24,8 +24,8 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
           <MobileNav />
 
           <LogoWithText />
-          <div className="hidden lg:flex lg:flex-grow lg:items-center" id="navbarSupportedContent1">
-            <ul className="flex flex-col lg:flex-row list-none space-y-4 lg:space-y-0 lg:space-x-6">
+          <div className="hidden px-4 lg:flex lg:flex-grow lg:items-center" id="navbarSupportedContent1">
+            <ul className="flex flex-col px-4 lg:flex-row list-none space-y-4 lg:space-y-0 lg:space-x-6">
               {["Products", "Solutions", "Resources & Support", "Developers", "Pricing"].map((item, index) => (
                 <li
                   key={item}

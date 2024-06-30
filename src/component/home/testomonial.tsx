@@ -23,7 +23,7 @@ const slides = [
 ];
 
 
- const Testimonial = () => {
+const Testimonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = slides.length;
 
@@ -37,13 +37,7 @@ const slides = [
 
   return (
     <div className="mt-12">
-      <div className='text-center w-full flex justify-center text-lg pt-10 gap-1'>
-        <FaStar />
-        <FaStar />
-        <FaStar />
-        <FaStar />
-        <FaStar />
-      </div>
+
       <div className='mt-20 '>
         <div className='flex justify-between '>
           <div
@@ -52,7 +46,6 @@ const slides = [
           >
             <GoArrowLeft className='absolute top-2 text-xl lg:top-6 md:top-6 lg:text-3xl md:text-3xl ' />
           </div>
-
           <div
             className='border-2 rounded-full w-10 h-10 lg:w-20 md:w-20 sm:w-10 lg:h-20 md:h-20 sm:h-10 flex justify-center relative mx-3 lg:mx-10 md:10 cursor-pointer'
             onClick={nextSlide}
@@ -67,8 +60,18 @@ const slides = [
             className={`text-center w-full mb-7 ${index === currentSlide ? "" : "hidden"
               }`}
           >
+            <div className='text-center w-full flex justify-center text-lg pt-10 gap-1'>
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+            </div>
+            <h1 className='text-center text-3xl font-bold mt-5 '>Our Experience With Botbat was Exceptional, We Have Everything we need in one place.</h1>
+
             {/* Adjust the classes as per your styling */}
             <span className='text-2xl inline-block px-2 py-3 lg:px-10 md:px-10 border-e-4 border-blue-700'>
+
               <div className='flex justify-around'>
                 <div>
                   <img

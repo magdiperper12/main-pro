@@ -7,15 +7,15 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
+
 import React from "react";
- 
+
 function Footer() {
   return (
-    <div className='bg-slate-800 text-blue-10 text-white relative min-h-screen'>
-      
+    <div className='bg-slate-600 text-blue-10 text-white relative'>
       <div className='container flex w-11/12 text-center m-auto'>
         <div className='w-full  p-2 md:p-4 m-auto'>
-          <div className='mt-8 md:mt-10 flex flex-col md:flex-row items-center '>
+          <div className='mt-8 md:mt-10 flex flex-col md:flex-row items-center justify-between'>
             <div className=' px-2 py-3 mb-2 md:mb-0 md:mr-3 w-full lg:w-1/2 md:w-1/2 sm:w-auto'>
               <div className='w-full text-center lg:text-left md:text-left sm:text-left '>
                 <img
@@ -28,7 +28,7 @@ function Footer() {
                 With powerful conversational AI on one platform With powerful m
                 conversational AI on one platform
               </p>
-              <div className='mt-12 flex gap-2'>
+              <div className='mt-12 flex flex-row gap-2'>
                 <input
                   className='w-8/12 shadow appearance-none border rounded  py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline md:w-6/12 sm:w-full lg:w-8/12'
                   type='email'
@@ -40,38 +40,23 @@ function Footer() {
                   type='submit'
                   className='text-white w-4/12 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm   text-center  py-3  md:w-5/12 sm:w-4/12 lg:w-4/12 lg:px-3 md:px-3 sm:px-1 '
                 >
-                  account
+                  Subscribe
                 </button>
               </div>
               <p className='text-base sm:text-lg md:text-xl lg:text-1xl mt-5 flex   justify-center text-start'>
                 With powerful conversational AI on one platform With powerful
                 conversational AI on one platform
               </p>
-              <div className='text-center w-4/6 mx-auto my-10'>
-                <FaInstagram
-                  className='  bg-blue-200 p-3 m-2 rounded-full text-2xl lg:text-2xl md:text-2xl  text-slate-700   '
-                />
-                <FaWhatsapp
-                  className='  bg-blue-200 p-3 m-2 rounded-full text-2xl lg:text-2xl md:text-2xl  text-slate-700   '
-                />
-                {/* <FaTelegram
-                  className='  bg-blue-200 p-3 m-2 rounded-full text-2xl lg:text-2xl md:text-2xl  text-slate-700   '
-                /> */}
-                <FaFacebook
-                  className='  bg-blue-200 p-3 m-2 rounded-full text-2xl lg:text-2xl md:text-2xl  text-slate-700   '
-                />
-                <FaYoutube
-                  className='  bg-blue-200 p-3 m-2 rounded-full text-2xl lg:text-2xl md:text-2xl  text-slate-700   '
-                />
-                <FaLinkedin
-                  className='  bg-blue-200 p-3 m-2 rounded-full text-2xl lg:text-2xl md:text-2xl  text-slate-700   '
-                />
-                <FaTwitter
-                  className='bg-blue-200 p-3 m-2 rounded-full text-2xl lg:text-2xl md:text-2xl  text-slate-700   '
-                />
+              <div className='flex flex-row text-center mx-auto my-10'>
+                <FaInstagram className="h-12 w-12 p-2" />
+                <FaWhatsapp className="h-12 w-12 p-2" />
+                <FaFacebook className="h-12 w-12 p-2" />
+                <FaYoutube className="h-12 w-12 p-2" />
+                <FaLinkedin className="h-12 w-12 p-2" />
+                <FaTwitter className="h-12 w-12 p-2" />
               </div>
             </div>
-            <div className=' px-4 py-3 mb-2 md:mb-0 md:mr-3 w-full lg:w-1/2 md:w-1/2 sm:w-auto flex relative text-sm md:text-lg lg:text-lg'>
+            <div className=' text-start px-4 py-3 mb-2 md:mb-0 md:mr-3 w-full lg:w-1/2 md:w-1/2 sm:w-auto flex relative text-sm md:text-lg lg:text-lg'>
               <div className='w-full lg:w-1/2 md:w-1/2 sm:w-auto '>
                 <h1 className='block text-1xl my-4 font-extrabold'>
                   column one
