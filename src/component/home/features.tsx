@@ -32,12 +32,12 @@ const Features: React.FC = () => {
   return (
     <div>
       {/* Header of the page */}
-      <div className='text-center mt-10 md:mt-44'>
+      <div className='text-center my-4 md:my-12'>
         <p className='text-lg md:text-xl lg:text-2xl font-extrabold'>
-          FEATURES
+          Journey
         </p>
         <h1 className='text-3xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-tight'>
-          Streamline Your Workflow with Our Product
+          Your Success Journey with Botbat
         </h1>
         <p className='text-base md:text-lg lg:text-xl mt-5 flex w-3/4 m-auto'>
           Build Event Driven Flows and Bots to automate your communication
@@ -45,8 +45,8 @@ const Features: React.FC = () => {
           communication workload.
         </p>
       </div>
- 
- 
+
+
     </div>
   );
 };

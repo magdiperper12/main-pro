@@ -22,7 +22,7 @@ function Channels() {
           </p>
         </div>
 
-        <div className="flex item-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex item-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
           {[
             { icon: FaCommentDots, text: "SMS", color: "text-blue-700" },
             { icon: FaFacebookMessenger, text: "Messenger", color: "text-blue-700" },
@@ -31,8 +31,8 @@ function Channels() {
             { icon: FaInstagram, text: "Instagram", color: "text-red-700" },
             { icon: FaWhatsapp, text: "WhatsApp", color: "text-green-700" },
           ].map((item, index) => (
-            <div key={index} className="flex flex-col items-center my-2 hover:shadow-lg rounded p-5 transition duration-300 ease-in-out">
-              <div className="w-16 md:w-20 lg:w-24">
+            <div key={index} className="flex flex-col items-center my-2 hover:shadow-lg rounded py-2 transition duration-300 ease-in-out">
+              <div className="w-6 md:w-16 lg:w-18">
                 <item.icon className={`w-full text-4xl md:text-5xl lg:text-6xl ${item.color}`} />
               </div>
               <div className="mt-2">

@@ -12,6 +12,7 @@ import Carousel from "../component/home/main-carousel";
 import MainFeatures from "../component/home/main-features";
 import Testimonial from "../component/home/testomonial";
 import News from "../component/home/news";
+import Journey from "../component/home/journey";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -19,6 +20,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <Carousel />
         <MainFeatures />
         <Features />
+        <Journey /> 
         <SubFeatures/>
         <Channels />
         <Testimonial />
