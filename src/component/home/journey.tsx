@@ -29,28 +29,45 @@ const items = [
 
 function Journey() {
   return (
-    <div className="py-16">
-      <div className="container mx-auto px-4 text-center">
-        <div className="flex flex-col space-y-24">
+    <div className='py-16'>
+      <div className='container mx-auto px-4 text-center'>
+        <div className='flex flex-col space-y-24'>
           {/* Step 1 */}
-          {
-            items.map((item, index) => (
-              <div className={`flex flex-col ${index % 2 == 0 ? 'md:flex-row-reverse' : 'md:flex-row'} items-start md:space-x-8 `}>
-                <div className="w-full md:w-1/2">
-                  <img src={item.image} alt="Automate communication" className="rounded-lg shadow-lg" />
-                </div>
-                <div className={`w-full px-12 md:w-1/2 text-start  mt-8 md:mt-0`}>
-                  <p className="relative px-8 font-bold my-8">
-                    <span className="absolute left-0 top-0 h-full w-3 bg-blue-500"></span>
-                    Product Name
-                  </p>
-
-                  <h2 className="text-2xl font-semibold mb-4">{item.heading}</h2>
-                  <p className="text-lg">Build Event Driven Flows and Bots to automate your communication workload. Connect your apps and services with Botbat and automate your communication workload.</p>
-                </div>
+          {items.map((item, index) => (
+            <div
+              className={`flex flex-col ${
+                index % 2 == 0 ? "md:flex-row-reverse" : "md:flex-row"
+              } items-start md:space-x-8 `}
+            >
+              {/*  <div className='w-full md:w-1/2 p-2 mt-15'>
+              <div className='w-full'>
+                <img
+                  alt='gallery'
+                  className='block h-full w-full rounded-lg object-cover object-center'
+                  src={image}
+                /> */}
+              <div className='w-full md:w-1/2 px-14'>
+                <img
+                  src={item.image}
+                  alt='Automate communication'
+                  className='rounded-lg object-cover object-center'
+                />
               </div>
-            ))
-          }
+              <div className={`w-full px-12 md:w-1/2 text-start  mt-8 md:mt-0`}>
+                <p className='relative px-8 font-bold my-8'>
+                  <span className='absolute start-0 top-0 h-full w-3 bg-blue-500'></span>
+                  Product Name
+                </p>
+
+                <h2 className='text-2xl font-semibold mb-4'>{item.heading}</h2>
+                <p className='text-lg'>
+                  Build Event Driven Flows and Bots to automate your
+                  communication workload. Connect your apps and services with
+                  Botbat and automate your communication workload.
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
