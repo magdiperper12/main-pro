@@ -37,7 +37,7 @@ function MobileNav() {
 
       {isOpen && (
         <ul
-          className='absolute -start-5 mt-8 z-50 w-80 text-start rounded-lg bg-gray-800 text-white shadow-lg  h-screen text-3xl'
+          className='absolute -start-5 mt-8 z-50 w-80 text-start rounded-lg bg-gray-800 text-white shadow-lg  h-screen text-3xl px-5'
           id='navbarSupportedContent1'
         >
           <li className='py-2 lg:py-0 lg:mx-4 hover:bg-gray-100 hover:text-gray-800'>
