@@ -30,22 +30,23 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
           >
             <ul className='flex flex-col px-4 lg:flex-row list-none space-y-4 lg:space-y-0 lg:space-x-6'>
               {[
-                "Products",
-                "Solutions",
-                "Resources & Support",
-                "Developers",
-                "Pricing",
+                {name:"Products",url:"/products"},
+                {name:"Solutions",url:"/rolutions"},
+                {name:"Resources & Support",url:"/resources & rupport"},
+                {name:"Developers",url:"/developers"},
+                {name:"Pricing",url:"/pricing"},
+               
               ].map((item, index) => (
                 <li
-                  key={item}
+                  key={item.name}
                   className={`my-2 lg:my-0 opacity-0 animate-fadeIn`}
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <a
                     className='text-black/80 transition-colors duration-200 hover:text-black/90 font-bold focus:text-blue-600'
-                    href='#'
+                    href={item.url}
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </li>
               ))}
