@@ -32,14 +32,14 @@ const News: React.FC = () => {
   return (
     <div>
       {/* Header of the page */}
-      <div className='text-center mt-10 md:mt-44'>
+      <div className='text-center mt-10 md:mt-44 w-full'>
         <p className='text-lg md:text-xl lg:text-2xl font-extrabold'>
           News and Articles
         </p>
         <h1 className='text-3xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-tight'>
           See what's new with Botbat
         </h1>
-        <p className='text-base md:text-lg lg:text-xl mt-5 flex w-3/4 m-auto'>
+        <p className='text-sm md:text-lg lg:text-xl  mt-5 leading-tight'>
           Stay up to date with the latest news and articles from Botbat.
         </p>
       </div>
@@ -58,14 +58,23 @@ const News: React.FC = () => {
                   className='block h-2/3 w-full rounded-lg object-cover object-center my-5'
                   src={item.image}
                 />
-                <h1 className='text-center text-3xl font-bold py-4 '>
+                <h1 className='text-start text-3xl font-bold py-4 '>
                   {item.buttonText}
                 </h1>
-                <p className='text-lg text-center py-2 '>{item.text}</p>
+                <p className='text-lg text-start py-2 '>{item.text}</p>
+                <button className='text-xl text-start py-2 hover:underline'>
+                  Read more {` >`}
+                </button>
               </div>
             ))}
           </div>
         </div>
+      </div>
+
+      <div className='text-center mt-10 md:mt-10 w-full'>
+        <button className='text-xl text-start py-1  rounded-md px-5 m-auto border-blue-600 border text-blue-800 hover:text-blue-50 hover:bg-blue-600'>
+          View all
+        </button>
       </div>
     </div>
   );

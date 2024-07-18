@@ -20,11 +20,11 @@ function CallToSubscribe() {
             </p>
           </div>
           {/* Buttons */}
-          <div className='mt-8 md:mt-10 flex flex-col md:flex-row justify-center items-center mx-3 md:mx-0 lg:mx-0'>
-            <button className='bg-blue-700 text-white rounded-md px-4 py-3 mb-2 md:mb-0 md:mr-3 w-full lg:w-auto md:w-auto'>
+          <div className='mt-8 md:mt-10 flex flex-col md:flex-row justify-center items-center mx-3 md:mx-0 lg:mx-0 gap-5'>
+            <button className='bg-blue-700 text-white rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-auto md:w-auto'>
               Start Building Today
             </button>
-            <button className='bg-white text-blue-900 border border-blue-600 rounded-md px-4 py-3 mb-2 md:mb-0 md:ml-3 w-full lg:w-auto md:w-auto'>
+            <button className='bg-white text-blue-900 border border-blue-600 rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-auto md:w-auto'>
               Explore Our Products
             </button>
           </div>

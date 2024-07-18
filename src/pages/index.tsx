@@ -1,7 +1,5 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import Header from "../component/layout/header";
-import { useState } from "react";
 import "../styles/global.css";
 import Layout from "../component/layout/layout";
 import Features from "../component/home/features";
@@ -17,15 +15,15 @@ import Journey from "../component/home/journey";
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-        <Carousel />
-        <MainFeatures />
-        <Features />
-        <Journey /> 
-        <SubFeatures/>
-        <Channels />
-        <Testimonial />
-        <News/>
-        <CallToSubscribe/>
+      <Carousel />
+      <MainFeatures />
+      <Features />
+      <Journey />
+      <SubFeatures />
+      <Channels />
+      <Testimonial />
+      <News />
+      <CallToSubscribe />
     </Layout>
   );
 };

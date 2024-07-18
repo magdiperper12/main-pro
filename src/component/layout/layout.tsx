@@ -1,19 +1,19 @@
 import { getLowResolutionImageURL } from "gatsby-plugin-image";
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import "../../styles/global.css";
 import Header from "./header";
 import Footer from "./footer";
 // import React from "react";
 
-
 interface LayoutProps {
   children: ReactNode;
 }
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-
-  const [direction, setDirection] = useState(localStorage.getItem("direction") || "ltr");
-
+  const [direction, setDirection] = useState("ltr");
+  useEffect(() => {
+    setDirection(localStorage.getItem("direction") || "ltr");
+  }, []);
   const toggleDirection = () => {
     const newDir = direction === "ltr" ? "rtl" : "ltr";
     setDirection(newDir);
@@ -21,9 +21,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   return (
-    <div dir={direction} id="root" className="min-h-screen bg-white font-cairo" >
+    <div dir={direction} id='root' className='min-h-screen bg-white font-cairo'>
       <Helmet defer={false}>
-        <link rel="icon" type="image/svg+xml" href="https://botbat.blr1.digitaloceanspaces.com/botbat.logo.io.svg" />
+        <link
+          rel='icon'
+          type='image/svg+xml'
+          href='https://botbat.blr1.digitaloceanspaces.com/botbat.logo.io.svg'
+        />
       </Helmet>
       <Header direction={direction} toggleDirection={toggleDirection} />
 
@@ -31,7 +35,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       <Footer />
     </div>
-  )
+  );
 };
 
 export default Layout;

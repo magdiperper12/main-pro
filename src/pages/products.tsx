@@ -7,14 +7,13 @@ import Convertional from "../component/products/convertional";
 import Massaging from "../component/products/massaging";
 import Building from "../component/products/building";
 
-
 const ProductsPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-       <Product />
-       <Convertional />
-       <Massaging />
-       <Building />
+      <Product />
+      <Convertional />
+      <Massaging />
+      <Building />
     </Layout>
   );
 };
