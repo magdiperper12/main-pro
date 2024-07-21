@@ -84,17 +84,22 @@ function Convertional() {
         <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-10 items-start w-11/12 m-auto'>
           {items.map((item, index) => (
             <div key={index} className='text-center'>
-              <item.icon className='text-6xl text-blue-600 mb-4 mx-auto' />
+              <item.icon className='text-8xl text-blue-600 mb-7 mx-auto shadow-lg shadow-blue-200 rounded-full p-5 hover:-rotate-45  duration-500 ' />
               <a
-                className='text-3xl font-bold text-gray-800 mb-4'
+                className='text-3xl font-bold text-blue-950 hover:text-blue-800 duration'
                 href={item.url}
               >
                 {item.heading}
               </a>
-              <p className='text-lg text-gray-600'>{item.paragraph}</p>
-              <ul className='text-lg text-gray-600 list-disc text-start px-0 md:px-4 lg:px-8  list-inside my-5 '>
+              <p className='text-lg mt-5 text-gray-600'>{item.paragraph}</p>
+              <ul className='text-lg text-gray-600 list-disc text-start px-0 md:px-4 lg:px-8  list-inside my-5  marker:text-blue-700'>
                 {item.list.map((listItem, idx) => (
-                  <li key={idx}>{listItem}</li>
+                  <li
+                    key={idx}
+                    className='hover:translate-x-3 duration-300 hover:text-blue-800'
+                  >
+                    {listItem}
+                  </li>
                 ))}
               </ul>
             </div>
