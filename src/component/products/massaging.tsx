@@ -22,7 +22,7 @@ const items: FeatureItem[] = [
     heading: "E-mail",
     paragraph:
       "Empower your Business. Serve user using AI Technology and make it easier Technology and make it easier.",
-    url: "/messaging/access-email",
+    url: "/messaging/email-channel",
     list: [
       "integration tracking",
       "platform tracking",
@@ -35,7 +35,7 @@ const items: FeatureItem[] = [
     heading: "Whattsapp",
     paragraph:
       "With state of the art Workflow builder. Make your Technology and make it easier application more interactive.",
-    url: "/messaging/access-whatsapp",
+    url: "/messaging/whatsapp-channel",
     list: [
       "integration tracking",
       "platform tracking",
@@ -48,7 +48,7 @@ const items: FeatureItem[] = [
     heading: "Instagrame",
     paragraph:
       "Enhance customer engagement with real-time chat solutions. Build interactive, seamless experiences.",
-    url: "/messaging/access-email",
+    url: "/messaging/Instagram-channel",
     list: [
       "integration tracking",
       "platform tracking",
@@ -61,7 +61,7 @@ const items: FeatureItem[] = [
     heading: "Facebook_Messenger",
     paragraph:
       "Connect your apps and services with Botbat and automate your communication  powerful API.",
-    url: "/messaging/access-email",
+    url: "/messaging/FacebookMessenger-channel",
     list: [
       "integration tracking",
       "platform tracking",
