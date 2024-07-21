@@ -72,7 +72,7 @@ function Whatsappexperience() {
                 <img
                   src={item.image}
                   alt='Automate communication'
-                  className='rounded-lg object-cover object-center'
+                  className='rounded-lg object-cover object-center hover:scale-105 duration-200'
                 />
               </div>
               <div
@@ -84,7 +84,12 @@ function Whatsappexperience() {
                 <p className='text-lg'>{item.text}</p>
                 <ul className='text-lg text-gray-600 list-disc text-start px-0 md:px-4 lg:px-8  list-inside my-5 marker:text-blue-800 '>
                   {item.list.map((listItem, idx) => (
-                    <li key={idx}>{listItem}</li>
+                    <li
+                      key={idx}
+                      className='hover:translate-x-2 duration-200 hover:text-blue-900 cursor-pointer'
+                    >
+                      {listItem}
+                    </li>
                   ))}
                 </ul>
               </div>

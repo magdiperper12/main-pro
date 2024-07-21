@@ -48,7 +48,7 @@ function EmailDispatch() {
             {items.map((item, index) => (
               <div
                 key={index}
-                className='text-center bg-zinc-100 p-10  h-64 rounded-xl border-2 border-zinc-200'
+                className='text-center bg-zinc-100 p-10  h-64 rounded-xl border-2 border-zinc-200 hover:rotate-3 hover:shadow-xl duration-300'
               >
                 <p className='text-3xl font-bold text-gray-800 mb-4'>
                   {item.heading}
