@@ -2,15 +2,15 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
-import DevelopHeader from "../../component/productpages/developer/developheader";
-import NavigationDev from "../../component/productpages/developer/navegation";
-import Empoered from "../../component/productpages/developer/empowerdev";
+import NavigatorHeader from "../../component/productpages/navigator/navigatorheader";
+import NavigationDev from "../../component/productpages/navigator/navegation";
+import Navigatorfoot from "../../component/productpages/navigator/navigatorfoot";
 const Navigator: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <DevelopHeader />
+      <NavigatorHeader />
       <NavigationDev />
-      <Empoered />
+      <Navigatorfoot />
     </Layout>
   );
 };

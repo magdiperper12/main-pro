@@ -58,10 +58,10 @@ function NavigationDev() {
         {items.map((item, index) => (
           <div
             key={index}
-            className='text-center bg-zinc-100 border-2 border-zinc-200 p-2 rounded-lg '
+            className='hover:shadow-lg duration-200  text-center bg-zinc-100  p-2 rounded-lg '
           >
-            <item.icon className='text-5xl md:text-5xl lg:text-8xl text-zinc-400  mx-auto my-8' />
-            <h2 className='text-2xl font-bold text-gray-800 py-4 text-start border-t-2 border-zinc-200 px-3'>
+            <item.icon className='text-5xl md:text-5xl lg:text-8xl text-blue-600  mx-auto my-8  hover:scale-105 duration-300 hover:drop-shadow-lg' />
+            <h2 className='text-2xl font-bold text-gray-800 py-4 text-start border-t-2 border-zinc-200 px-3 hover:text-blue-800'>
               {item.heading}
             </h2>
             <p className='text-lg text-gray-600 text-start px-3 pb-5'>

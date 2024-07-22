@@ -1,6 +1,6 @@
 import React from "react";
 
-function ResourceInhance() {
+function Navigatorfoot() {
   return (
     <div className='bg-gray-100 py-12 md:py-24 mt-8 md:mt-24'>
       <div className='container mx-auto text-center'>
@@ -8,11 +8,12 @@ function ResourceInhance() {
           {/* Header of the page */}
           <div>
             <h1 className='text-3xl md:text-4xl lg:text-6xl font-extrabold mt-5 '>
-              Are You Ready to Enhance Your Customer Interactions?
+              Empower Your Business with Gen AI Website Navigator
             </h1>
             <p className='text-lg md:text-xl lg:text-2xl mt-5 mx-auto max-w-5xl'>
-              Discover the Power of Intelligent Social Listening and Elevate
-              Your Customer Service to the Next Level
+              Leverage our advanced AI tool to gain valuable insights and make
+              informed decisions, enhancing both user experience and business
+              performance.
             </p>
           </div>
           {/* Buttons */}
@@ -30,4 +31,4 @@ function ResourceInhance() {
   );
 }
 
-export default ResourceInhance;
+export default Navigatorfoot;

@@ -2,15 +2,16 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
-import SolutionHeader from "../../component/productpages/solutions/solutionHeader";
-import Intelligent from "../../component/productpages/solutions/intelligent";
-import Buildingsolution from "../../component/productpages/solutions/buildingsolution";
+
+import CustomHeader from "../../component/productpages/custom/customheader";
+import Customfooter from "../../component/productpages/custom/customfooter";
+import CustomIntelegent from "../../component/productpages/custom/customIntelegent";
 const Custom: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <SolutionHeader />
-      <Intelligent />
-      <Buildingsolution />
+      <CustomHeader />
+      <CustomIntelegent />
+      <Customfooter />
     </Layout>
   );
 };

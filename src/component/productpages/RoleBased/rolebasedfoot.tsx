@@ -1,6 +1,6 @@
 import React from "react";
 
-function Pricingfoot() {
+function Rolebasedfoot() {
   return (
     <div className='bg-gray-100 py-12 md:py-24 mt-8 md:mt-24'>
       <div className='container mx-auto text-center'>
@@ -31,4 +31,4 @@ function Pricingfoot() {
   );
 }
 
-export default Pricingfoot;
+export default Rolebasedfoot;
