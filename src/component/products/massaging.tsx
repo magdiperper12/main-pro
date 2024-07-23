@@ -74,7 +74,7 @@ const items: FeatureItem[] = [
     heading: "Telegram",
     paragraph:
       "Connect your apps and services with Botbat and automate your communication  powerful API.",
-    url: "/messaging/access-email",
+    url: "/messaging/Telegram-channel",
     list: [
       "integration tracking",
       "platform tracking",
