@@ -61,10 +61,10 @@ const ActionsDropdown = () => {
 
       {/* Full view buttons for larger screens */}
       <div className=' items-center gap-2 hidden sm:flex mx-auto md:mx-4'>
-        <button className='bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300'>
+        <button className='bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 text-nowrap'>
           Book a Demo
         </button>
-        <button className='bg-transparent border border-blue-500 text-blue-500 hover:text-white hover:bg-blue-500 py-2 px-4 rounded-md transition duration-300'>
+        <button className='bg-transparent border border-blue-500 text-blue-500 hover:text-white hover:bg-blue-500 py-2 px-4 rounded-md transition duration-300 text-nowrap'>
           Join for Free
         </button>
         <button className='text-blue-500 hover:text-gray-400 transition duration-300'>
