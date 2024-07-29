@@ -87,7 +87,7 @@ const items: FeatureItem[] = [
     heading: "SMS",
     paragraph:
       "Connect your apps and services with Botbat and automate your communication  powerful API.",
-    url: "/messaging/access-email",
+    url: "/messaging/SMS-channel",
     list: [
       "integration tracking",
       "platform tracking",
