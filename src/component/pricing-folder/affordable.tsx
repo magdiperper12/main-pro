@@ -15,7 +15,7 @@ function Affordable() {
         </div>
         <div className=' w-full  mt-20'>
           <div className=' h-auto grid grid-cols-3 gap-10 lg:gap-12  w-10/12 sm:w-10/12 md:w-11/12 lg:w-11/12 m-auto text-white text-nowrap '>
-            <div className='col-span-3 sm:col-span-3 md:col-span-1 lg:col-span-1   text-center rounded-xl   shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 duration-200'>
+            <div className='col-span-3 sm:col-span-3 md:col-span-1 lg:col-span-1   text-center rounded-xl   shadow-lg shadow-blue-100 hover:shadow-xl hover:shadow-blue-200 duration-200'>
               <div className='bg-blue-500  py-10 rounded-t-xl  '>
                 <h2 className=' text-4xl lg:text-4xl md:text-xl sm:text-4xl font-bold '>
                   Free plane
@@ -68,7 +68,7 @@ function Affordable() {
                 </button>
               </div>
             </div>
-            <div className='col-span-3 sm:col-span-3 md:col-span-1 lg:col-span-1   text-center rounded-xl   shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 duration-200'>
+            <div className='col-span-3 sm:col-span-3 md:col-span-1 lg:col-span-1   text-center rounded-xl   shadow-lg shadow-blue-100 hover:shadow-xl hover:shadow-blue-200 duration-200'>
               <div className='bg-blue-500  py-10 rounded-t-xl  '>
                 <h2 className=' text-4xl lg:text-4xl md:text-xl sm:text-4xl font-bold '>
                   Pro Plan
@@ -121,7 +121,7 @@ function Affordable() {
                 </button>
               </div>
             </div>
-            <div className='col-span-3 sm:col-span-3 md:col-span-1 lg:col-span-1   text-center rounded-xl   shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 duration-200'>
+            <div className='col-span-3 sm:col-span-3 md:col-span-1 lg:col-span-1   text-center rounded-xl   shadow-lg shadow-blue-100 hover:shadow-xl hover:shadow-blue-200 duration-200'>
               <div className='bg-blue-500  py-10 rounded-t-xl  '>
                 <h2 className=' text-4xl lg:text-4xl md:text-xl sm:text-4xl font-bold '>
                   Enterprise Plan
