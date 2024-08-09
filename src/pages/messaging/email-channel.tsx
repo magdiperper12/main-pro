@@ -2,10 +2,10 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
-import Emailheader from "../../component/productpages/a-emailPage/emailheader";
-import EmailDispatch from "../../component/productpages/a-emailPage/emailDispatch";
-import Emailexperience from "../../component/productpages/a-emailPage/emailexperience";
-import Emailfooter from "../../component/productpages/a-emailPage/emailfooter";
+import EmailDispatch from "../../component/productpages/a-email/EmailDispatch";
+import Emailefooter from "../../component/productpages/a-email/Emailefooter";
+import Emailexperience from "../../component/productpages/a-email/Emailexperience";
+import Emailheader from "../../component/productpages/a-email/Emailheader";
 
 const EmailPage: React.FC<PageProps> = () => {
   return (
@@ -13,7 +13,7 @@ const EmailPage: React.FC<PageProps> = () => {
       <Emailheader />
       <EmailDispatch />
       <Emailexperience />
-      <Emailfooter />
+      <Emailefooter />
     </Layout>
   );
 };
