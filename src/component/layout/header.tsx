@@ -35,10 +35,10 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
           <ul className='flex flex-col px-4 lg:flex-row list-none space-y-4 lg:space-y-0 lg:space-x-6 gap-5'>
             {[
               { name: "Products", url: "/products" },
-              { name: "Solutions", url: "/products" },
-              { name: "Resources & Support", url: "/products" },
-              { name: "Developers", url: "/products" },
-              { name: "Pricing", url: "/products" },
+              { name: "Solutions", url: "/#" },
+              { name: "Resources & Support", url: "/#" },
+              { name: "Developers", url: "/#" },
+              { name: "Pricing", url: "/pricing" },
             ].map((item, index) => (
               <li
                 key={item.name}
