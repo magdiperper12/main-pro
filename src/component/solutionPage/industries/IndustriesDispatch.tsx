@@ -13,46 +13,61 @@ interface FeatureItem {
 const items: FeatureItem[] = [
   {
     icon: FaImage,
-    heading: "Conversational Solutions",
+    heading: "Government Solutions",
     paragraph:
-      "Transform customer interactions with AI-powered technologies, delivering personalized, seamless, and impactful experiences across every touchpoint.",
+      "Implementing AI technologies enables governments to improve public services, increase transparency, and enhance administrative efficiency",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/Conversational-Solutions",
+    url: "/solution-channel/services/Professional",
   },
   {
     icon: FaImage,
-    heading: "Gen AI Applications",
+    heading: "Healthcare Solutions",
     paragraph:
-      "Unlock the power of Gen AI Applications: Predict trends, optimize operations, and deliver personalized customer experiences that drive productivity.",
+      "Our solutions support doctors and nurses in providing better care to enhance healthcare quality, manage health records, and improve patient experience",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/Gen-AI",
+    url: "/solution-channel/services/Digital",
   },
   {
     icon: FaImage,
-    heading: "Services",
+    heading: "Education Solutions",
     paragraph:
-      "Tailored solutions through Professional Services, Digital Transformation, CX Consultancy, and Agent Offshoring to elevate your business.",
+      "Personalize learning experiences, improve educational outcomes, assess performance, and support students through intelligent performance analysis tools",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/Services",
+    url: "/solution-channel/services/Customer",
   },
   {
     icon: FaImage,
-    heading: "Industries",
+    heading: "Transportation Solutions",
     paragraph:
-      "Achieve unparalleled outcomes with customized solutions that deliver measurable results in healthcare, retail, and more.",
+      "Improve transportation operations and traffic management through smart solutions that reduce congestion, increase efficiency and safety, and enhance the mobility experience for everyone",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/Industries",
+    url: "/solution-channel/services/Agent",
+  },
+  {
+    icon: FaImage,
+    heading: "Retail and E-commerce Solutions",
+    paragraph:
+      "Advanced consumer behavioral analytics and intelligent inventory management to increase sales and personalize the shopping experience for customers",
+    explor: "explor solution",
+    arrow: FaCircleArrowRight,
+    url: "/solution-channel/services/Agent",
   },
 ];
 
-function Solutioncontent() {
+function IndustriesDispatch() {
   return (
     <section className=' sm:my-10 md:my-16 pb-24 '>
       <div className='container mx-auto  px-0 lg:px-4 md:px-4 sm:px-0'>
+        <div className='text-center pb-20'>
+          <h1 className='text-3xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-tight w-3/4 md:w-3/4 lg:w-2/4 m-auto'>
+            Leverage advanced solutions tailored to each Industry, ensuring your
+            excellence and leadership in your field
+          </h1>
+        </div>
         <div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-10 items-start w-11/12 m-auto'>
           {items.map((item, index) => (
             <div
@@ -85,4 +100,4 @@ function Solutioncontent() {
   );
 }
 
-export default Solutioncontent;
+export default IndustriesDispatch;

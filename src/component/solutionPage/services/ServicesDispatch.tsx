@@ -18,7 +18,7 @@ const items: FeatureItem[] = [
       "We provide you with a team of specialized experts to support your projects in improving your operational processes and technological integration, from planning to implementation",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "solution-channel/Conversational-Solutions",
+    url: "/solution-channel/services/Professional",
   },
   {
     icon: FaImage,
@@ -27,7 +27,7 @@ const items: FeatureItem[] = [
       "We help you modernize your operations, improve efficiency, and transform your organization into an integrated digital environment using the latest AI technologies",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "solution-channel/Gen-AI",
+    url: "/solution-channel/services/Digital",
   },
   {
     icon: FaImage,
@@ -36,7 +36,7 @@ const items: FeatureItem[] = [
       "We design innovative strategies to enhance customer experience and increase satisfaction using AI solutions.",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "solution-channel/Services",
+    url: "/solution-channel/services/Customer",
   },
   {
     icon: FaImage,
@@ -45,7 +45,7 @@ const items: FeatureItem[] = [
       "Increase efficiency and reduce costs by providing agent offshoring services powered by AI technologies",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "solution-channel/Industries",
+    url: "/solution-channel/services/Agent",
   },
 ];
 
