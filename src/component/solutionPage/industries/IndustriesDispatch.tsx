@@ -18,7 +18,7 @@ const items: FeatureItem[] = [
       "Implementing AI technologies enables governments to improve public services, increase transparency, and enhance administrative efficiency",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/services/Professional",
+    url: "/solution-channel/Industry/Government",
   },
   {
     icon: FaImage,
@@ -27,7 +27,7 @@ const items: FeatureItem[] = [
       "Our solutions support doctors and nurses in providing better care to enhance healthcare quality, manage health records, and improve patient experience",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/services/Digital",
+    url: "/solution-channel/Industry/Healthcare",
   },
   {
     icon: FaImage,
@@ -36,7 +36,7 @@ const items: FeatureItem[] = [
       "Personalize learning experiences, improve educational outcomes, assess performance, and support students through intelligent performance analysis tools",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/services/Customer",
+    url: "/solution-channel/Industry/Education",
   },
   {
     icon: FaImage,
@@ -45,7 +45,7 @@ const items: FeatureItem[] = [
       "Improve transportation operations and traffic management through smart solutions that reduce congestion, increase efficiency and safety, and enhance the mobility experience for everyone",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/services/Agent",
+    url: "/solution-channel/Industry/Retail",
   },
   {
     icon: FaImage,
@@ -54,7 +54,7 @@ const items: FeatureItem[] = [
       "Advanced consumer behavioral analytics and intelligent inventory management to increase sales and personalize the shopping experience for customers",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/services/Agent",
+    url: "/solution-channel/Industry/Transportation",
   },
 ];
 

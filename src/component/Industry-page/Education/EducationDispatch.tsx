@@ -9,43 +9,44 @@ interface FeatureItem {
 const items: FeatureItem[] = [
   {
     icon: FaImage,
-    heading: "Customized Solutions",
+    heading: "In-depth CX Analysis",
     paragraph:
-      "AI strategies specifically tailored to align with your business goals and industry requirements",
+      "Comprehensive analysis of the customer journey using advanced tools to identify strengths and areas for improvement",
   },
   {
     icon: FaImage,
-    heading: "Expertise and Efficiency",
+    heading: "Customized Strategies",
     paragraph:
-      "our team of exprts ensures you receive accurate and tailored solution to meet your specifice need",
+      "Development of strategies specifically designed to meet your needs and the aspirations of your customers",
   },
   {
     icon: FaImage,
-    heading: "Seamless integreation",
+    heading: "Seamless Integration",
     paragraph:
-      "smooth integration of ai technologies into your existing systems and workflows",
+      "Smooth implementation of changes to enhance customer experience without disrupting operations, ensuring increased efficiency",
   },
   {
     icon: FaImage,
-    heading: "continuous support",
+    heading: "Performance Analysis",
     paragraph:
-      "Ongoing assistance and updates to ensoure optimal performance and adaptability",
+      "Detailed reports on your service performance with recommendations for continuous improvement",
   },
 ];
 
-function ProfessionalDispatch() {
+function EducationDispatch() {
   return (
     <div>
       <section className=' py-20 mt-20'>
         <div className='container mx-auto px-0 lg:px-4 md:px-4 sm:px-0 '>
           <div className='text-center pb-20'>
             <h1 className='text-3xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-tight w-3/4 md:w-3/4 lg:w-2/4 m-auto'>
-              Customized Professional Soulution for your Business Need
+              Leverage a Wide Range of Features to Enhance Your Customer
+              Experience
             </h1>
             <p className='text-lg md:text-xl lg:text-2xl mt-5 flex w-3/4 m-auto'>
-              We are committed to delivering added value to your business
-              through our Professional services , which are distinguished by
-              their quality and their quality and flexability
+              We provide you with customized solutions to improve customer
+              experience, based on deep analysis and a thorough understanding of
+              your customers' needs
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-5 items-start w-11/12 m-auto'>
@@ -68,4 +69,4 @@ function ProfessionalDispatch() {
   );
 }
 
-export default ProfessionalDispatch;
+export default EducationDispatch;

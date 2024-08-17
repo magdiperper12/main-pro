@@ -1,6 +1,6 @@
 import React from "react";
 
-function Emailfooter() {
+function Retailfooter() {
   return (
     <div className='bg-gray-100 py-12 md:py-24 mt-8 md:mt-24'>
       <div className='container mx-auto text-center'>
@@ -8,11 +8,11 @@ function Emailfooter() {
           {/* Header of the page */}
           <div>
             <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5   '>
-              Boost Your Email Capabilities with a Reliable API
+              Transform Your Business with AI-Powered Professional Services
             </h1>
             <p className='text-lg md:text-xl lg:text-2xl mt-5 mx-auto max-w-5xl'>
-              Optimized Performance, Seamless Scaling, and Comprehensive
-              Management for All Your Needs
+              Make the decision now and leverage our professional services to
+              achieve your goals
             </p>
           </div>
           {/* Buttons */}
@@ -30,4 +30,4 @@ function Emailfooter() {
   );
 }
 
-export default Emailfooter;
+export default Retailfooter;

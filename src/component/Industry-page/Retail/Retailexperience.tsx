@@ -19,7 +19,7 @@ const items: FeatureItem[] = [
       "   in-depth analysis current operation",
       "   identification of challenges you face",
       " Recognition of oppotunities for performance improvement",
-      "Development of clear action plan"
+      "Development of clear action plan",
     ],
   },
   {
@@ -54,7 +54,7 @@ const items: FeatureItem[] = [
   },
 ];
 
-function Professionalexperience() {
+function Retailexperience() {
   return (
     <div className='py-16'>
       <div className='container mx-auto px-4 text-center'>
@@ -99,4 +99,4 @@ function Professionalexperience() {
   );
 }
 
-export default Professionalexperience;
+export default Retailexperience;

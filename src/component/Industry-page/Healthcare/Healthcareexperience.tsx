@@ -12,53 +12,48 @@ interface FeatureItem {
 }
 const items: FeatureItem[] = [
   {
-    heading: "Design customized and compelling email messages",
-    text: "Seamlessly construct your new campaigns witha feature-packed drag-and-drop tool",
+    heading: "Assessing the Current Situation ",
+    text: "We analyze your current infrastructure and digital operations to identify areas needing improvement",
     image: image1,
     list: [
-      "  Ready-made, dynamic, and responsive components",
-      "  Template library for common scenarios",
-      "Streamlined import of your HTML designs",
-      "  Customization featuresBuilt-in safeguards against",
+      "    Review current systems and processes",
+      "    Identify strengths and weaknesses in the digital infrastructure",
+      "   Develop a clear digital transformation strategy",
     ],
   },
   {
-    heading: "Elevate your email experience using dynamic AMP components",
-    text: "Create and send captivating messages with AMP's interactive features through API",
+    heading: "Designing the Digital Transformation Strategy",
+    text: "Creating a comprehensive digital transformation plan that covers all aspects of the business based on the assessment results",
     image: image2,
     list: [
-      "  Dynamic product showcase with interactive carousel",
-      "  In-email subscription confirmation",
-      "  ollapsible FAQ section in email using accordion",
-      "  Implement custom interactive elements",
+      "    Identify priorities and key transformation points",
+      "   Select appropriate technologies and solutions",
+      "  Develop an implementation and testing roadmap",
     ],
   },
   {
-    heading: "Gather data, extract insights and implement strategies",
-    text: "Extract data from email analytics, scrutinize reports for delivery issues, grasp message flow, and track every interaction",
-    image: image3,
-    list: [
-      "  Delivery success rate",
-      "  Email open frequency",
-      "  Click-through count",
-      "  Subscription cancellations",
-      "    Delivery failures",
-    ],
-  },
-  {
-    heading: "Enhancing Email Deliverability",
-    text: "Advanced tools to boost email delivery rates and ensure inbox placement",
+    heading: "Implementing Digital Solutions",
+    text: "Working on implementing solutions and integrating them with your current systems in a systematic and well-planned manner while providing necessary training for the team",
     image: image4,
     list: [
-      "  Authentication Protocols",
-      "  Dedicated IP Address",
-      "   IP Warm-up",
-      "  Email Validation",
+      "    Ensure installation and integration of new systems",
+      "    Train employees on new tools and technologies",
+      "  Monitor performance and ensure transition integration",
+    ],
+  },
+  {
+    heading: "Continuous Monitoring and Improvement",
+    text: "We continue to monitor the performance of digital solutions and provide ongoing support to ensure achieving the desired goals",
+    image: image3,
+    list: [
+      "    Collect and analyze data to measure performance",
+      "    Identify opportunities for improvement and development",
+      "    Implement updates and improvements periodically",
     ],
   },
 ];
 
-function Emailexperience() {
+function Healthcareexperience() {
   return (
     <div className='py-16'>
       <div className='container mx-auto px-4 text-center'>
@@ -67,7 +62,7 @@ function Emailexperience() {
           {items.map((item, index) => (
             <div
               className={`flex flex-col md:flex-row-reverse
-               items-start md:space-x-8 `}
+             items-start md:space-x-8 `}
               key={index}
             >
               <div className='w-full md:w-1/2 px-14'>
@@ -103,4 +98,4 @@ function Emailexperience() {
   );
 }
 
-export default Emailexperience;
+export default Healthcareexperience;

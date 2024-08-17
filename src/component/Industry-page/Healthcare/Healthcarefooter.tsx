@@ -1,6 +1,6 @@
 import React from "react";
 
-function Professionalfooter() {
+function Healthcarefooter() {
   return (
     <div className='bg-gray-100 py-12 md:py-24 mt-8 md:mt-24'>
       <div className='container mx-auto text-center'>
@@ -8,11 +8,12 @@ function Professionalfooter() {
           {/* Header of the page */}
           <div>
             <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5   '>
-              Transform Your Business with AI-Powered Professional Services
+              It's time to transform your organization into an integrated
+              digital entity
             </h1>
             <p className='text-lg md:text-xl lg:text-2xl mt-5 mx-auto max-w-5xl'>
-              Make the decision now and leverage our professional services to
-              achieve your goals
+              Start your journey towards digital transformation with us and
+              achieve the growth you deserve
             </p>
           </div>
           {/* Buttons */}
@@ -30,4 +31,4 @@ function Professionalfooter() {
   );
 }
 
-export default Professionalfooter;
+export default Healthcarefooter;
