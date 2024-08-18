@@ -29,7 +29,7 @@ const items: FeatureItem[] = [
   {
     icon: TiFlowMerge,
     heading: "Social Listening and Engagement",
-    url: "/product-details/social-gen-ai",
+    url: "/product-details/social",
     paragraph:
       "With state of the art Workflow builder. Make your Technology and make it easier application more interactive.",
     list: [
