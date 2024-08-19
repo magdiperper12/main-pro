@@ -14,4 +14,4 @@ const ProductsPage: React.FC<PageProps> = () => {
 
 export default ProductsPage;
 
-export const Head: HeadFC = () => <title>Product Page</title>;
+export const Head: HeadFC = () => <title>Book a demo</title>;

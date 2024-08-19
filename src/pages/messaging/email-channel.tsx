@@ -113,4 +113,4 @@ const EmailPage: React.FC<PageProps> = () => {
 
 export default EmailPage;
 
-export const Head: HeadFC = () => <title>Email-Page</title>;
+export const Head: HeadFC = () => <title>Email-channel</title>;

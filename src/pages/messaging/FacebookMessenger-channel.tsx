@@ -13,7 +13,7 @@ import image4 from "../../images/robotic.webp";
 import Channelfooter from "../../component/channel/channelfooter";
 import Experience from "../../component/channel/experience";
 
-const dispachitems =  [
+const dispachitems = [
   {
     heading: "System Integration",
     paragraph:
@@ -116,5 +116,4 @@ const FacebookMessengerpage: React.FC<PageProps> = () => {
 
 export default FacebookMessengerpage;
 
-export const Head: HeadFC = () => <title>FacebookMessengerpage</title>;
-
+export const Head: HeadFC = () => <title>Messenger-channel</title>;

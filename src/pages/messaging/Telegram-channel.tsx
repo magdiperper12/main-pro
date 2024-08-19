@@ -112,4 +112,4 @@ const Telegrampage: React.FC<PageProps> = () => {
 };
 
 export default Telegrampage;
-export const Head: HeadFC = () => <title>Telegrampage</title>;
+export const Head: HeadFC = () => <title>Telegram-channel</title>;

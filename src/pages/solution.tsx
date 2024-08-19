@@ -18,4 +18,4 @@ const PolutionPage: React.FC<PageProps> = () => {
 
 export default PolutionPage;
 
-export const Head: HeadFC = () => <title>Polution Page</title>;
+export const Head: HeadFC = () => <title>Solution </title>;

@@ -109,4 +109,4 @@ const WhatsappPage: React.FC<PageProps> = () => {
 
 export default WhatsappPage;
 
-export const Head: HeadFC = () => <title>WhatsappPage</title>;
+export const Head: HeadFC = () => <title>Whatsapp-channel</title>;

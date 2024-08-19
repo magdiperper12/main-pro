@@ -5,7 +5,7 @@ interface Channelheaderprops {
   paragraph: string;
   image: string;
   fbtn: string;
-  sbtn: string;
+  sbtn: string; 
 }
 
 const ChannelHeader: React.FC<Channelheaderprops> = ({

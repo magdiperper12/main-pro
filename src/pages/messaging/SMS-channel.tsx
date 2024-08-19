@@ -114,4 +114,4 @@ const SmsPage: React.FC<PageProps> = () => {
 };
 
 export default SmsPage;
-export const Head: HeadFC = () => <title>Email-Page</title>;
+export const Head: HeadFC = () => <title>SMS-channel</title>;
