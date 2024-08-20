@@ -16,4 +16,4 @@ const PricingPage: React.FC<PageProps> = () => {
 
 export default PricingPage;
 
-export const Head: HeadFC = () => <title>pricing Page</title>;
+export const Head: HeadFC = () => <title>pricing </title>;
