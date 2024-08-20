@@ -1,14 +1,13 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import "../../styles/global.css"; // Make sure global styles are correctly applied
-import Layout from "../../component/layout/layout";
+import "../../styles/global.css";
 import { FaImage } from "react-icons/fa";
 import image3 from "../../images/customer_support.webp";
 import Imagehead from "../../component/conversation/imagehead";
-import Convfooter from "../../component/conversation/Convfooter";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import Secoundconvcontent from "../../component/conversation/SecoundConvcontent ";
 import SecoundConvfooter from "../../component/conversation/SecoundConvFooter";
+import Layout from "../../component/layout/layout";
 
 interface FeatureItem {
   icon: React.ElementType;
