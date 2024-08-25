@@ -16,7 +16,7 @@ const dispachitems = [
     heading: "Support",
     paragraph:
       "Get technical support and assistance in troubleshooting through our comprehensive support resources",
-    explor: "explor solution",
+    explor: "explor Support",
     arrow: FaCircleArrowRight,
     url: "/support-Resorce/support",
   },
@@ -25,16 +25,16 @@ const dispachitems = [
     heading: "Support",
     paragraph:
       "Get technical support and assistance in troubleshooting through our comprehensive support resources",
-    explor: "explor solution",
+    explor: "explor Support",
     arrow: FaCircleArrowRight,
-    url: "/support",
+    url: "/support-Resorce/SescoundSupport",
   },
   {
     icon: FaImage,
     heading: "Support",
     paragraph:
       "Get technical support and assistance in troubleshooting through our comprehensive support resources",
-    explor: "explor solution",
+    explor: "explor Support",
     arrow: FaCircleArrowRight,
     url: "/support",
   },
