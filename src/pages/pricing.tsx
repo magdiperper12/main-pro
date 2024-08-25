@@ -226,7 +226,6 @@ const PricingPage: React.FC<PageProps> = () => {
           </div>
         </div>
       </div>
-
       <Question items={items} theheader='' />
     </Layout>
   );

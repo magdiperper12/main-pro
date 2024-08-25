@@ -23,7 +23,7 @@ const Convcontent: React.FC<DispatchProps> = ({
           <h1 className='text-3xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-tight'>
             {theheader}
           </h1>
-          <p className='text-lg md:text-xl lg:text-2xl mt-5 flex w-3/4 m-auto'>
+          <p className='text-lg md:text-xl lg:text-2xl mt-5 flex w-3/4 m-auto '>
             {thescoundheader}
           </p>
         </div>

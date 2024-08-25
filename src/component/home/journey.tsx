@@ -39,13 +39,7 @@ function Journey() {
                 index % 2 == 0 ? "md:flex-row-reverse" : "md:flex-row"
               } items-start md:space-x-8 `}
             >
-              {/*  <div className='w-full md:w-1/2 p-2 mt-15'>
-              <div className='w-full'>
-                <img
-                  alt='gallery'
-                  className='block h-full w-full rounded-lg object-cover object-center'
-                  src={image}
-                /> */}
+             
               <div className='w-full md:w-1/2 px-14'>
                 <img
                   src={item.image}

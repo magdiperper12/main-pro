@@ -18,7 +18,7 @@ const dispachitems = [
       "Get technical support and assistance in troubleshooting through our comprehensive support resources",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/services/Professional",
+    url: "/support-Resorce/support",
   },
   {
     icon: FaImage,
@@ -27,7 +27,7 @@ const dispachitems = [
       "Get technical support and assistance in troubleshooting through our comprehensive support resources",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/services/Digital",
+    url: "/support",
   },
   {
     icon: FaImage,
@@ -36,7 +36,7 @@ const dispachitems = [
       "Get technical support and assistance in troubleshooting through our comprehensive support resources",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/services/Customer",
+    url: "/support",
   },
 ];
 
