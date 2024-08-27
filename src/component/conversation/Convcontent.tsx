@@ -33,7 +33,7 @@ const Convcontent: React.FC<DispatchProps> = ({
             return (
               <div
                 key={index}
-                className='hover:shadow-lg duration-200 text-center bg-zinc-100 p-2 rounded-lg'
+                className='hover:shadow-lg hover:shadow-blue-100 duration-200 text-center bg-zinc-100 p-2 rounded-lg'
               >
                 <Icon className='text-5xl md:text-5xl lg:text-8xl text-blue-600 mx-auto my-8 hover:scale-105 duration-300 hover:drop-shadow-lg' />
                 <h2 className='text-2xl font-bold text-gray-800 py-4 text-start border-t-2 border-zinc-200 px-3 hover:text-blue-800'>

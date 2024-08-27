@@ -36,7 +36,7 @@ const dispachitems = [
       "Get technical support and assistance in troubleshooting through our comprehensive support resources",
     explor: "explor Support",
     arrow: FaCircleArrowRight,
-    url: "/support",
+    url: "/support-Resorce/Secure",
   },
 ];
 
