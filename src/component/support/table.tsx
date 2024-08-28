@@ -18,7 +18,7 @@ interface ExperienceProps {
   experienceItems: FeatureItem[];
 }
 
-const Tableexplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
+const TableExplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
   return (
     <div className='py-10'>
       {experienceItems.map((featureItem, featureIndex) => (
@@ -67,4 +67,4 @@ const Tableexplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
   );
 };
 
-export default Tableexplor;
+export default TableExplor;

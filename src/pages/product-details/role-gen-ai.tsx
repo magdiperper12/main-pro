@@ -3,11 +3,14 @@ import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
 
-import Convcontent from "../../component/conversation/Convcontent";
+import Convcontent from "../../component/conversation/conv-content";
 import image3 from "../../images/customer_support.webp";
 import { FaImage } from "react-icons/fa";
-import Convheader from "../../component/conversation/Convheader";
-import Convfooter from "../../component/conversation/Convfooter";
+import Convheader from "../../component/conversation/conv-header";
+import Convfooter from "../../component/conversation/conv-footer";
+import ConvHeader from "../../component/conversation/conv-header";
+import ConvContent from "../../component/conversation/conv-content";
+import ConvFooter from "../../component/conversation/conv-footer";
 
 interface FeatureItem {
   icon: React.ElementType;
@@ -57,14 +60,14 @@ const dispachitems: FeatureItem[] = [
 const Role: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <Convheader
+      <ConvHeader
         image={image3}
         title='   NLU and Role Based Chatbot'
         paragraph='  Our innovative tool combines natural language understanding (NLU)
               and intelligent role-based guidance to deliver an exceptional'
         btn='Get a Free Demo'
       />
-      <Convcontent
+      <ConvContent
         theheader='   Experience Smart Interaction with the Role-Based and NLU Chatbot'
         thescoundheader='  The Role-Based and NLU Chatbot uses AI to analyze inquiries and
             guide visitors with accurate information and support based on
@@ -73,7 +76,7 @@ const Role: React.FC<PageProps> = () => {
         dispachitems={dispachitems}
       />
 
-      <Convfooter
+      <ConvFooter
         title='  Join Leading Companies Using Our Technology'
         secondTitle='Elevate your customer experience with our innovative solution.
               Enhance service, boost satisfaction, and improve efficiency - see

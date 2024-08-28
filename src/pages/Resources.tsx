@@ -3,12 +3,15 @@ import type { HeadFC, PageProps } from "gatsby";
 import "../styles/global.css";
 import Layout from "../component/layout/layout";
 import image3 from "../images/customer_support.webp";
-import Imagehead from "../component/conversation/imagehead";
-import SecoundConvfooter from "../component/conversation/SecoundConvFooter";
-import ThirdConvcontent from "../component/conversation/thirdconvcontent";
+import Imagehead from "../component/conversation/image-head";
+import SecoundConvfooter from "../component/conversation/secound-conv-footer";
+import ThirdConvcontent from "../component/conversation/third-conv-content";
 import { FaImage } from "react-icons/fa";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import Question from "../component/conversation/Question";
+import ImageHead from "../component/conversation/image-head";
+import ThirdConvContent from "../component/conversation/third-conv-content";
+import SecoundConvFooter from "../component/conversation/secound-conv-footer";
 
 const dispachitems = [
   {
@@ -77,17 +80,17 @@ const items = [
 const Resources: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <Imagehead
+      <ImageHead
         image={image3}
         title='Resources and Support for All Your Needs'
         paragraph='Explore the solutions we offer to support and enhance your business using our advanced tools while ensuring complete security for your data'
       />
-      <ThirdConvcontent
+      <ThirdConvContent
         dispachitems={dispachitems}
         theheader='Explore our support and resources sections to find the solutions and information you need.'
       />
 
-      <SecoundConvfooter
+      <SecoundConvFooter
         title='Get started with our Solutions for free'
         secondTitle='Join now and try our services to discover how we can help you'
         button='Start for Free'

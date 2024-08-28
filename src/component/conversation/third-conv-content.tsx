@@ -13,7 +13,7 @@ interface DispatchProps {
   dispachitems: FeatureItem[];
 }
 
-const Secoundconvcontent: React.FC<DispatchProps> = ({
+const ThirdConvContent: React.FC<DispatchProps> = ({
   theheader,
   dispachitems,
 }) => {
@@ -25,7 +25,7 @@ const Secoundconvcontent: React.FC<DispatchProps> = ({
             {theheader}
           </h1>
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-10 items-start w-11/12 m-auto'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-10 items-start w-11/12 m-auto'>
           {dispachitems.map((item, index) => (
             <div
               key={index}
@@ -57,4 +57,4 @@ const Secoundconvcontent: React.FC<DispatchProps> = ({
   );
 };
 
-export default Secoundconvcontent;
+export default ThirdConvContent;

@@ -3,6 +3,7 @@ import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
 import Tableexplor from "../../component/support/table";
+import TableExplor from "../../component/support/table";
 
 interface Item {
   first: string;
@@ -203,7 +204,7 @@ const SecoundSupport: React.FC<PageProps> = () => {
         </div>
       </div>
 
-      <Tableexplor experienceItems={experienceItems} />
+      <TableExplor experienceItems={experienceItems} />
 
       <div className='relative overflow-x-auto mb-6 w-3/4 m-auto bg-zinc-50 my-24 px-5  pt-5 rounded-md  border'>
         <div className='mb-2 text-lg font-semibold text-gray-800 '>

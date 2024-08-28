@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import "../../styles/global.css";
-import Supportexplor from "./supportexplor";
+import Supportexplor from "./support-explor";
 import image3 from "../images/customer_support.webp";
 import MobileNav from "../layout/mobile-nav";
 import { PageProps } from "gatsby";

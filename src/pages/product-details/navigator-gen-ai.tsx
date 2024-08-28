@@ -3,11 +3,14 @@ import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
 
-import Convcontent from "../../component/conversation/Convcontent";
+import Convcontent from "../../component/conversation/conv-content";
 import image3 from "../../images/customer_support.webp";
 import { FaImage } from "react-icons/fa";
-import Convheader from "../../component/conversation/Convheader";
-import Convfooter from "../../component/conversation/Convfooter";
+import Convheader from "../../component/conversation/conv-header";
+import Convfooter from "../../component/conversation/conv-footer";
+import ConvFooter from "../../component/conversation/conv-footer";
+import ConvContent from "../../component/conversation/conv-content";
+import ConvHeader from "../../component/conversation/conv-header";
 
 interface FeatureItem {
   icon: React.ElementType;
@@ -44,7 +47,7 @@ const dispachitems: FeatureItem[] = [
 const Navigator: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <Convheader
+      <ConvHeader
         image={image3}
         title=' Gen Al Website Navigator'
         paragraph='   Our intelligent tool helps you navigate your websites easily and
@@ -55,7 +58,7 @@ const Navigator: React.FC<PageProps> = () => {
       <div className='flex  items-center  m-auto mb-20 w-2/4 h-auto bg-zinc-100 rounded-xl '>
         <img src={image3} alt='' />
       </div>
-      <Convcontent
+      <ConvContent
         theheader='  Seamless navigation and enhanced experience with Gen Al Website
             Navigator'
         thescoundheader='  Analyze and guide your website visitors effectively with Gen AI
@@ -65,7 +68,7 @@ const Navigator: React.FC<PageProps> = () => {
         dispachitems={dispachitems}
       />
 
-      <Convfooter
+      <ConvFooter
         title='    Empower Your Business with Gen AI Website Navigator'
         secondTitle='  Leverage our advanced AI tool to gain valuable insights and make
               informed decisions, enhancing both user experience and business

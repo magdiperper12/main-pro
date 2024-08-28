@@ -2,7 +2,7 @@ import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
-import ChannelHeader from "../../component/channel/channelheader";
+import ChannelHeader from "../../component/channel/channel-header";
 import Dispatch from "../../component/channel/dispach";
 
 import image1 from "../../images/header.jpg";
@@ -10,8 +10,9 @@ import image2 from "../../images/campaign.webp";
 import image3 from "../../images/customer_support.webp";
 import image4 from "../../images/robotic.webp";
 
-import Channelfooter from "../../component/channel/channelfooter";
+import Channelfooter from "../../component/channel/channel-footer";
 import Experience from "../../component/channel/experience";
+import ChannelFooter from "../../component/channel/channel-footer";
 
 const dispachitems = [
   {
@@ -82,7 +83,7 @@ const experianceitems = [
     ],
   },
 ];
-const Telegrampage: React.FC<PageProps> = () => {
+const TelegramPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
@@ -100,7 +101,7 @@ const Telegrampage: React.FC<PageProps> = () => {
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
-      <Channelfooter
+      <ChannelFooter
         title='Enhance Your Customer Experience with BOTBAT’s Telegram Bots'
         secoundTitle=' Utilize BOTBAT’s Telegram bots to improve customer communication
               and achieve your marketing goals effectively'
@@ -111,5 +112,5 @@ const Telegrampage: React.FC<PageProps> = () => {
   );
 };
 
-export default Telegrampage;
+export default TelegramPage;
 export const Head: HeadFC = () => <title>Telegram-channel</title>;

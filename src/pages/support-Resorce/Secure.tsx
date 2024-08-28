@@ -6,10 +6,12 @@ import { GrSecure, GrShieldSecurity } from "react-icons/gr";
 import { SiSpringsecurity } from "react-icons/si";
 import { HiMiniSun } from "react-icons/hi2";
 import Layout from "../../component/layout/layout";
-import Convcontent from "../../component/conversation/Convcontent";
-import Imagehead from "../../component/conversation/imagehead";
+import Convcontent from "../../component/conversation/conv-content";
+import Imagehead from "../../component/conversation/image-head";
 import image3 from "../../images/customer_support.webp";
 import Question from "../../component/conversation/Question";
+import ImageHead from "../../component/conversation/image-head";
+import ConvContent from "../../component/conversation/conv-content";
 
 const serviceFeatures = [
   {
@@ -102,14 +104,14 @@ const Secure: React.FC<PageProps> = () => {
       </div>
 
       <div>
-        <Imagehead
+        <ImageHead
           image={image3}
           title='Access Control and Organizational Synchronization'
           paragraph='Thanks to advanced security features, the Botbat platform allows your team to have full control over who can access what by defining roles that align with your organizational structure. Additionally, the platform offers options to configure permissions for each user role'
         />
       </div>
 
-      <Convcontent
+      <ConvContent
         theheader='Quality and Trustworthiness are at the Core of Our Products'
         thescoundheader='At Botbat, we empower organizations to communicate with their customers and deliver an exceptional customer experience through our advanced cloud-based software.'
         dispachitems={serviceFeatures}

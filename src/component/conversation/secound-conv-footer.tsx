@@ -8,7 +8,7 @@ interface ChannelfooterProps {
   image: string;
 }
 
-const SecoundConvfooter: React.FC<ChannelfooterProps> = ({
+const SecoundConvFooter: React.FC<ChannelfooterProps> = ({
   title,
   image,
   secondTitle,
@@ -46,4 +46,4 @@ const SecoundConvfooter: React.FC<ChannelfooterProps> = ({
   );
 };
 
-export default SecoundConvfooter;
+export default SecoundConvFooter;

@@ -6,7 +6,7 @@ interface Channelheaderprops {
   image: string;
 }
 
-const Imagehead: React.FC<Channelheaderprops> = ({
+const ImageHead: React.FC<Channelheaderprops> = ({
   title,
   paragraph,
   image,
@@ -30,4 +30,4 @@ const Imagehead: React.FC<Channelheaderprops> = ({
   );
 };
 
-export default Imagehead;
+export default ImageHead;

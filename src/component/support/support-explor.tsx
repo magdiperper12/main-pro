@@ -18,7 +18,7 @@ interface ExperienceProps {
   experienceItems: FeatureItem[];
 }
 
-const Supportexplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
+const SupportExplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const handleToggle = (index: number) => {
@@ -99,4 +99,4 @@ const Supportexplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
   );
 };
 
-export default Supportexplor;
+export default SupportExplor;

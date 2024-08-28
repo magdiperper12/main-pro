@@ -3,11 +3,13 @@ import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import { FaImage } from "react-icons/fa";
 import image3 from "../../images/customer_support.webp";
-import Imagehead from "../../component/conversation/imagehead";
+import Imagehead from "../../component/conversation/image-head";
 import { FaCircleArrowRight } from "react-icons/fa6";
-import Secoundconvcontent from "../../component/conversation/SecoundConvcontent ";
-import SecoundConvfooter from "../../component/conversation/SecoundConvFooter";
+import Secoundconvcontent from "../../component/conversation/secound-conv-content ";
+import SecoundConvfooter from "../../component/conversation/secound-conv-footer";
 import Layout from "../../component/layout/layout";
+import SecoundConvContent from "../../component/conversation/secound-conv-content ";
+import SecoundConvFooter from "../../component/conversation/secound-conv-footer";
 
 interface FeatureItem {
   icon: React.ElementType;
@@ -66,12 +68,12 @@ const ServicesPage: React.FC<PageProps> = () => {
         paragraph='  We offer a comprehensive range of professional services and digital transformation solutionsto enhance your business using advanced
             artificial intelligence technologies'
       />
-      <Secoundconvcontent
+      <SecoundConvContent
         theheader=' Unique Advantages That Make Our Service Your Optimal Choice'
         dispachitems={dispachitems}
       />
 
-      <SecoundConvfooter
+      <SecoundConvFooter
         title='  Get started with our Solutions for free'
         secondTitle=' Join now and unlock impactful solutions designed to drive your
               success.'

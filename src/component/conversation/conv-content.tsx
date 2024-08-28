@@ -11,7 +11,7 @@ interface DispatchProps {
   dispachitems: FeatureItem[];
 }
 
-const Convcontent: React.FC<DispatchProps> = ({
+const ConvContent: React.FC<DispatchProps> = ({
   theheader,
   thescoundheader,
   dispachitems,
@@ -51,4 +51,4 @@ const Convcontent: React.FC<DispatchProps> = ({
   );
 };
 
-export default Convcontent;
+export default ConvContent;

@@ -5,7 +5,7 @@ import Layout from "../component/layout/layout";
 import { FaPhone } from "react-icons/fa6";
 import { CiMail } from "react-icons/ci";
 
-const ProductsPage: React.FC<PageProps> = () => {
+const BookADemo: React.FC<PageProps> = () => {
   return (
     <Layout>
       <div>
@@ -198,6 +198,6 @@ const ProductsPage: React.FC<PageProps> = () => {
   );
 };
 
-export default ProductsPage;
+export default BookADemo;
 
 export const Head: HeadFC = () => <title>Book a demo</title>;

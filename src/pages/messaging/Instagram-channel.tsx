@@ -2,15 +2,16 @@ import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
-import ChannelHeader from "../../component/channel/channelheader";
+import ChannelHeader from "../../component/channel/channel-header";
 import Dispatch from "../../component/channel/dispach";
-import Channelfooter from "../../component/channel/channelfooter";
+import Channelfooter from "../../component/channel/channel-footer";
 import Experience from "../../component/channel/experience";
 
 import image1 from "../../images/header.jpg";
 import image2 from "../../images/campaign.webp";
 import image3 from "../../images/customer_support.webp";
 import image4 from "../../images/robotic.webp";
+import ChannelFooter from "../../component/channel/channel-footer";
 
 const dispatchItems = [
   {
@@ -98,7 +99,7 @@ const InstagramPage: React.FC<PageProps> = () => {
         dispachitems={dispatchItems}
       />
       <Experience experianceitems={experienceItems} />
-      <Channelfooter
+      <ChannelFooter
         title='Efficiently Manage Instagram Interactions'
         secoundTitle='Centralize all your Instagram interactions in one dashboard to boost agent productivity and offer personalized responses'
         button='Start for free'
