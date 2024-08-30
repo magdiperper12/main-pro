@@ -4,10 +4,12 @@ import "../../styles/global.css"; // Make sure global styles are correctly appli
 import Layout from "../../component/layout/layout";
 import { FaImage } from "react-icons/fa";
 import image3 from "../../images/customer_support.webp";
-import Imagehead from "../../component/conversation/imagehead";
+import Imagehead from "../../component/conversation/image-head";
 import { FaCircleArrowRight } from "react-icons/fa6";
-import Secoundconvcontent from "../../component/conversation/SecoundConvcontent ";
-import SecoundConvfooter from "../../component/conversation/SecoundConvFooter";
+import Secoundconvcontent from "../../component/conversation/secound-conv-content ";
+import SecoundConvfooter from "../../component/conversation/secound-conv-footer";
+import SecoundConvFooter from "../../component/conversation/secound-conv-footer";
+import SecoundConvContent from "../../component/conversation/secound-conv-content ";
 
 interface FeatureItem {
   icon: React.ElementType;
@@ -76,13 +78,13 @@ const IndustriesPage: React.FC<PageProps> = () => {
             solutions designed to enhance efficiency and deliver exceptional
             results across diverse industrial sectors'
       />
-      <Secoundconvcontent
+      <SecoundConvContent
         theheader='Leverage advanced solutions tailored to each Industry, ensuring your
             excellence and leadership in your field'
         dispachitems={dispachitems}
       />
 
-      <SecoundConvfooter
+      <SecoundConvFooter
         title='  Get started with our Solutions for free'
         secondTitle=' Join now and unlock impactful solutions designed to drive your
               success.'

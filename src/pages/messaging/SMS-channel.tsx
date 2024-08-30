@@ -2,7 +2,7 @@ import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
-import ChannelHeader from "../../component/channel/channelheader";
+import ChannelHeader from "../../component/channel/channel-header";
 import Dispatch from "../../component/channel/dispach";
 
 import image1 from "../../images/header.jpg";
@@ -10,8 +10,9 @@ import image2 from "../../images/campaign.webp";
 import image3 from "../../images/customer_support.webp";
 import image4 from "../../images/robotic.webp";
 
-import Channelfooter from "../../component/channel/channelfooter";
+import Channelfooter from "../../component/channel/channel-footer";
 import Experience from "../../component/channel/experience";
+import ChannelFooter from "../../component/channel/channel-footer";
 
 const dispachitems = [
   {
@@ -102,7 +103,7 @@ const SmsPage: React.FC<PageProps> = () => {
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
-      <Channelfooter
+      <ChannelFooter
         title=' BOTBAT: The Ultimate SMS Tool for Achieving Your Business Goals'
         secoundTitle='  Elevate your communication. Boost your business growth with
               innovative, effective SMS solutions'

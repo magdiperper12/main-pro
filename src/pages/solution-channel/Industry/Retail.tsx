@@ -7,10 +7,11 @@ import image1 from "../../../images/header.jpg";
 import image2 from "../../../images/campaign.webp";
 import image3 from "../../../images/customer_support.webp";
 import image4 from "../../../images/robotic.webp";
-import ChannelHeader from "../../../component/channel/channelheader";
-import SecoundDispatch from "../../../component/channel/secounddispach";
-import Channelfooter from "../../../component/channel/channelfooter";
+import ChannelHeader from "../../../component/channel/channel-header";
+import SecoundDispatch from "../../../component/channel/secound-dispach";
+import Channelfooter from "../../../component/channel/channel-footer";
 import Experience from "../../../component/channel/experience";
+import ChannelFooter from "../../../component/channel/channel-footer";
 
 const dispachitems = [
   {
@@ -81,7 +82,7 @@ const experianceitems = [
   },
 ];
 
-const Retailpage: React.FC<PageProps> = () => {
+const RetailPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
@@ -98,7 +99,7 @@ We offer an integrated shopping experience across all channels, enhancing custom
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
-      <Channelfooter
+      <ChannelFooter
         title=' Get Ready to Transform Your Business Future Now'
         secoundTitle=' Join market leaders and start your journey towards exceptional success in retail and e-commerce'
         button='Start for free'
@@ -107,6 +108,6 @@ We offer an integrated shopping experience across all channels, enhancing custom
     </Layout>
   );
 };
-export default Retailpage;
+export default RetailPage;
 
 export const Head: HeadFC = () => <title>Industries-Retail</title>;

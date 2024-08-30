@@ -3,8 +3,9 @@ import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import { FaImage } from "react-icons/fa";
 import Layout from "../../component/layout/layout";
-import Convcontent from "../../component/conversation/Convcontent";
-import SupportLayout from "../../component/support/supportlayout";
+import Convcontent from "../../component/conversation/conv-content";
+import SupportLayout from "../../component/support/support-layout";
+import ConvContent from "../../component/conversation/conv-content";
 // Define service features
 const serviceFeatures = [
   {
@@ -88,7 +89,7 @@ const Support: React.FC<PageProps> = () => {
         </div>
       </div>
 
-      <Convcontent
+      <ConvContent
         theheader=''
         thescoundheader=''
         dispachitems={serviceFeatures} // Assuming 'dispatchItems' is the correct prop name

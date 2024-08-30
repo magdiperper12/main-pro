@@ -2,15 +2,16 @@ import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
-import ChannelHeader from "../../component/channel/channelheader";
+import ChannelHeader from "../../component/channel/channel-header";
 import image1 from "../../images/header.jpg";
 import image2 from "../../images/campaign.webp";
 import image3 from "../../images/customer_support.webp";
 import image4 from "../../images/robotic.webp";
 import { FaImage } from "react-icons/fa6";
-import Channelfooter from "../../component/channel/channelfooter";
+import Channelfooter from "../../component/channel/channel-footer";
 import Experience from "../../component/channel/experience";
-import SecoundDispatch from "../../component/channel/secounddispach";
+import SecoundDispatch from "../../component/channel/secound-dispach";
+import ChannelFooter from "../../component/channel/channel-footer";
 
 const dispachitems = [
   {
@@ -99,7 +100,7 @@ const GenPage: React.FC<PageProps> = () => {
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
-      <Channelfooter
+      <ChannelFooter
         title='   Customized Solutions for Your Unique Needs with Botbat Generative
               AI Power'
         secoundTitle=" Don't miss the opportunity to elevate your business. Start now and discover the unlimited possibilities that Generative AI offers for

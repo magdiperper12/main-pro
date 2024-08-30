@@ -5,9 +5,12 @@ import Layout from "../component/layout/layout";
 import { FaImage } from "react-icons/fa";
 import image3 from "../images/customer_support.webp";
 import { FaCircleArrowRight } from "react-icons/fa6";
-import Imagehead from "../component/conversation/imagehead";
-import Secoundconvcontent from "../component/conversation/SecoundConvcontent ";
-import SecoundConvfooter from "../component/conversation/SecoundConvFooter";
+import Imagehead from "../component/conversation/image-head";
+import Secoundconvcontent from "../component/conversation/secound-conv-content ";
+import SecoundConvfooter from "../component/conversation/secound-conv-footer";
+import ImageHead from "../component/conversation/image-head";
+import SecoundConvContent from "../component/conversation/secound-conv-content ";
+import SecoundConvFooter from "../component/conversation/secound-conv-footer";
 
 interface FeatureItem {
   icon: React.ElementType;
@@ -57,20 +60,20 @@ const dispachitems: FeatureItem[] = [
   },
 ];
 
-const PolutionPage: React.FC<PageProps> = () => {
+const SolutionPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <Imagehead
+      <ImageHead
         image={image3}
         title=' Innovative Solutions for Every Need'
         paragraph='  Explore the solutions we offer to enhance your business'
       />
-      <Secoundconvcontent
+      <SecoundConvContent
         theheader=' Unique Advantages That Make Our Service Your Optimal Choice'
         dispachitems={dispachitems}
       />
 
-      <SecoundConvfooter
+      <SecoundConvFooter
         title='   Get started with our Solutions for free'
         secondTitle='   Join now and unlock impactful solutions designed to drive your
               success.'
@@ -81,6 +84,6 @@ const PolutionPage: React.FC<PageProps> = () => {
     </Layout>
   );
 };
-export default PolutionPage;
+export default SolutionPage;
 
 export const Head: HeadFC = () => <title>Solution </title>;

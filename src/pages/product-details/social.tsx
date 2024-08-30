@@ -3,11 +3,14 @@ import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
 
-import Convcontent from "../../component/conversation/Convcontent";
+import Convcontent from "../../component/conversation/conv-content";
 import image3 from "../../images/customer_support.webp";
 import { FaImage } from "react-icons/fa";
-import Convheader from "../../component/conversation/Convheader";
-import Convfooter from "../../component/conversation/Convfooter";
+import Convheader from "../../component/conversation/conv-header";
+import Convfooter from "../../component/conversation/conv-footer";
+import ConvHeader from "../../component/conversation/conv-header";
+import ConvContent from "../../component/conversation/conv-content";
+import ConvFooter from "../../component/conversation/conv-footer";
 
 interface FeatureItem {
   icon: React.ElementType;
@@ -44,7 +47,7 @@ const dispachitems: FeatureItem[] = [
 const Social: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <Convheader
+      <ConvHeader
         image={image3}
         title='   AI-Powered Social Listening'
         paragraph=' Discover How AI Technology Can Elevate Your Customer Experience to
@@ -71,14 +74,14 @@ const Social: React.FC<PageProps> = () => {
           </p>
         </div>
       </div>
-      <Convcontent
+      <ConvContent
         theheader=" Intelligently Hear Your Customers' Voice: Elevate Your Chatbot
             Service to the Next Level"
         thescoundheader='  Our smart tool monitors and analyzes social media conversations,automatically improving chatbot responses and enhancing customer experience.'
         dispachitems={dispachitems}
       />
 
-      <Convfooter
+      <ConvFooter
         title=' Are You Ready to Enhance Your Customer Interactions?'
         secondTitle='Discover the Power of Intelligent Social Listening and Elevate
               Your Customer Service to the Next Level'

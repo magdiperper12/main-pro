@@ -7,10 +7,11 @@ import image1 from "../../../images/header.jpg";
 import image2 from "../../../images/campaign.webp";
 import image3 from "../../../images/customer_support.webp";
 import image4 from "../../../images/robotic.webp";
-import ChannelHeader from "../../../component/channel/channelheader";
-import SecoundDispatch from "../../../component/channel/secounddispach";
-import Channelfooter from "../../../component/channel/channelfooter";
+import ChannelHeader from "../../../component/channel/channel-header";
+import SecoundDispatch from "../../../component/channel/secound-dispach";
+import Channelfooter from "../../../component/channel/channel-footer";
 import Experience from "../../../component/channel/experience";
+import ChannelFooter from "../../../component/channel/channel-footer";
 
 const dispachitems = [
   {
@@ -81,7 +82,7 @@ const experianceitems = [
   },
 ];
 
-const Healthcarepage: React.FC<PageProps> = () => {
+const HealthcarePage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
@@ -97,7 +98,7 @@ const Healthcarepage: React.FC<PageProps> = () => {
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
-      <Channelfooter
+      <ChannelFooter
         title=' Expand Your Patient Communication with Integrated Solutions'
         secoundTitle='Rely on our integrated solutions to improve your communication with patients across multiple channels'
         button='Start for free'
@@ -106,6 +107,6 @@ const Healthcarepage: React.FC<PageProps> = () => {
     </Layout>
   );
 };
-export default Healthcarepage;
+export default HealthcarePage;
 
 export const Head: HeadFC = () => <title>Industries-Healthcare</title>;

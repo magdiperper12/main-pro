@@ -6,12 +6,13 @@ import image1 from "../../../images/header.jpg";
 import image2 from "../../../images/campaign.webp";
 import image3 from "../../../images/customer_support.webp";
 import image4 from "../../../images/robotic.webp";
-import ChannelHeader from "../../../component/channel/channelheader";
-import SecoundDispatch from "../../../component/channel/secounddispach";
-import Channelfooter from "../../../component/channel/channelfooter";
+import ChannelHeader from "../../../component/channel/channel-header";
+import SecoundDispatch from "../../../component/channel/secound-dispach";
+import Channelfooter from "../../../component/channel/channel-footer";
 import Experience from "../../../component/channel/experience";
 import Layout from "../../../component/layout/layout";
 import "../../../styles/global.css";
+import ChannelFooter from "../../../component/channel/channel-footer";
 
 const dispachitems = [
   {
@@ -83,7 +84,7 @@ const experianceitems = [
   },
 ];
 
-const Customerpage: React.FC<PageProps> = () => {
+const CustomerPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
@@ -104,7 +105,7 @@ const Customerpage: React.FC<PageProps> = () => {
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
-      <Channelfooter
+      <ChannelFooter
         title='Transform Your Customer Experience into a Competitive Advantage'
         secoundTitle=' With CX Consultancy service, you can turn customer experience into  a differentiating factor that drives your business growth'
         button='Start for free'
@@ -114,6 +115,6 @@ const Customerpage: React.FC<PageProps> = () => {
   );
 };
 
-export default Customerpage;
+export default CustomerPage;
 
 export const Head: HeadFC = () => <title>service-Customer</title>;

@@ -8,7 +8,7 @@ interface Channelheaderprops {
   btn: string;
 }
 
-const Convheader: React.FC<Channelheaderprops> = ({
+const ConvHeader: React.FC<Channelheaderprops> = ({
   title,
   paragraph,
   image,
@@ -45,4 +45,4 @@ const Convheader: React.FC<Channelheaderprops> = ({
   );
 };
 
-export default Convheader;
+export default ConvHeader;

@@ -2,16 +2,17 @@ import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
-import ChannelHeader from "../../component/channel/channelheader";
+import ChannelHeader from "../../component/channel/channel-header";
 import { FaImage } from "react-icons/fa6";
 import image1 from "../../images/header.jpg";
 import image2 from "../../images/campaign.webp";
 import image3 from "../../images/customer_support.webp";
 import image4 from "../../images/robotic.webp";
 
-import Channelfooter from "../../component/channel/channelfooter";
+import Channelfooter from "../../component/channel/channel-footer";
 import Experience from "../../component/channel/experience";
-import SecoundDispatch from "../../component/channel/secounddispach";
+import SecoundDispatch from "../../component/channel/secound-dispach";
+import ChannelFooter from "../../component/channel/channel-footer";
 
 const dispachitems = [
   {
@@ -103,7 +104,7 @@ const ConversationPage: React.FC<PageProps> = () => {
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
-      <Channelfooter
+      <ChannelFooter
         title='   Elevate Your Customer ServiceNo Technical Complexities'
         secoundTitle="Don't miss the chance to enhance your customer service. Try our
               assistant and experience the significant improvement in customer

@@ -7,7 +7,7 @@ interface Channelfooterprops {
   secoundButton: string;
 }
 
-const Channelfooter: React.FC<Channelfooterprops> = ({
+const ChannelFooter: React.FC<Channelfooterprops> = ({
   title,
   secoundTitle,
   button,
@@ -41,4 +41,4 @@ const Channelfooter: React.FC<Channelfooterprops> = ({
   );
 };
 
-export default Channelfooter;
+export default ChannelFooter;
