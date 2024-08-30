@@ -1,4 +1,3 @@
-import { getLowResolutionImageURL } from "gatsby-plugin-image";
 import React, { ReactNode, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import "../../styles/global.css";

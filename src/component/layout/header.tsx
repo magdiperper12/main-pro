@@ -36,7 +36,7 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
             {[
               { name: "Products", url: "/products" },
               { name: "Solutions", url: "/solution" },
-              { name: "Resources & Support", url: "/#" },
+              { name: "Resources & Support", url: "/Resources" },
               { name: "Developers", url: "/#" },
               { name: "Pricing", url: "/pricing" },
             ].map((item, index) => (
