@@ -2,7 +2,6 @@ import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
-import Tableexplor from "../../component/support/table";
 import TableExplor from "../../component/support/table";
 
 interface Item {
