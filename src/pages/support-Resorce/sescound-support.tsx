@@ -165,19 +165,23 @@ const SecoundSupport: React.FC<PageProps> = () => {
   return (
     <Layout>
       <div>
-        <div className='mt-24 shadow-blue-100 md:mt-32 lg:mt-40 shadow-lg w-10/12 m-auto text-center my-7 md:my-12 space-y-3'>
+        {/* <div>box-shadow: 4px 4px 22px -4px #1B1F26B8; */}
+        <div className='mt-24 shadow-blue-100 shadow-custom md:mt-32 lg:mt-40 w-10/12 m-auto text-center my-7 md:my-12 space-y-5 pt-3 pb-8'>
           <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
             Botbat system status
           </h1>
-          <p className='text-lg md:text-xl lg:text-2xl m-auto w-full p-10'>
-            All systems are operating normally. Last Updated: 2024-08-22
+          <p className='text-lg md:text-xl lg:text-2xl m-auto w-full '>
+            All systems are operating normally
+          </p>
+          <p className='text-lg md:text-xl lg:text-2xl m-auto w-full '>
+            Last Updated: 2024-08-22
           </p>
         </div>
-        <div className='mt-24 md:mt-32 lg:mt-40 w-10/12 m-auto text-center my-7 md:my-12 space-y-3'>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
+        <div className='mt-20 md:mt-24 lg:mt-28 w-10/12 m-auto text-center my-7 md:my-12 space-y-3'>
+          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight lg:w-1/2 sm:w-3/4 m-auto text-wrap'>
             A comprehensive view of our system performance
           </h1>
-          <p className='text-lg md:text-xl lg:text-2xl m-auto w-full p-10'>
+          <p className='text-lg md:text-xl lg:text-2xl  w-full p-10 lg:w-1/2 sm:w-3/4 m-auto'>
             Track the real-time status and health of every critical system in
             our platform
           </p>
@@ -249,13 +253,13 @@ const SecoundSupport: React.FC<PageProps> = () => {
       </div>
 
       <div>
-        <div className='mt-24 shadow-blue-100  md:mt-32 lg:mt-40 shadow-lg  m-auto text-center my-7 md:my-12 space-y-3  px-10 py-6 md:w-1/3 sm:w-3/4 rounded-lg'>
+        <div className='mt-24 shadow-blue-100 shadow-custom  md:mt-32 lg:mt-40  m-auto text-center my-7 md:my-12 space-y-3  px-10 py-6 md:w-1/3 sm:w-3/4 rounded-lg'>
           <h1 className='text-3xl md:text-4xl lg:text-5xl text-blue-800 font-extrabold mt-5 leading-tight m-auto w-auto'>
             Report an Issue
           </h1>
         </div>
 
-        <div className='mt-24 shadow-blue-100  md:mt-32 lg:mt-40 shadow-lg md:w-10/12 sm:11/12 m-auto text-start my-7 md:my-12 space-y-3 p-10 '>
+        <div className='mt-24 shadow-blue-100 shadow-custom md:mt-32 lg:mt-40  md:w-10/12 sm:11/12 m-auto text-start my-7 md:my-12 space-y-3 p-10 '>
           <div className='md:w-3/4 m-auto space-y-7'>
             <div>
               <label

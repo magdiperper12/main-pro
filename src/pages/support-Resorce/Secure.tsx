@@ -6,9 +6,10 @@ import { GrSecure, GrShieldSecurity } from "react-icons/gr";
 import { SiSpringsecurity } from "react-icons/si";
 import { HiMiniSun } from "react-icons/hi2";
 import Layout from "../../component/layout/layout";
-import Convcontent from "../../component/conversation/conv-content";
-import Imagehead from "../../component/conversation/image-head";
-import image3 from "../../images/customer_support.webp";
+import image1 from "../../images/image 19.png";
+import image2 from "../../images/image 20.png";
+import image3 from "../../images/image 21 (3).png";
+import image from "../../images/campaign.webp";
 import Question from "../../component/conversation/Question";
 import ImageHead from "../../component/conversation/image-head";
 import ConvContent from "../../component/conversation/conv-content";
@@ -81,20 +82,29 @@ const Secure: React.FC<PageProps> = () => {
         </div>
         <div className='flex items-center justify-center my-20 '>
           <div className='grid grid-cols-1 gap-5 text-center'>
-            <div className='col shadow-lg shadow-zinc-200 py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
-              <FaImage className='text-3xl md:text-4xl lg:text-6xl text-blue-600  hover:scale-105 duration-300 hover:drop-shadow-lg inline mx-3' />
+            <div className='col shadow-blue-100 shadow-custom  py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
+              <img
+                src={image1}
+                className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
+              />
               <div className='text-lg md:text-xl lg:text-xl text-zinc-500 font-semibold   inline  mx-3'>
                 End-to-end encryption for all sensitive data
               </div>
             </div>
-            <div className='col shadow-lg shadow-zinc-200 py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
-              <HiMiniSun className='text-3xl md:text-4xl lg:text-6xl text-blue-600  hover:scale-105 duration-300 hover:drop-shadow-lg inline mx-3' />
+            <div className='col shadow-blue-100 shadow-custom  py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
+              <img
+                src={image2}
+                className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
+              />
               <div className='text-lg md:text-xl lg:text-xl text-zinc-500 font-semibold   inline  mx-3'>
                 Continuous monitoring and threat detection
               </div>
             </div>
-            <div className='col shadow-lg shadow-zinc-200 py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
-              <SiSpringsecurity className='text-3xl md:text-4xl lg:text-6xl text-blue-600  hover:scale-105 duration-300 hover:drop-shadow-lg inline mx-3' />
+            <div className='col shadow-blue-100 shadow-custom   py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
+              <img
+                src={image3}
+                className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
+              />
               <div className='text-lg md:text-xl lg:text-xl text-zinc-500 font-semibold   inline  mx-3'>
                 Regular security audits and updates
               </div>
@@ -105,7 +115,7 @@ const Secure: React.FC<PageProps> = () => {
 
       <div>
         <ImageHead
-          image={image3}
+          image={image}
           title='Access Control and Organizational Synchronization'
           paragraph='Thanks to advanced security features, the Botbat platform allows your team to have full control over who can access what by defining roles that align with your organizational structure. Additionally, the platform offers options to configure permissions for each user role'
         />
@@ -117,7 +127,7 @@ const Secure: React.FC<PageProps> = () => {
         dispachitems={serviceFeatures}
       />
       <div className='pb-16'>
-        <div className='mt-24 shadow-blue-100  md:mt-32 lg:mt-40 shadow-lg w-10/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10'>
+        <div className='mt-24  md:mt-32 lg:mt-40 shadow-blue-200 shadow-custom  w-10/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10 pt-5'>
           <h1 className='text-3xl md:text-4xl md:w-9/12 sm:w-12/12  lg:text-5xl font-extrabold mt-5 leading-tight m-auto'>
             Enhance User Experience with Botbat's AI Conversation and Automation
           </h1>

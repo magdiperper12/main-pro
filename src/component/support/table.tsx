@@ -1,7 +1,5 @@
 import React from "react";
-import { IoIosArrowDropup, IoIosArrowDropdownCircle } from "react-icons/io";
-import { TiFlowMerge } from "react-icons/ti";
-
+import { FaCheckCircle } from "react-icons/fa";
 interface Item {
   first: string;
   secound: string;
@@ -52,7 +50,10 @@ const TableExplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
                   <td className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap '>
                     {item.first}
                   </td>
-                  <td className='px-6 py-4'>{item.secound}</td>
+                  <td className='px-6 py-4'>
+                    <FaCheckCircle className='text-lg inline me-3 text-blue-500 ' />
+                    {item.secound}
+                  </td>{" "}
                   <td className='px-6 py-4'>
                     {item.date.toLocaleDateString()}
                   </td>

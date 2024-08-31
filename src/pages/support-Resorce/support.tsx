@@ -3,7 +3,6 @@ import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import { FaImage } from "react-icons/fa";
 import Layout from "../../component/layout/layout";
-import Convcontent from "../../component/conversation/conv-content";
 import SupportLayout from "../../component/support/support-layout";
 import ConvContent from "../../component/conversation/conv-content";
 // Define service features
@@ -40,7 +39,7 @@ const Support: React.FC<PageProps> = () => {
       <div>
         <div className='mt-24 md:mt-32 lg:mt-40 shadow-lg shadow-blue-100 w-full m-auto text-center p-10 space-y-7'>
           <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
-            Support Center
+            Search for the support you need...
           </h1>
           <form className='max-w-md mx-auto'>
             <label
@@ -78,7 +77,7 @@ const Support: React.FC<PageProps> = () => {
           </form>
         </div>
 
-        <div className='mt-24 shadow-blue-100  md:mt-32 lg:mt-40 shadow-lg w-10/12 m-auto text-center my-7 md:my-12 space-y-3'>
+        <div className='mt-24 shadow-blue-100 shadow-custom py-2   md:mt-32 lg:mt-40  w-10/12 m-auto text-center my-7 md:my-12 space-y-3'>
           <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
             Specialized Consulting by Experts
           </h1>
@@ -95,13 +94,20 @@ const Support: React.FC<PageProps> = () => {
         dispachitems={serviceFeatures} // Assuming 'dispatchItems' is the correct prop name
       />
 
-      <div className='p-10 text-center text-3xl font-bold'>
+      <div className='pt-10  text-center text-3xl font-bold'>
         Explore Support Categories
       </div>
 
-      <SupportLayout />
+      <SupportLayout
+        direction={""}
+        menuItems={[]}
+        activeMenuItem={""}
+        handleMenuClick={function (btn: string): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
 
-      <div className='mt-24 shadow-blue-100  md:mt-32 lg:mt-40 shadow-lg w-10/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10'>
+      <div className='mt-24 shadow-blue-100   md:mt-28 lg:mt-16 shadow-custom w-10/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10 pt-3'>
         <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
           Direct Contact
         </h1>

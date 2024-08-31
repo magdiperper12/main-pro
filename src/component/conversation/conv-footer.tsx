@@ -14,7 +14,7 @@ const ConvFooter: React.FC<ChannelfooterProps> = ({
   secondButton,
 }) => {
   return (
-    <div className='bg-gray-100 py-12 md:py-24 mt-8 md:mt-24'>
+    <div className=' py-12 md:py-24 mt-8 md:mt-24'>
       <div className='container mx-auto text-center'>
         <div className='sm:rounded-0 text-center'>
           {/* Header of the page */}

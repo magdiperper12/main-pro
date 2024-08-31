@@ -28,7 +28,7 @@ const Question: React.FC<DispatchProps> = ({ theheader, items }) => {
         {items.map((faq, index) => (
           <div
             key={index}
-            className='pt-7 px-5  space-y-4 shadow-lg shadow-blue-50 text-start mx-auto w-full md:w-10/12 rounded-md'
+            className='pt-7 pb-3 px-5  space-y-4 shadow-custom shadow-blue-100 text-start mx-auto w-full md:w-10/12 rounded-md'
           >
             <div
               className='flex justify-between items-center cursor-pointer'

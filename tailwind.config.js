@@ -25,7 +25,9 @@ module.exports = {
         '2xl': '1.5rem',
         // Add other sizes as needed
       },
-
+          boxShadow: {
+            'custom': '4px 4px 22px -4px #1B1F26B8',
+          },
     },
   },
   variants: {
