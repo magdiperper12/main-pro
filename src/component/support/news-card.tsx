@@ -15,7 +15,7 @@ interface DispatchProps {
 
 const NewCard: React.FC<DispatchProps> = ({ theheader, carditems }) => {
   return (
-    <section className=' sm:my-10 md:my-16 pb-10  '>
+    <section>
       <div className='container mx-auto  px-0 lg:px-4 md:px-4 sm:px-0'>
         <div className='text-center pb-20'>
           <h1 className='text-3xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-tight w-3/4 md:w-3/4 lg:w-2/4 m-auto'>
@@ -26,7 +26,7 @@ const NewCard: React.FC<DispatchProps> = ({ theheader, carditems }) => {
           {carditems.map((item, index) => (
             <div
               key={index}
-              className='text-center bg-blue-50 rounded-lg min-h-96  md:mt-16'
+              className='text-center bg-blue-50 rounded-lg min-h-96 mb-8 md:mt-20'
             >
               <img
                 alt='gallery'

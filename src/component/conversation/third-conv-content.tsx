@@ -19,26 +19,28 @@ const ThirdConvContent: React.FC<DispatchProps> = ({
   dispachitems,
 }) => {
   return (
-    <section className='sm:my-10 md:my-16 pb-10'>
+    <section className='flex justify-center'>
       <div className='container mx-auto px-0 lg:px-4 md:px-4 sm:px-0'>
         <div className='text-center pb-20'>
           <h1 className='text-3xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-tight w-3/4 md:w-3/4 lg:w-2/4 m-auto'>
             {theheader}
           </h1>
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-10 items-start w-11/12 m-auto'>
+        <div
+          className={`flex flex-col lg:flex-row md:flex-row flex-wrap gap-10 items-center w-full m-auto justify-center`}
+        >
           {dispachitems.map((item, index) => {
             const Icon = item.icon;
             const Arrow = item.arrow;
             return (
               <div
                 key={index}
-                className='hover:shadow-lg duration-200 text-center bg-zinc-100 p-2 rounded-lg min-h-80'
+                className='hover:shadow-lg duration-200 text-center bg-zinc-100 p-2 rounded-lg min-h-80 max-w-sm'
               >
                 {typeof Icon === "string" ? (
                   <img
                     src={Icon}
-                    className={` w-1/4 h-1/4 text-blue-600 mx-auto my-5 hover:scale-105 duration-300 hover:drop-shadow-lg`}
+                    className='w-1/4 h-1/4 text-blue-600 mx-auto my-5 hover:scale-105 duration-300 hover:drop-shadow-lg'
                   />
                 ) : (
                   <Icon className='text-5xl md:text-5xl lg:text-8xl text-blue-600 mx-auto my-8 hover:scale-105 duration-300 hover:drop-shadow-lg' />

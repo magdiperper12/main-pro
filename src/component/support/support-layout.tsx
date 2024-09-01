@@ -231,7 +231,7 @@ const SupportLayout: React.FC<PageProps> = () => {
   const { experienceItems } = getDataForActiveMenu();
 
   return (
-    <div dir={direction} id='root' className='min-h-screen bg-white font-cairo'>
+    <div dir={direction} id='root' className=' bg-white font-cairo'>
       <header className={direction}>
         <nav className='w-full flex  lg:justify-between items-center space-x-4 flex-nowrap justify-around pt-10 px-10 text-center'>
           <div className=' sm:flex sm:flex-grow sm:items-center px-4 m-auto'>

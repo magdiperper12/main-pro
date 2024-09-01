@@ -81,31 +81,31 @@ const Secure: React.FC<PageProps> = () => {
           </p>
         </div>
         <div className='flex items-center justify-center  '>
-          <div className='grid grid-cols-1 gap-5 text-center'>
-            <div className='col  shadow-custom shadow-gray-400  py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
-              <img
-                src={image1}
-                className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
-              />
-              <div className='text-lg md:text-xl lg:text-xl text-zinc-500 font-semibold   inline  mx-3'>
-                End-to-end encryption for all sensitive data
-              </div>
-            </div>
-            <div className='col  shadow-custom shadow-gray-400  py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
-              <img
-                src={image2}
-                className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
-              />
-              <div className='text-lg md:text-xl lg:text-xl text-zinc-500 font-semibold   inline  mx-3'>
-                Continuous monitoring and threat detection
-              </div>
-            </div>
-            <div className='col  shadow-custom shadow-gray-400   py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
+          <div className='grid grid-cols-1 gap-5  w-full text-center'>
+            <div className='col  shadow-custom shadow-gray-400 m-auto py-1  w-3/4 md:w-5/12 ps-3 pe-7  text-start rounded-lg hover:shadow-xl duration-150'>
               <img
                 src={image3}
                 className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
               />
-              <div className='text-lg md:text-xl lg:text-xl text-zinc-500 font-semibold   inline  mx-3'>
+              <div className='text-lg md:text-xl lg:text-xl text-slate-500  font-semibold   inline   mx-5 '>
+                End-to-end encryption for all sensitive data
+              </div>
+            </div>
+            <div className='col  shadow-custom shadow-gray-400 m-auto py-1   w-3/4 md:w-5/12 ps-3 pe-7 text-start rounded-lg hover:shadow-xl duration-150'>
+              <img
+                src={image2}
+                className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
+              />
+              <div className='text-lg md:text-xl lg:text-xl text-slate-500  font-semibold   inline   mx-5'>
+                Continuous monitoring and threat detection
+              </div>
+            </div>
+            <div className='col  shadow-custom shadow-gray-400  m-auto py-1   w-3/4 md:w-5/12 ps-3 pe-7  text-start rounded-lg hover:shadow-xl duration-150 space-x-5'>
+              <img
+                src={image1}
+                className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
+              />
+              <div className='text-lg md:text-xl lg:text-xl text-slate-500 font-semibold   inline  mx-5 '>
                 Regular security audits and updates
               </div>
             </div>
@@ -126,21 +126,21 @@ const Secure: React.FC<PageProps> = () => {
         thescoundheader='At Botbat, we empower organizations to communicate with their customers and deliver an exceptional customer experience through our advanced cloud-based software.'
         dispachitems={serviceFeatures}
       />
-      <div className='pb-16'>
-        <div className='    shadow-custom shadow-gray-400  w-10/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10 pt-5'>
+      <div className=''>
+        <div className='    shadow-custom shadow-gray-400  w-10/12 m-auto text-center my-7 md:my-12 space-y-5 p-5 '>
           <h1 className='text-3xl md:text-4xl md:w-9/12 sm:w-12/12  lg:text-5xl font-extrabold mt-5 leading-tight m-auto'>
             Enhance User Experience with Botbat's AI Conversation and Automation
           </h1>
-          <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4 p-10'>
+          <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4 '>
             While we provide robust security measures, it's also crucial to
             follow best practices such as using strong passwords and enabling
             two-factor authentication
           </p>
-          <div className='mt-8 md:mt-10 flex flex-col md:flex-row justify-center items-center mx-3 md:mx-0 lg:mx-0 gap-5'>
-            <button className='bg-blue-700 text-white rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-auto'>
+          <div className=' flex flex-col md:flex-row justify-center items-center mx-3 md:mx-0 lg:mx-0 gap-5'>
+            <button className='bg-blue-700 text-white rounded-lg px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-auto'>
               Get a Free Demo
             </button>
-            <button className='bg-white text-blue-900 border border-blue-600 rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-auto'>
+            <button className='bg-white text-blue-900 border border-blue-600 rounded-lg px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-auto'>
               Contact an Expert
             </button>
           </div>

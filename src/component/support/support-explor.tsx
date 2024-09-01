@@ -26,7 +26,7 @@ const SupportExplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
   };
 
   return (
-    <div className='pb-16'>
+    <div>
       <div className='container mx-auto lg:px-4 sm:px-1 text-center'>
         <div className='flex flex-col space-y-4'>
           {experienceItems.map((item, index) => (
@@ -83,7 +83,7 @@ const SupportExplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
                             : "max-h-0 opacity-0"
                         }`}
                       >
-                        <p className='text-base md:text-lg md:text-lg sm:text-base text-blue-900 '>
+                        <p className='text-base  md:text-lg sm:text-base text-blue-900 '>
                           {faq.answer}
                         </p>
                       </div>

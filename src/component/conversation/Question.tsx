@@ -24,11 +24,11 @@ const Question: React.FC<DispatchProps> = ({ theheader, items }) => {
       <h1 className='text-2xl lg:text-5xl md:text-3xl sm:text-2xl font-bold text-blue-950 mb-16 text-center'>
         {theheader}
       </h1>
-      <div className='space-y-16'>
+      <div className='space-y-5'>
         {items.map((faq, index) => (
           <div
             key={index}
-            className='pt-7 pb-3 px-5  space-y-4  shadow-custom shadow-gray-200 text-start mx-auto w-full md:w-10/12 rounded-md'
+            className='pt-7 pb-3 px-5  space-y-1  shadow-custom shadow-gray-200 text-start mx-auto w-full md:w-10/12 rounded-md'
           >
             <div
               className='flex justify-between items-center cursor-pointer'

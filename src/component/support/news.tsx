@@ -22,7 +22,7 @@ const News: React.FC<DispatchProps> = ({
   return (
     <div className='my-16 md:my-28'>
       <div className='text-center  w-full'>
-        <p className='text-md md:text-lg font-extrabold'>{feature}</p>
+        <p className='text-sm md:text-md font-extrabold'>{feature}</p>
         <h1 className='text-2xl md:text-3xl  font-extrabold mt-5 leading-tight'>
           {theheader}
         </h1>
@@ -40,7 +40,7 @@ const News: React.FC<DispatchProps> = ({
               >
                 <img
                   alt='gallery'
-                  className='block h-1/2 w-full rounded-lg object-cover object-center my-5'
+                  className='block h-7/12 w-full rounded-lg object-cover object-center my-5'
                   src={item.image}
                 />
                 <div className='ps-2'>
@@ -63,8 +63,8 @@ const News: React.FC<DispatchProps> = ({
         </div>
       </div>
 
-      <div className='text-center   w-full'>
-        <button className='text-lg lg:xl text-start py-1  rounded-md px-8 m-auto border-blue-600 border text-blue-800 hover:text-blue-50 hover:bg-blue-600'>
+      <div className='text-center  w-full pt-1'>
+        <button className='text-lg lg:xl text-start   rounded-md px-8 m-auto border-blue-600 border text-blue-800 hover:text-blue-50 hover:bg-blue-600'>
           View all
         </button>
       </div>
