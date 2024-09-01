@@ -7,6 +7,15 @@ import { TbApi } from "react-icons/tb";
 import { SiPostman } from "react-icons/si";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import image3 from "../../images/doctor2.jpg";
+import fileicon from "../../images/fileicon.png";
+import apiicon from "../../images/APIicon.png";
+import github from "../../images/github.png";
+import blog from "../../images/blog.png";
+import bostman from "../../images/bostman.png";
+import apienhance from "../../images/apienhance.png";
+import integration from "../../images/integration.png";
+import performance from "../../images/performance.png";
+import support from "../../images/support.png";
 import Layout from "../../component/layout/layout";
 import ConvFooter from "../../component/conversation/conv-footer";
 import ThirdConvContent from "../../component/conversation/third-conv-content";
@@ -16,7 +25,7 @@ import Latest from "../../component/support/latest";
 
 const dispachitems = [
   {
-    icon: IoDocumentText,
+    icon: fileicon,
     heading: "Documentation",
     paragraph: "Comprehensive guides and references for BotBat's AI services",
     explor: "Get Started",
@@ -24,7 +33,7 @@ const dispachitems = [
     url: "/support-Resorce/support",
   },
   {
-    icon: FaBlog,
+    icon: blog,
     heading: "Blog",
     paragraph:
       "Stay updated with the latest features, best practices, and case studies",
@@ -33,7 +42,7 @@ const dispachitems = [
     url: "/developer/blog",
   },
   {
-    icon: TbApi,
+    icon: apiicon,
     heading: "APIs",
     paragraph: "Detailed API documentation for seamless integration",
     explor: "Explore APIs",
@@ -41,7 +50,7 @@ const dispachitems = [
     url: "/support-Resorce/Secure",
   },
   {
-    icon: FaGithub,
+    icon: github,
     heading: "GitHub",
     paragraph:
       "Access our open-source projects and contribute to the community",
@@ -50,7 +59,7 @@ const dispachitems = [
     url: "/support-Resorce/Secure",
   },
   {
-    icon: SiPostman,
+    icon: bostman,
     heading: "Postman",
     paragraph: "Test our APIs and explore endpoints using Postman collections",
     explor: "Use Postman",
@@ -92,7 +101,7 @@ const items = [
 const newsitem = [
   {
     header: "Smart Customer Support",
-    text: "Improve customer support with BotBat's smart bots to reduce wait times and increase satisfaction",
+    text: " customer support with BotBat's smart bots to reduce wait times and increase satisfaction",
     buttonText: "Click One",
     image: image3,
     url: "/#",
@@ -115,7 +124,7 @@ const newsitem = [
 
 const latestitems = [
   {
-    icon: IoDocumentText,
+    icon: performance,
     heading: "Performance Improvements",
     paragraph:
       "This update includes significant improvements in system performance. Response times have been reduced and request processing efficiency has been increased to ensure a smoother and faster user experience",
@@ -124,7 +133,7 @@ const latestitems = [
     url: "/support-Resorce/support",
   },
   {
-    icon: FaBlog,
+    icon: integration,
     heading: "New Integrations",
     paragraph:
       "This update focuses on introducing new integrations with external services and platforms, allowing users to easily expand their use of BotBat and achieve better results in their work",
@@ -133,7 +142,7 @@ const latestitems = [
     url: "/developer/blog",
   },
   {
-    icon: TbApi,
+    icon: apienhance,
     heading: "API Enhancements",
     paragraph:
       "This update includes improvements to the available APIs, with new options added for developers to enable easier and more effective integration with their systems",
@@ -142,7 +151,7 @@ const latestitems = [
     url: "/support-Resorce/Secure",
   },
   {
-    icon: FaGithub,
+    icon: support,
     heading: "Support for Additional Platforms",
     paragraph:
       "This update includes support for new platforms, allowing users better integration with other systems and increasing the effectiveness of services provided through BotBat",
@@ -155,18 +164,18 @@ const latestitems = [
 const Develop: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <div className=' py-12 md:py-24 mt-8 md:mt-16 bg-gray-200'>
+      <div className=' py-12 md:py-16 mt-8 md:mt-16 bg-zinc-200'>
         <div className='container mx-auto text-center'>
           <div className='sm:rounded-0 text-center space-y-10'>
-            <h1 className='text-2xl md:text-3xl lg:text-4xl font-extrabold mt-5 '>
+            <h1 className='text-xl md:text-2xl lg:text-3xl font-extrabold mt-5 '>
               developers and documentation - Botbat 
             </h1>
-            <form className='max-w-lg mx-auto'>
+            <form className='w-full mx-auto'>
               <div className='relative'>
                 <input
                   type='search'
                   id='default-search'
-                  className='block w-full p-3 ps-10 text-md text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-400 focus:border-blue-400 outline-none'
+                  className='block  p-3 ps-10 text-md text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-400 focus:border-blue-400 outline-none w-3/4 md:w-1/2 m-auto'
                   placeholder='Search for documents or articles...'
                   required
                 />

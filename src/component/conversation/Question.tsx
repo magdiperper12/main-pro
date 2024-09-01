@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoIosArrowDropup, IoIosArrowDropdownCircle } from "react-icons/io";
+import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 
 interface FeatureItem {
   answer: string;
@@ -28,19 +28,19 @@ const Question: React.FC<DispatchProps> = ({ theheader, items }) => {
         {items.map((faq, index) => (
           <div
             key={index}
-            className='pt-7 pb-3 px-5  space-y-4 shadow-custom shadow-blue-100 text-start mx-auto w-full md:w-10/12 rounded-md'
+            className='pt-7 pb-3 px-5  space-y-4  shadow-custom shadow-gray-200 text-start mx-auto w-full md:w-10/12 rounded-md'
           >
             <div
               className='flex justify-between items-center cursor-pointer'
               onClick={() => handleToggle(index)}
             >
-              <h2 className='text-xl lg:text-3xl md:text-2xl sm:text-xl font-bold text-blue-950'>
+              <h2 className='text-lg  md:text-2xl  font-bold text-blue-950'>
                 {faq.question}
               </h2>
               {expandedIndex === index ? (
-                <IoIosArrowDropdownCircle className='text-blue-700 text-3xl transition-transform transform rotate-180 hover:text-black' />
+                <FaCaretDown className='text-blue-600 text-3xl transition-transform hover:text-black rotate-180' />
               ) : (
-                <IoIosArrowDropup className='text-blue-600 text-3xl transition-transform hover:text-black rotate-180' />
+                <FaCaretUp className='text-black text-3xl transition-transform transform rotate-180 hover:text-blue-700' />
               )}
             </div>
 
@@ -51,7 +51,7 @@ const Question: React.FC<DispatchProps> = ({ theheader, items }) => {
                   : "max-h-0 opacity-0"
               }`}
             >
-              <p className='text-base lg:text-xl md:text-lg sm:text-base text-blue-900 mt-4'>
+              <p className='text-base  md:text-lg sm:text-base text-blue-900 mt-4'>
                 {faq.answer}
               </p>
             </div>

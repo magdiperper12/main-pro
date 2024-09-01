@@ -15,7 +15,7 @@ const ImageHead: React.FC<Channelheaderprops> = ({
     <div>
       <div className='mt-24 md:mt-32 lg:mt-40 '>
         <div className='text-center my-7 md:my-12 space-y-3'>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
+          <h1 className='text-3xl md:text-4xl lg:text-5xl w-7/12 m-auto font-extrabold mt-5 leading-tight'>
             {title}
           </h1>
           <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4'>

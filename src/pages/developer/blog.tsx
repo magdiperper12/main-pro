@@ -4,16 +4,16 @@ import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
 import NewCard from "../../component/support/news-card";
 import image3 from "../../images/doctor2.jpg";
-import { FaCircleArrowRight } from "react-icons/fa6";
+import { IoIosArrowForward } from "react-icons/io";
 
 const carditems = [
   {
     image: image3,
-    heading: "Improving User Experiencevia Chatbot",
+    heading: "Improving User Experiencevia with Chatbot",
     paragraph:
-      "The ideal user interface starts with a smart chatbot. Ensure your customers' experience is smooth and enjoyable, and attract them to stay with you longer",
+      "The ideal user interface has start with a smart chatbot. Ensure your customers' experience is smooth and enjoyable, and attract them to stay with you longer",
     explor: "Read more  ",
-    arrow: FaCircleArrowRight,
+    arrow: IoIosArrowForward,
     url: "/#",
   },
   {
@@ -22,7 +22,7 @@ const carditems = [
     paragraph:
       " Attract and retain customers thanks to AI that turns potential customers into permanent fans of your brand. Every interaction is an opportunity to gain new loyalty",
     explor: "Read more  ",
-    arrow: FaCircleArrowRight,
+    arrow: IoIosArrowForward,
     url: "/#",
   },
   {
@@ -31,7 +31,7 @@ const carditems = [
     paragraph:
       "Transform your operations into a non-stop performance machine! With automation, reduce costs and increase productivity in ways you never imagined.",
     explor: "Read more  ",
-    arrow: FaCircleArrowRight,
+    arrow: IoIosArrowForward,
     url: "/#",
   },
   {
@@ -40,7 +40,7 @@ const carditems = [
     paragraph:
       "Explore ways chatbots can enhance customer interactions and increase satisfaction through our integrated solutions",
     explor: "Read more  ",
-    arrow: FaCircleArrowRight,
+    arrow: IoIosArrowForward,
     url: "/#",
   },
   {
@@ -49,7 +49,7 @@ const carditems = [
     paragraph:
       "Leverage chatbots to make your business available to customers 24/7 and increase sales opportunities even outside traditional business hours",
     explor: "Read more  ",
-    arrow: FaCircleArrowRight,
+    arrow: IoIosArrowForward,
     url: "/#",
   },
   {
@@ -58,7 +58,7 @@ const carditems = [
     paragraph:
       "Learn how smart automation enhances operational efficiency and reduces costs, giving you a competitive edge in your market",
     explor: "Read more  ",
-    arrow: FaCircleArrowRight,
+    arrow: IoIosArrowForward,
     url: "/#",
   },
   {
@@ -67,16 +67,16 @@ const carditems = [
     paragraph:
       "Discover how chatbots can turn every inquiry into a golden sales opportunity. Start driving higher revenue with smart interactions that lead customers to purchase decisions",
     explor: "Read more  ",
-    arrow: FaCircleArrowRight,
+    arrow: IoIosArrowForward,
     url: "/#",
   },
   {
     image: image3,
     heading: "Smart Marketing with AI",
     paragraph:
-      "Take your marketing campaigns to the next level with AI techniques. Get ready to achieve amazing results and increase conversions like never before",
+      "Take your marketing campaigns to the next level with AI techniques. Get ready to achieve amazing results and doing increase conversions like never before",
     explor: "Read more  ",
-    arrow: FaCircleArrowRight,
+    arrow: IoIosArrowForward,
     url: "/#",
   },
   {
@@ -85,25 +85,25 @@ const carditems = [
     paragraph:
       "It's time to save time and costs with customer support automation solutions. Maintain customer satisfaction with super-fast service delivery and unparalleled accuracy",
     explor: "Read more  ",
-    arrow: FaCircleArrowRight,
+    arrow: IoIosArrowForward,
     url: "/#",
   },
 ];
 const Blog: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <div className=' py-8 md:py-16 my-28 md:my-48 bg-gray-200'>
+      <div className=' py-8 md:pt-10 md:pb-16 my-28 md:my-48 bg-zinc-200'>
         <div className='container   mx-auto text-center'>
           <div className='sm:rounded-0 text-center space-y-10'>
             <h1 className='text-3xl md:text-4xl lg:text-6xl font-extrabold mt-5 '>
               BOTBAT Blog
             </h1>
-            <h1 className='text-xl md:text-2xl lg:text-3xl font-extrabold mt-5 '>
+            <h1 className='text-lg md:text-xl lg:text-2xl font-extrabold mt-5 '>
               Explore our latest blogs on conversational AI and automation
             </h1>
-            <form className='max-w-lg mx-auto'>
+            <form className='lg:w-1/2 md:w-2/3 w-3/4 m-auto'>
               <div className='relative'>
-                <div className='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
+                <div className='  absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
                   <svg
                     className='w-4 h-4 text-gray-500 dark:text-gray-400'
                     aria-hidden='true'
@@ -135,8 +135,8 @@ const Blog: React.FC<PageProps> = () => {
 
       <NewCard theheader={""} carditems={carditems} />
 
-      <nav aria-label='Page navigation example'>
-        <ul className='flex items-center -space-x-px h-8 text-sm'>
+      <nav aria-label='Page navigation  w-full '>
+        <ul className='flex items-center mb-10 justify-center -space-x-px h-8 text-sm'>
           <li>
             <a
               href='#'

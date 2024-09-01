@@ -67,12 +67,12 @@ const Secure: React.FC<PageProps> = () => {
   return (
     <Layout>
       <div>
-        <div className='mt-24   md:mt-32 lg:mt-40  w-10/12 m-auto text-center my-7 md:my-12 space-y-3'>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
+        <div className='mt-16  md:mt-24 lg:mt-28  w-10/12 m-auto text-center  md:my-5 space-y-1'>
+          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 w-10/12 leading-tight m-auto'>
             Secure Your Conversation Data with Botbat with Robust Encryption
             Algorithms
           </h1>
-          <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4 p-10'>
+          <p className='text-lg md:text-xl lg:text-2xl m-auto w-11/12 p-3'>
             At Botbat, data security is at the forefront of our entire system.
             Botbat encrypts any content transmitted to and from our AI-powered
             virtual assistants. Additionally, the platform provides an extra
@@ -80,9 +80,9 @@ const Secure: React.FC<PageProps> = () => {
             your data remains safe from any harm
           </p>
         </div>
-        <div className='flex items-center justify-center my-20 '>
+        <div className='flex items-center justify-center  '>
           <div className='grid grid-cols-1 gap-5 text-center'>
-            <div className='col shadow-blue-100 shadow-custom  py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
+            <div className='col  shadow-custom shadow-gray-400  py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
               <img
                 src={image1}
                 className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
@@ -91,7 +91,7 @@ const Secure: React.FC<PageProps> = () => {
                 End-to-end encryption for all sensitive data
               </div>
             </div>
-            <div className='col shadow-blue-100 shadow-custom  py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
+            <div className='col  shadow-custom shadow-gray-400  py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
               <img
                 src={image2}
                 className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
@@ -100,7 +100,7 @@ const Secure: React.FC<PageProps> = () => {
                 Continuous monitoring and threat detection
               </div>
             </div>
-            <div className='col shadow-blue-100 shadow-custom   py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
+            <div className='col  shadow-custom shadow-gray-400   py-4 px-4 text-start rounded-lg hover:shadow-xl duration-150'>
               <img
                 src={image3}
                 className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
@@ -127,7 +127,7 @@ const Secure: React.FC<PageProps> = () => {
         dispachitems={serviceFeatures}
       />
       <div className='pb-16'>
-        <div className='mt-24  md:mt-32 lg:mt-40 shadow-blue-200 shadow-custom  w-10/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10 pt-5'>
+        <div className='    shadow-custom shadow-gray-400  w-10/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10 pt-5'>
           <h1 className='text-3xl md:text-4xl md:w-9/12 sm:w-12/12  lg:text-5xl font-extrabold mt-5 leading-tight m-auto'>
             Enhance User Experience with Botbat's AI Conversation and Automation
           </h1>

@@ -37,47 +37,24 @@ const Support: React.FC<PageProps> = () => {
   return (
     <Layout>
       <div>
-        <div className='mt-24 md:mt-32 lg:mt-40 shadow-lg shadow-blue-100 w-full m-auto text-center p-10 space-y-7'>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
+        <div className='mt-16 md:mt-28 lg:mt-32 shadow-custom shadow-gray-500 w-full m-auto text-center pt-4 pb-10 space-y-7'>
+          <h1 className='text-2xl md:text-3xl lg:text-3xl font-extrabold mt-5 leading-tight'>
             Search for the support you need...
           </h1>
-          <form className='max-w-md mx-auto'>
-            <label
-              htmlFor='search'
-              className='mb-2 text-sm font-medium text-gray-900 sr-only'
-            >
-              Search for the help you need... (e.g., reset password)
-            </label>
+          <form className='max-w-lg mx-auto'>
             <div className='relative'>
-              <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
-                <svg
-                  className='w-4 h-4 text-gray-500'
-                  aria-hidden='true'
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 20 20'
-                >
-                  <path
-                    stroke='currentColor'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'
-                  />
-                </svg>
-              </div>
               <input
                 type='search'
                 id='search'
                 className='block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500'
-                placeholder='Search support topics...'
+                placeholder='Search for the help you need... (e.g., reset password)'
                 required
               />
             </div>
           </form>
         </div>
 
-        <div className='mt-24 shadow-blue-100 shadow-custom py-2   md:mt-32 lg:mt-40  w-10/12 m-auto text-center my-7 md:my-12 space-y-3'>
+        <div className=' shadow-custom shadow-gray-400 py-2  w-10/12 m-auto text-center my-7 md:my-12 space-y-3'>
           <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
             Specialized Consulting by Experts
           </h1>
@@ -107,7 +84,7 @@ const Support: React.FC<PageProps> = () => {
         }}
       />
 
-      <div className='mt-24 shadow-blue-100   md:mt-28 lg:mt-16 shadow-custom w-10/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10 pt-3'>
+      <div className='mt-24  shadow-custom shadow-gray-400   md:mt-28 lg:mt-16  w-10/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10 pt-3'>
         <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
           Direct Contact
         </h1>
@@ -124,7 +101,7 @@ const Support: React.FC<PageProps> = () => {
           </button>
         </div>
       </div>
-      <div className='mt-24 shadow-blue-100  md:mt-32 lg:mt-40 shadow-lg w-10/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10 '>
+      <div className='mt-24   md:mt-32 lg:mt-40  shadow-custom shadow-gray-400 w-10/12 m-auto text-center my-7 md:my-12 space-y-3 py-10 '>
         <input
           type='text'
           id='username'

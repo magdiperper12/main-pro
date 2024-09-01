@@ -26,15 +26,15 @@ const NewCard: React.FC<DispatchProps> = ({ theheader, carditems }) => {
           {carditems.map((item, index) => (
             <div
               key={index}
-              className='text-center bg-blue-50 rounded-lg min-h-96 '
+              className='text-center bg-blue-50 rounded-lg min-h-96  md:mt-16'
             >
               <img
                 alt='gallery'
-                className='block h-1/2 w-full rounded-lg object-cover object-center my-5 hover:scale-105 duration-300 hover:drop-shadow-lg'
+                className='block h-1/2 w-full rounded-lg object-cover object-center mb-5  '
                 src={item.image}
               />
               <div className='block h-1/2 w-full px-4 bg-slate-100 shadow-md shadow-slate-300 '>
-                <h2 className='text-2xl font-bold text-gray-800 py-4 text-start border-zinc-200  hover:text-blue-800 border-b-2  text-wrap'>
+                <h2 className='text-2xl font-bold text-gray-800 py-2 my-2 text-start border-zinc-300  border-b-2  text-wrap'>
                   {item.heading}
                 </h2>
                 <p className='text-lg text-gray-600 text-start  pb-5'>
