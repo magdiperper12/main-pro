@@ -54,7 +54,7 @@ const Social: React.FC<PageProps> = () => {
               New Heights'
         btn='Get a Free Demo'
       />
-      <div className='flex justify-start  md:justify-around lg:justify-around items-start  m-auto mb-20 w-3/4  rounded-xl bg-blue-50 shadow-lg shadow-blue-100  '>
+      <div className='flex justify-start md:mb-52 md:-mt-32  md:justify-around lg:justify-around items-start  m-auto mb-20 w-3/4  rounded-xl bg-blue-50 shadow-lg shadow-blue-100  '>
         <div className='text-center  p-2  ps-10'>
           <h2 className='text-2xl font-bold text-gray-800 py-4 text-start '>
             Social Listening

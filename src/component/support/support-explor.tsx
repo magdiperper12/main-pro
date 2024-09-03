@@ -26,7 +26,7 @@ const SupportExplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
   };
 
   return (
-    <div>
+    <div className='mb-10 md:mb-16'>
       <div className='container mx-auto lg:px-4 sm:px-1 text-center'>
         <div className='flex flex-col space-y-4'>
           {experienceItems.map((item, index) => (

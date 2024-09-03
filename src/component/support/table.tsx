@@ -18,7 +18,7 @@ interface ExperienceProps {
 
 const TableExplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
   return (
-    <div className='py-10'>
+    <div className='my-10 md:my-16'>
       {experienceItems.map((featureItem, featureIndex) => (
         <div
           key={featureIndex}

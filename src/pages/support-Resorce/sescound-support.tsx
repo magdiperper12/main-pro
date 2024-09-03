@@ -163,10 +163,9 @@ const experienceItems: FeatureItem[] = [
 const SecoundSupport: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <div>
-        {/* <div>box-shadow: 4px 4px 22px -4px #1B1F26B8; */}
-        <div className='mt-24  shadow-custom shadow-gray-400 md:mt-32 lg:mt-40 w-10/12 m-auto text-center my-7 md:my-12  py-7'>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight'>
+      <div className='my-10 md:my-16'>
+        <div className='  shadow-custom shadow-gray-400 md:mt-32 lg:mt-40 w-10/12 m-auto text-center my-7 md:my-12  py-7'>
+          <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold leading-tight'>
             Botbat system status
           </h1>
           <p className='mt-5 text-lg md:text-xl lg:text-2xl m-auto w-full '>
@@ -177,7 +176,7 @@ const SecoundSupport: React.FC<PageProps> = () => {
           </p>
         </div>
         <div className=' w-10/12 m-auto text-center my-10 md:my-16 '>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight lg:w-1/2 sm:w-3/4 m-auto text-wrap'>
+          <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight lg:w-1/2 sm:w-3/4 m-auto text-wrap'>
             A comprehensive view of our system performance
           </h1>
           <p className='text-lg md:text-xl lg:text-2xl  w-full p-4 lg:w-1/2 sm:w-3/4 m-auto'>
@@ -209,7 +208,7 @@ const SecoundSupport: React.FC<PageProps> = () => {
 
       <TableExplor experienceItems={experienceItems} />
 
-      <div className='relative overflow-x-auto mb-6 w-3/4 m-auto bg-zinc-50 my-24 px-5  pt-5 rounded-md  border'>
+      <div className='relative overflow-x-auto w-3/4 m-auto bg-zinc-50  my-10 md:my-16 px-5  pt-5 rounded-md  border'>
         <div className='mb-5 text-lg md:text-xl  font-semibold text-gray-800 '>
           Scheduled updates and maintenance
         </div>
@@ -252,11 +251,11 @@ const SecoundSupport: React.FC<PageProps> = () => {
       </div>
 
       <div>
-        <div className=' shadow-custom shadow-gray-400   m-auto text-center my-10 md:my-20   py-3 md:w-1/4 sm:w-3/4 rounded-lg text-3xl md:text-4xl lg:text-5xl text-gray-800 font-extrabold mt-5 leading-tight  w-auto'>
+        <div className=' shadow-custom shadow-gray-400   m-auto text-center my-10 md:my-16  py-3 md:w-1/4 sm:w-3/4 rounded-lg text-3xl md:text-4xl lg:text-5xl text-gray-800 font-extrabold mt-5 leading-tight  w-auto'>
           Report an Issue
         </div>
 
-        <div className=' shadow-custom shadow-gray-300   md:w-10/12 sm:11/12 m-auto text-start my-7 md:my-12 space-y-3 px-6 py-10 '>
+        <div className=' shadow-custom shadow-gray-300   md:w-10/12 sm:11/12 m-auto text-start  my-10 md:my-16 space-y-3 px-6 py-10 '>
           <div className='md:w-3/4 m-auto space-y-7'>
             <div>
               <label

@@ -231,38 +231,43 @@ const SupportLayout: React.FC<PageProps> = () => {
   const { experienceItems } = getDataForActiveMenu();
 
   return (
-    <div dir={direction} id='root' className=' bg-white font-cairo'>
-      <header className={direction}>
-        <nav className='w-full flex  lg:justify-between items-center space-x-4 flex-nowrap justify-around pt-10 px-10 text-center'>
-          <div className=' sm:flex sm:flex-grow sm:items-center px-4 m-auto'>
-            <ul className='flex flex-col lg:flex-row  list-none space-y-4 lg:space-y-0   justify-between w-full lg:border-b-2 border-zinc-200   lg:w-10/12 m-auto'>
-              {menuItems.map((item, index) => (
-                <li
-                  key={item.name}
-                  className={`my-2 lg:my-0 opacity-0 lg:px-3 animate-fadeIn duration-300 ease-in-out py-4 border-b-2  text-nowrap ${
-                    activeMenuItem === item.btn
-                      ? "border-blue-500"
-                      : "border-transparent"
-                  }`}
-                  style={{ animationDelay: `${index * 150}ms` }}
-                >
-                  <button
-                    className={`text-black/80 transition-colors duration-200 hover:text-black/90 font-bold ${
+    <div className='mt-10 md:mt-16'>
+      <div dir={direction} id='root' className=' bg-white font-cairo'>
+        <div className='  text-center text-3xl font-bold'>
+          Explore Support Categories
+        </div>
+        <header className={direction}>
+          <nav className='w-full flex  lg:justify-between items-center space-x-4 flex-nowrap justify-around pt-4 px-10 text-center'>
+            <div className=' sm:flex sm:flex-grow sm:items-center px-4 m-auto'>
+              <ul className='flex flex-col lg:flex-row  list-none space-y-4 lg:space-y-0   justify-between w-full lg:border-b-2 border-zinc-200   lg:w-10/12 m-auto'>
+                {menuItems.map((item, index) => (
+                  <li
+                    key={item.name}
+                    className={`my-2 lg:my-0 opacity-0 lg:px-3 animate-fadeIn duration-300 ease-in-out py-4 border-b-2  text-nowrap ${
                       activeMenuItem === item.btn
-                        ? "text-blue-600"
-                        : "focus:text-blue-600"
+                        ? "border-blue-500"
+                        : "border-transparent"
                     }`}
-                    onClick={() => handleMenuClick(item.btn)}
+                    style={{ animationDelay: `${index * 150}ms` }}
                   >
-                    {item.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <Supportexplor experienceItems={experienceItems} />
+                    <button
+                      className={`text-black/80 transition-colors duration-200 hover:text-black/90 font-bold ${
+                        activeMenuItem === item.btn
+                          ? "text-blue-600"
+                          : "focus:text-blue-600"
+                      }`}
+                      onClick={() => handleMenuClick(item.btn)}
+                    >
+                      {item.name}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
+        </header>
+        <Supportexplor experienceItems={experienceItems} />
+      </div>
     </div>
   );
 };

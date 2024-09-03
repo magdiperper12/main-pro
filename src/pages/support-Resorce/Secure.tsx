@@ -66,9 +66,9 @@ const items = [
 const Secure: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <div>
-        <div className='mt-16  md:mt-24 lg:mt-28  w-10/12 m-auto text-center  md:my-5 space-y-1'>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 w-10/12 leading-tight m-auto'>
+      <div className='my-10 md:my-16'>
+        <div className='  w-10/12 m-auto text-center   space-y-1'>
+          <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 w-10/12 leading-tight m-auto'>
             Secure Your Conversation Data with Botbat with Robust Encryption
             Algorithms
           </h1>
@@ -128,7 +128,7 @@ const Secure: React.FC<PageProps> = () => {
       />
       <div className=''>
         <div className='    shadow-custom shadow-gray-400  w-10/12 m-auto text-center my-7 md:my-12 space-y-5 p-5 '>
-          <h1 className='text-3xl md:text-4xl md:w-9/12 sm:w-12/12  lg:text-5xl font-extrabold mt-5 leading-tight m-auto'>
+          <h1 className=' md:w-9/12 sm:w-12/12  text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight m-auto'>
             Enhance User Experience with Botbat's AI Conversation and Automation
           </h1>
           <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4 '>
@@ -149,8 +149,8 @@ const Secure: React.FC<PageProps> = () => {
 
       <Question items={items} theheader='' />
 
-      <div className='mt-24 md:mt-32 lg:mt-40  md:w-9/12 sm:w-11/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10'>
-        <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
+      <div className=' my-10 md:my-16 md:w-9/12 sm:w-11/12 m-auto text-center  space-y-3 pb-10'>
+        <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight'>
           Join the elite organizations that trust Botbat to secure their data
         </h1>
         <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4 p-10'>

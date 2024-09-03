@@ -39,15 +39,16 @@ function Journey() {
                 index % 2 == 0 ? "md:flex-row-reverse" : "md:flex-row"
               } items-start md:space-x-8 `}
             >
-             
-              <div className='w-full md:w-1/2 px-14'>
+              <div className='w-full md:w-1/2 px-8 md:px-14'>
                 <img
                   src={item.image}
                   alt='Automate communication'
                   className='rounded-lg object-cover object-center'
                 />
               </div>
-              <div className={`w-full px-12 md:w-1/2 text-start  mt-8 md:mt-0`}>
+              <div
+                className={`w-full px-8 md:px-12 md:w-1/2 text-start  mt-8 md:mt-0`}
+              >
                 <p className='relative px-8 font-bold my-8'>
                   <span className='absolute start-0 top-0 h-full w-3 bg-blue-500'></span>
                   Product Name

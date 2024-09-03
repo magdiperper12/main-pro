@@ -72,7 +72,7 @@ function Convertional() {
     <section className='bg-gray-100 py-20 mt-20'>
       <div className='container mx-auto px-0 lg:px-4 md:px-4 sm:px-0 '>
         <div className='text-center pb-20'>
-          <h1 className='text-3xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-tight'>
+          <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight'>
             Conversational
           </h1>
           <p className='text-lg md:text-xl lg:text-2xl mt-5 flex w-3/4 m-auto'>

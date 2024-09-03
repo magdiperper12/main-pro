@@ -16,11 +16,11 @@ const SecoundConvFooter: React.FC<ChannelfooterProps> = ({
   secondButton,
 }) => {
   return (
-    <div>
-      <div className='flex item-center w-full sm:my-16 md:my-24 px-0 lg:px-12 py-2 lg:pt-12 flex-wrap mx-auto mb-10'>
+    <div className='my-10 md:my-16'>
+      <div className='flex item-center w-full  px-0 lg:px-12 py-2 lg:pt-12 flex-wrap mx-auto '>
         <div className='flex w-full sm:w-full md:w-1/2 lg:w-1/2 order-1 md:order-2 rtl:order-1 '>
           <div className='w-full p-2 md:p-4'>
-            <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold mt-10 text-center md:text-start '>
+            <h1 className='text-xl md:text-3xl lg:text-5xl font-bold mt-10 text-center md:text-start '>
               {title}
             </h1>
             <p className='text-lg md:text-xl mt-6 text-center md:text-start'>

@@ -58,7 +58,7 @@ function Footer() {
             </div>
             <div className=' text-start px-4 py-3 mb-2 md:mb-0 md:mr-3 w-full lg:w-1/2 md:w-1/2 sm:w-auto flex relative text-sm md:text-lg lg:text-lg'>
               <div className='w-full lg:w-1/2 md:w-1/2 sm:w-auto '>
-                <h1 className='block text-1xl my-4 font-extrabold'>
+                <h1 className='block text-xl my-4 font-extrabold'>
                   column one
                 </h1>
                 <h1 className='block  my-2 '>link one</h1>

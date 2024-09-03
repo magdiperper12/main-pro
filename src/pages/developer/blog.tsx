@@ -95,10 +95,10 @@ const Blog: React.FC<PageProps> = () => {
       <div className=' py-8 md:pt-10 md:pb-16 my-28 md:my-48 bg-zinc-200'>
         <div className='container   mx-auto text-center'>
           <div className='sm:rounded-0 text-center space-y-10'>
-            <h1 className='text-3xl md:text-4xl lg:text-6xl font-extrabold mt-5 '>
+            <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 '>
               BOTBAT Blog
             </h1>
-            <h1 className='text-lg md:text-xl lg:text-2xl font-extrabold mt-5 '>
+            <h1 className='text-md md:text-lg lg:text-xl font-extrabold mt-5 '>
               Explore our latest blogs on conversational AI and automation
             </h1>
             <form className='lg:w-1/2 md:w-2/3 w-3/4 m-auto'>

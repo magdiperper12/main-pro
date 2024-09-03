@@ -21,8 +21,8 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
 
   return (
     <div className={`${direction}`}>
+      <div className='w-full h-20 top-0'></div>
       <nav className='fixed top-0 z-50 w-full bg-zinc-50 shadow-slate-200 shadow-lg sm:fixed flex lg:justify-between lg:border-b-2 lg:border-blue-50 items-center py-2 space-x-4 flex-nowrap justify-around'>
-        {/* <div className='container w-full flex  justify-around  '> */}
         <div className='flex items-center justify-center '>
           <MobileNav />
           <LogoWithText />

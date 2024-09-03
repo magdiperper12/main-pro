@@ -14,7 +14,7 @@ function Channels() {
     <div className='py-12 bg-gray-100'>
       <div className='container mx-auto px-4 lg:px-12'>
         <div className='text-center mb-10'>
-          <h1 className='text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight'>
+          <h1 className='text-xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight'>
             Reach and Engage Customers on their favorite channels
           </h1>
           <p className='text-lg md:text-xl lg:text-2xl mt-3 text-gray-700'>
@@ -22,7 +22,7 @@ function Channels() {
           </p>
         </div>
 
-        <div className=' item-center grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-20'>
+        <div className=' item-center grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 md:gap-20 gap-0'>
           {[
             { icon: FaCommentDots, text: "SMS", color: "text-blue-700" },
             {
@@ -41,11 +41,11 @@ function Channels() {
             >
               <div className='w-full md:w-16 lg:w-18'>
                 <item.icon
-                  className={`w-full text-6xl sm:text-6xl md:text-6xl lg:text-6xl ${item.color}`}
+                  className={`w-full text-4xl  md:text-5xl lg:text-6xl ${item.color}`}
                 />
               </div>
               <div className='mt-2'>
-                <h2 className='text-xl md:text-xl lg:text-2xl font-bold text-gray-900'>
+                <h2 className='text-lg md:text-xl lg:text-2xl font-bold text-gray-900'>
                   {item.text}
                 </h2>
               </div>

@@ -20,8 +20,8 @@ const Question: React.FC<DispatchProps> = ({ theheader, items }) => {
   };
 
   return (
-    <div className='my-20 px-4'>
-      <h1 className='text-2xl lg:text-5xl md:text-3xl sm:text-2xl font-bold text-blue-950 mb-16 text-center'>
+    <div className='my-10 md:my-16 px-4'>
+      <h1 className='text-xl md:text-3xl lg:text-5xl font-bold text-blue-950 mb-16 text-center'>
         {theheader}
       </h1>
       <div className='space-y-5'>

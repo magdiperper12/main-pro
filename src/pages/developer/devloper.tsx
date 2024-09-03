@@ -164,7 +164,7 @@ const latestitems = [
 const Develop: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <div className=' py-12 md:py-16 mt-8 md:mt-16 bg-zinc-200'>
+      <div className='  my-10 md:my-16 bg-zinc-200'>
         <div className='container mx-auto text-center'>
           <div className='sm:rounded-0 text-center space-y-10'>
             <h1 className='text-xl md:text-2xl lg:text-3xl font-extrabold mt-5 '>

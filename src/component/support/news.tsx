@@ -20,7 +20,7 @@ const News: React.FC<DispatchProps> = ({
   newsitem,
 }) => {
   return (
-    <div className='my-16 md:my-28'>
+    <div className="my-10 md:my-16">
       <div className='text-center  w-full'>
         <p className='text-sm md:text-md font-extrabold'>{feature}</p>
         <h1 className='text-2xl md:text-3xl  font-extrabold mt-5 leading-tight'>
@@ -44,7 +44,7 @@ const News: React.FC<DispatchProps> = ({
                   src={item.image}
                 />
                 <div className='ps-2'>
-                  <h1 className='text-start text-xl lg:text-2xl font-bold py-1 text-nowrap'>
+                  <h1 className='text-start text-xl lg:text-2xl font-bold py-1 text-wrap'>
                     {item.header}
                   </h1>
                   <p className=' text-start py-1  text-md lg:text-lg'>

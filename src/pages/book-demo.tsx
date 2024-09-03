@@ -12,10 +12,10 @@ const BookADemo: React.FC<PageProps> = () => {
         <div className=' grid grid-cols-2 mt-24 items-center'>
           <div className='col-span-2 lg:col-span-1 md:col-span-1 sm:col-span-2 min-h-screen flex  flex-col ps-10 justify-center my-10'>
             <div className='mb-5 lg:mb-12 md:mb-8'>
-              <h1 className='text-blue-950 text-4xl lg:text-6xl md:text-5xl sm:text-4xl font-bold py-5'>
+              <h1 className='text-blue-950 text-xl md:text-3xl lg:text-5xl sm:text-4xl font-bold py-5'>
                 Demo overview
               </h1>
-              <p className='text-blue-900 text-xl lg:text-2xl md:text-xl sm:text-xl font-bold'>
+              <p className='text-blue-900 text-md lg:text-xl md:text-lg font-bold'>
                 in our demo session,we will cover :{" "}
               </p>
               <ul className=' marker:text-blue-800 text-lg text-blue-950 list-disc list-inside ps-5 py-5 space-y-2'>
@@ -34,7 +34,7 @@ const BookADemo: React.FC<PageProps> = () => {
               </ul>
             </div>
             <div className=''>
-              <h1 className='text-blue-950 text-3xl lg:text-4xl md:text-3xl sm:text-3xl font-bold py-5'>
+              <h1 className='text-blue-950 text-xl md:text-3xl lg:text-5xl font-bold py-5'>
                 contact us for more information{" "}
               </h1>
               <p className='text-blue-900 text-lg lg:text-xl md:text-lg sm:text-lg '>

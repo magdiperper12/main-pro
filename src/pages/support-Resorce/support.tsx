@@ -36,8 +36,8 @@ const serviceFeatures = [
 const Support: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <div>
-        <div className='mt-16 md:mt-28 lg:mt-32 shadow-custom shadow-gray-500 w-full m-auto text-center pt-4 pb-10 space-y-7'>
+      <div className='my-10 md:my-16'>
+        <div className=' shadow-custom shadow-gray-500 w-full m-auto text-center pt-4 pb-10 space-y-7'>
           <h1 className='text-2xl md:text-3xl lg:text-3xl font-extrabold mt-5 leading-tight'>
             Search for the support you need...
           </h1>
@@ -54,8 +54,8 @@ const Support: React.FC<PageProps> = () => {
           </form>
         </div>
 
-        <div className=' shadow-custom shadow-gray-400 py-2  w-10/12 m-auto text-center mt-7 md:mt-12 space-y-4'>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
+        <div className=' shadow-custom shadow-gray-400 py-2  w-10/12 m-auto text-center  my-10 md:my-16 space-y-4'>
+          <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight'>
             Specialized Consulting by Experts
           </h1>
           <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4 px-10 pb-7'>
@@ -71,10 +71,6 @@ const Support: React.FC<PageProps> = () => {
         dispachitems={serviceFeatures} // Assuming 'dispatchItems' is the correct prop name
       />
 
-      <div className='pt-10  text-center text-3xl font-bold'>
-        Explore Support Categories
-      </div>
-
       <SupportLayout
         direction={""}
         menuItems={[]}
@@ -84,11 +80,11 @@ const Support: React.FC<PageProps> = () => {
         }}
       />
 
-      <div className=' mt-16 shadow-custom shadow-gray-300  w-10/12 m-auto text-center   py-8'>
-        <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold  leading-tight'>
+      <div className=' my-10 md:my-16 shadow-custom shadow-gray-300  w-10/12 m-auto text-center   py-8'>
+        <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold  leading-tight'>
           Direct Contact
         </h1>
-        <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4 mt-4 mb-8 '>
+        <p className='text-md md:text-lg lg:text-xl m-auto w-3/4 mt-4 mb-8 '>
           Get in touch with our support team via chat or phone for immediate
           assistance
         </p>
@@ -101,8 +97,8 @@ const Support: React.FC<PageProps> = () => {
           </button>
         </div>
       </div>
-      <div className='pb-6  shadow-custom shadow-gray-300 w-10/12 m-auto text-center my-7 md:my-12 space-y-6  '>
-        <h1 className='pt-6 text-3xl md:text-4xl lg:text-5xl font-extrabold  leading-tight'>
+      <div className='pb-6  shadow-custom shadow-gray-300 w-10/12 m-auto text-center  my-10 md:my-16 space-y-6  '>
+        <h1 className='pt-6 text-xl md:text-3xl lg:text-5xl font-extrabold  leading-tight'>
           Direct Contact
         </h1>
         <input

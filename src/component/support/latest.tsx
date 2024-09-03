@@ -16,7 +16,7 @@ interface DispatchProps {
 
 const Latest: React.FC<DispatchProps> = ({ theheader, latestitems }) => {
   return (
-    <section className='sm:my-10 md:my-16 pb-10'>
+    <section className='my-10 md:my-16'>
       <div className='container mx-auto px-0 lg:px-4 md:px-4 sm:px-0'>
         <div className='text-center pb-10'>
           <h1 className='text-xl md:text-xl lg:text-2xl font-extrabold mt-5 leading-tight w-3/4 md:w-3/4 lg:w-2/4 m-auto'>

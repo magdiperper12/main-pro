@@ -74,7 +74,7 @@ const Testimonial = () => {
   return (
     <div className='mt-12'>
       <div className='mt-20 relative'>
-        <div className='flex justify-between absolute top-14 w-full '>
+        <div className='flex justify-between absolute top-5 md:top-14 w-full '>
           <div
             className='border-2 rounded-full w-10 h-10 lg:w-20 md:w-20 sm:w-10 lg:h-20 md:h-20 sm:h-10 flex justify-center relative  cursor-pointer mx-3 lg:mx-10 md:10  order-1 rtl:order-2'
             onClick={prevSlide}
@@ -99,7 +99,7 @@ const Testimonial = () => {
             <div className='text-center w-full flex justify-center text-lg md:text-xl lg:text-2xl pt-10 gap-1 mb-5'>
               {item.stars}
             </div>
-            <h1 className='text-center text-3xl font-bold mt-5 '>
+            <h1 className='text-center text-lg md:text-2xl lg:text-3xl font-bold mt-5 mx-10 md:mx-0 '>
               {item.title}
             </h1>
 
