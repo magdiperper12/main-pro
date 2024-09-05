@@ -12,7 +12,6 @@ import Testimonial from "../component/home/testomonial";
 import Journey from "../component/home/journey";
 import News from "../component/support/news";
 import image3 from "../images/doctor2.jpg";
-
 const newsitem = [
   {
     header: "Automate your communication workload with Botbat",
@@ -55,6 +54,7 @@ const IndexPage: React.FC<PageProps> = () => {
         newsitem={newsitem}
       />
       <CallToSubscribe />
+     
     </Layout>
   );
 };

@@ -3,7 +3,7 @@ import React from "react";
 
 function MainCarousel() {
   return (
-    <div className='mb-20 lg:mb-32 md:mb-28   '>
+    <div className='mb-10 lg:mb-32 md:mb-28   '>
       <div className='flex item-center w-full  lg:px-12 py-2 lg:pt-12 flex-wrap mx-auto'>
         <div className='flex w-11/12 sm:w-full md:w-1/2 lg:w-1/2 order-2 md:order-1 rtl:order-1 m-auto'>
           <div className='w-full p-2  mt-6 md:mt-4'>

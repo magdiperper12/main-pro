@@ -8,9 +8,9 @@ import { FaBullhorn } from "react-icons/fa";
 
 const MainFeatures = () => {
   return (
-    <section className='bg-gray-100 py-20'>
+    <section className='bg-gray-100 py-10 md:py-20'>
       <div className='container mx-auto px-4'>
-        <div className='text-center pb-20'>
+        <div className='text-center pb-10 md:pb-20'>
           <p className='text-lg md:text-xl lg:text-2xl font-extrabold'>
             FEATURES
           </p>
@@ -23,10 +23,10 @@ const MainFeatures = () => {
             your communication workload.
           </p>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 items-center'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-7 items-center'>
           <div className='text-center'>
-            <FaRobot className='text-5xl md:text-6xl  text-blue-600 mb-4 mx-auto' />
-            <h2 className='text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-4'>
+            <FaRobot className='text-5xl md:text-6xl  text-blue-600 mb-2 mx-auto' />
+            <h2 className='text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-2'>
               Powerful AI
             </h2>
             <p className='text-md text-gray-600'>
@@ -35,8 +35,8 @@ const MainFeatures = () => {
             </p>
           </div>
           <div className='text-center'>
-            <TiFlowMerge className='text-5xl md:text-6xl  text-blue-600 mb-4 mx-auto' />
-            <h2 className='text-xl md:text-2xl font-bold text-gray-800 mb-4'>
+            <TiFlowMerge className='text-5xl md:text-6xl  text-blue-600 mb-2 mx-auto' />
+            <h2 className='text-xl md:text-2xl font-bold text-gray-800 mb-2'>
               Workflow Builder
             </h2>
             <p className='text-lg text-gray-600'>
@@ -45,8 +45,8 @@ const MainFeatures = () => {
             </p>
           </div>
           <div className='text-center'>
-            <HiOutlineChatAlt2 className='text-5xl md:text-6xl  text-blue-600 mb-4 mx-auto' />
-            <h2 className='text-xl md:text-2xl font-bold text-gray-800 mb-4'>
+            <HiOutlineChatAlt2 className='text-5xl md:text-6xl  text-blue-600 mb-2 mx-auto' />
+            <h2 className='text-xl md:text-2xl font-bold text-gray-800 mb-2'>
               Real-time Communication
             </h2>
             <p className='text-lg text-gray-600'>
@@ -55,8 +55,8 @@ const MainFeatures = () => {
             </p>
           </div>
           <div className='text-center'>
-            <HiOutlineMail className='text-5xl md:text-6xl  text-blue-600 mb-4 mx-auto' />
-            <h2 className='text-xl md:text-2xl font-bold text-gray-800 mb-4'>
+            <HiOutlineMail className='text-5xl md:text-6xl  text-blue-600 mb-2 mx-auto' />
+            <h2 className='text-xl md:text-2xl font-bold text-gray-800 mb-2'>
               SMS & Messaging
             </h2>
             <p className='text-lg text-gray-600'>
@@ -66,8 +66,8 @@ const MainFeatures = () => {
           </div>
 
           <div className='text-center'>
-            <FaBullhorn className='text-5xl md:text-6xl  text-blue-600 mb-4 mx-auto' />
-            <h2 className='text-xl md:text-2xl font-bold text-gray-800 mb-4'>
+            <FaBullhorn className='text-5xl md:text-6xl  text-blue-600 mb-2 mx-auto' />
+            <h2 className='text-xl md:text-2xl font-bold text-gray-800 mb-2'>
               BroadCast
             </h2>
             <p className='text-lg text-gray-600'>
@@ -77,8 +77,8 @@ const MainFeatures = () => {
           </div>
 
           <div className='text-center'>
-            <IoAnalyticsSharp className='text-5xl md:text-6xl text-blue-600 mb-4 mx-auto' />
-            <h2 className='text-xl md:text-2xl font-bold text-gray-800 mb-4'>
+            <IoAnalyticsSharp className='text-5xl md:text-6xl text-blue-600 mb-2 mx-auto' />
+            <h2 className='text-xl md:text-2xl font-bold text-gray-800 mb-2'>
               Customers Data Plaform
             </h2>
             <p className='text-lg text-gray-600'>
