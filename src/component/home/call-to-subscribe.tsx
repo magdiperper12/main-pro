@@ -7,7 +7,7 @@ function CallToSubscribe() {
         <div className='sm:rounded-0 text-center'>
           {/* Header of the page */}
           <div className='w-full '>
-            <h1 className='text-xl md:text-3xl lg:text-5xl md:w-2/3 m-auto font-extrabold mt-5 '>
+            <h1 className='text-xl md:text-3xl lg:text-5xl w-10/12 md:w-2/3 m-auto font-extrabold mt-5 '>
               Begin with Botbat for Cost-Effective Multichannel Messaging
             </h1>
             <p className='text-base md:text-lg lg:text-xl mt-2 md:mt-5 md:w-3/4 text-center  mx-5 md:mx-auto m-auto'>

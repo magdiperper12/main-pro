@@ -68,7 +68,7 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
               {direction === "ltr" ? "EN" : "ع"}
             </button>
             {isDropdownOpen && (
-              <div className='absolute font-bold right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50'>
+              <div className='absolute font-bold end-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50'>
                 <ul className='py-1'>
                   <li>
                     <button

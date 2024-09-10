@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
                 <FaTwitter className='h-12 w-12 p-2' />
               </div>
             </div>
-            <div className='w-full lg:w-1/2 flex flex-wrap'>
+            <div className='w-full lg:w-1/2 flex '>
               {Array.from({ length: 3 }).map((_, colIndex) => (
                 <div
                   key={colIndex}

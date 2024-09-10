@@ -45,7 +45,7 @@ const MobileNav: React.FC = () => {
 
       {/* Animated Mobile Menu */}
       <ul
-        className={`fixed left-0 top-12 md:top-16 mt-0.5 md:mt-2 w-full h-auto bg-zinc-50 text-blue-950 z-50 text-start text-3xl space-y-1 py-2 shadow-slate-200 shadow-lg transition-all duration-300 ease-in-out transform ${
+        className={`fixed left-0 top-12 md:top-16 mt-0.5 md:mt-2 w-full h-auto bg-zinc-50 text-blue-950 z-50 text-start text-3xl space-y-1 py-2 shadow-slate-100 shadow-md transition-all duration-300 ease-in-out transform ${
           isOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-1 pointer-events-none"

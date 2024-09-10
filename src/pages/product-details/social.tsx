@@ -54,21 +54,21 @@ const Social: React.FC<PageProps> = () => {
               New Heights'
         btn='Get a Free Demo'
       />
-      <div className='flex justify-start md:mb-52 md:-mt-32  md:justify-around lg:justify-around items-start  m-auto mb-20 w-3/4  rounded-xl bg-blue-50 shadow-lg shadow-blue-100  '>
-        <div className='text-center  p-2  ps-10'>
-          <h2 className='text-2xl font-bold text-gray-800 py-4 text-start '>
+      <div className='flex flex-wrap md:flex-nowrap justify-start md:mb-36 lg:mb-44 md:-mt-32 lg:-mt-24 md:justify-around lg:justify-around items-start  m-auto mb-20 w-3/4  rounded-xl bg-blue-50 shadow-lg shadow-blue-100  '>
+        <div className='text-center  md:p-2  ps-10'>
+          <h2 className='text-lg md:text-xl lgtext-2xl font-bold text-gray-800 py-2 lgpy-4 text-start '>
             Social Listening
           </h2>
-          <p className='text-lg text-gray-600 text-start px-3 pb-5'>
+          <p className='text-sm md:text-md lgtext-lg text-gray-600 text-start px-3 pb-5'>
             Discover what your customers are saying about you on social media
             platform , and analyze the data to make informed decisior
           </p>
         </div>
-        <div className='text-center  p-2  ps-10'>
-          <h2 className='text-2xl font-bold text-gray-800 py-4 text-start '>
+        <div className='text-center  md:p-2  ps-10'>
+          <h2 className='text-lg md:text-xl lgtext-2xl font-bold text-gray-800 py-2 lgpy-4 text-start '>
             Engagement
           </h2>
-          <p className='text-lg text-gray-600 text-start px-3 pb-5'>
+          <p className='text-sm md:text-md lgtext-lg text-gray-600 text-start px-3 pb-5'>
             Interact with your customers intelligently quickly through chatbot ,
             providing them instance support and accurate answers
           </p>

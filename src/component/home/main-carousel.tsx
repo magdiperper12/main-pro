@@ -5,7 +5,7 @@ function MainCarousel() {
   return (
     <div className='mb-10 lg:mb-32 md:mb-28   '>
       <div className='flex item-center w-full  lg:px-12 py-2 lg:pt-12 flex-wrap mx-auto'>
-        <div className='flex w-11/12 sm:w-full md:w-1/2 lg:w-1/2 order-2 md:order-1 rtl:order-1 m-auto'>
+        <div className='flex w-11/12 sm:w-full md:w-1/2 lg:w-1/2 order-2 md:order-1 md:rtl:order-1 m-auto'>
           <div className='w-full p-2  mt-6 md:mt-4'>
             <p className='relative px-8 font-bold'>
               <span className='absolute start-0 top-0 h-6 w-3 bg-blue-500'></span>
@@ -31,7 +31,7 @@ function MainCarousel() {
             </div>
           </div>
         </div>
-        <div className='flex w-11/12 sm:w-full md:w-1/2 lg:w-1/2 order-1 md:order-2 rtl:order-1 m-auto sm:mb-10 md:mb-0'>
+        <div className='flex w-11/12 sm:w-full md:w-1/2 lg:w-1/2 order-1 md:order-2 md:rtl:order-1 m-auto sm:mb-10 md:mb-0'>
           <div className='w-full p-2 md:p-4'>
             <iframe
               src='https://www.youtube.com/embed/7e90gBu4pas'
