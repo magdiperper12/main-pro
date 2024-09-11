@@ -2,7 +2,6 @@ import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import Layout from "../../component/layout/layout";
-import Tableexplor from "../../component/support/table";
 import TableExplor from "../../component/support/table";
 
 interface Item {
@@ -164,25 +163,28 @@ const experienceItems: FeatureItem[] = [
 const SecoundSupport: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <div>
-        <div className='mt-24 shadow-blue-100 md:mt-32 lg:mt-40 shadow-lg w-10/12 m-auto text-center my-7 md:my-12 space-y-3'>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
+      <div className='my-10 md:my-16'>
+        <div className='  shadow-custom shadow-gray-400 md:mt-32 lg:mt-40 w-10/12 m-auto text-center my-7 md:my-12  py-7'>
+          <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold leading-tight'>
             Botbat system status
           </h1>
-          <p className='text-lg md:text-xl lg:text-2xl m-auto w-full p-10'>
-            All systems are operating normally. Last Updated: 2024-08-22
+          <p className='mt-5 text-lg md:text-xl lg:text-2xl m-auto w-full '>
+            All systems are operating normally
+          </p>
+          <p className='text-lg md:text-xl lg:text-2xl m-auto w-full '>
+            Last Updated: 2024-08-22
           </p>
         </div>
-        <div className='mt-24 md:mt-32 lg:mt-40 w-10/12 m-auto text-center my-7 md:my-12 space-y-3'>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
+        <div className=' w-10/12 m-auto text-center my-10 md:my-16 '>
+          <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight lg:w-1/2 sm:w-3/4 m-auto text-wrap'>
             A comprehensive view of our system performance
           </h1>
-          <p className='text-lg md:text-xl lg:text-2xl m-auto w-full p-10'>
+          <p className='text-lg md:text-xl lg:text-2xl  w-full p-4 lg:w-1/2 sm:w-3/4 m-auto'>
             Track the real-time status and health of every critical system in
             our platform
           </p>
         </div>
-        <div className='space-y-3 p-5 shadow-lg shadow-blue-100 rounded-lg absolute bottom-5 start-5 z-50 bg-white'>
+        <div className='space-y-3 py-5 px-3  shadow-md shadow-gray-400 rounded-lg md:absolute md:bottom-5 md:start-5  bg-white sm:m-auto'>
           <ul>
             <li>
               <span className='bg-green-700 rounded-full w-5 h-5 inline-block me-2'></span>
@@ -206,8 +208,8 @@ const SecoundSupport: React.FC<PageProps> = () => {
 
       <TableExplor experienceItems={experienceItems} />
 
-      <div className='relative overflow-x-auto mb-6 w-3/4 m-auto bg-zinc-50 my-24 px-5  pt-5 rounded-md  border'>
-        <div className='mb-2 text-lg font-semibold text-gray-800 '>
+      <div className='relative overflow-x-auto w-3/4 m-auto bg-zinc-50  my-10 md:my-16 px-5  pt-5 rounded-md  border'>
+        <div className='mb-5 text-lg md:text-xl  font-semibold text-gray-800 '>
           Scheduled updates and maintenance
         </div>
         <table className='w-full text-sm text-left rtl:text-right text-gray-500 '>
@@ -228,16 +230,16 @@ const SecoundSupport: React.FC<PageProps> = () => {
             </tr>
           </thead>
           <tbody>
-            <tr className=' border-t '>
-              <td className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap '>
+            <tr className=' border-t text-md md:text-md  text-black '>
+              <td className='px-6 py-4 font-medium  whitespace-nowrap '>
                 2024-09-01
               </td>
               <td className='px-6 py-4'>02:00 - 04:00 PM</td>
               <td className='px-6 py-4'>SMS</td>
               <td className='px-6 py-4'>Performance improvements</td>
             </tr>
-            <tr className=' border-t '>
-              <td className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap '>
+            <tr className=' border-t text-md md:text-md  text-black'>
+              <td className='px-6 py-4 font-medium  whitespace-nowrap '>
                 2024-09-05
               </td>
               <td className='px-6 py-4'>01:00 - 03:00 PM</td>
@@ -249,13 +251,11 @@ const SecoundSupport: React.FC<PageProps> = () => {
       </div>
 
       <div>
-        <div className='mt-24 shadow-blue-100  md:mt-32 lg:mt-40 shadow-lg  m-auto text-center my-7 md:my-12 space-y-3  px-10 py-6 md:w-1/3 sm:w-3/4 rounded-lg'>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl text-blue-800 font-extrabold mt-5 leading-tight m-auto w-auto'>
-            Report an Issue
-          </h1>
+        <div className=' shadow-custom shadow-gray-400   m-auto text-center my-10 md:my-16  py-3 md:w-1/4 sm:w-3/4 rounded-lg text-3xl md:text-4xl lg:text-5xl text-gray-800 font-extrabold mt-5 leading-tight  w-auto'>
+          Report an Issue
         </div>
 
-        <div className='mt-24 shadow-blue-100  md:mt-32 lg:mt-40 shadow-lg md:w-10/12 sm:11/12 m-auto text-start my-7 md:my-12 space-y-3 p-10 '>
+        <div className=' shadow-custom shadow-gray-300   md:w-10/12 sm:11/12 m-auto text-start  my-10 md:my-16 space-y-3 px-6 py-10 '>
           <div className='md:w-3/4 m-auto space-y-7'>
             <div>
               <label
@@ -349,7 +349,7 @@ const SecoundSupport: React.FC<PageProps> = () => {
             </div>
           </div>
           <div className=' w-full text-center '>
-            <button className='bg-blue-600 text-white rounded-lg px-4 py-3 mb-2 md:mb-0  lg:w-1/6 md:w-auto m-auto mt-6'>
+            <button className='bg-blue-600 text-white rounded-lg px-4 py-3 mb-2 md:mb-0   m-auto mt-6 sm:w-1/2 '>
               Submit Report
             </button>
           </div>

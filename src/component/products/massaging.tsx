@@ -99,10 +99,10 @@ const items: FeatureItem[] = [
 
 function Massaging() {
   return (
-    <section className=' py-20 mt-20'>
+    <section className=' pt-10'>
       <div className='container mx-auto  px-0 lg:px-4 md:px-4 sm:px-0'>
-        <div className='text-center pb-20'>
-          <h1 className='text-3xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-tight'>
+        <div className='text-center pb-10'>
+          <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight'>
             Messaging API'S
           </h1>
           <p className='text-lg md:text-xl lg:text-2xl mt-5 flex w-3/4 m-auto'>
@@ -121,7 +121,7 @@ function Massaging() {
                 {item.heading}
               </a>
               <p className='text-lg mt-5 text-gray-600'>{item.paragraph}</p>
-              <ul className='text-lg text-gray-600 list-disc text-start px-3 md:px-4 lg:px-8 list-inside my-5  marker:text-blue-700'>
+              <ul className='text-lg text-gray-600 list-disc text-start px-3 md:px-4 lg:px-8 list-inside   marker:text-blue-700'>
                 {item.list.map((listItem, idx) => (
                   <li
                     key={idx}

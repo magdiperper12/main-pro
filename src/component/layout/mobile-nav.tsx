@@ -1,15 +1,23 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
-function MobileNav() {
-  const [isOpen, setIsOpen] = useState(false);
+const MobileNav: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const menuItems = [
+    { label: "Products", link: "/products" },
+    { label: "Solution", link: "/solution" },
+    { label: "Resource & Support", link: "/support-Resorce/resources" },
+    { label: "Developers", link: "/developer/devloper" },
+    { label: "Pricing", link: "/pricing" },
+  ];
+
   return (
     <div className='relative'>
+      {/* Hamburger Button */}
       <button
         className='block border-0 bg-transparent px-2 text-gray-500 hover:text-black focus:text-black focus:outline-none lg:hidden'
         type='button'
@@ -35,69 +43,33 @@ function MobileNav() {
         </svg>
       </button>
 
-      {isOpen && (
-        <ul
-          className='absolute -start-5 mt-8 z-50 w-80 text-start rounded-lg bg-gray-800 text-white shadow-lg  h-screen text-3xl px-5'
-          id='navbarSupportedContent1'
-        >
-          <li className='py-2 lg:py-0 lg:mx-4 hover:bg-gray-100 hover:text-gray-800'>
-            <a
-              href='#'
-              className='block px-4 py-2 text-lg 
-               hover:bg-gray-100'
-            >
-              Developers
+      {/* Animated Mobile Menu */}
+      <ul
+        className={`fixed left-0 top-12 md:top-16 mt-0.5 md:mt-2 w-full h-auto bg-zinc-50 text-blue-950 z-50 text-start text-3xl space-y-1 py-2 shadow-slate-100 shadow-md transition-all duration-300 ease-in-out transform ${
+          isOpen
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-1 pointer-events-none"
+        }`}
+        id='navbarSupportedContent1'
+      >
+        {menuItems.map((item, index) => (
+          <li
+            key={item.label}
+            className={`hover:bg-blue-600 hover:text-white w-full pb-1 transition-all duration-500 ease-in-out transform ${
+              isOpen
+                ? "opacity-100 translate-x-0 delay-100"
+                : "opacity-0 translate-x-4 pointer-events-none"
+            }`}
+            style={{ transitionDelay: `${index * 150}ms` }}
+          >
+            <a href={item.link} className='px-4 text-lg block'>
+              {item.label}
             </a>
           </li>
-          <li className='py-2 lg:py-0 lg:mx-4 hover:bg-gray-100 hover:text-gray-800'>
-            <a
-              href='#'
-              className='block px-4 py-2 text-lg 
-               hover:bg-gray-100'
-            >
-              Pricing
-            </a>
-          </li>
-          <li className='py-2 lg:py-0 lg:mx-4 hover:bg-gray-100 hover:text-gray-800'>
-            <a
-              href='#'
-              className='block px-4 py-2 text-lg 
-               hover:bg-gray-100'
-            >
-              Developers
-            </a>
-          </li>
-          <li className='py-2 lg:py-0 lg:mx-4 hover:bg-gray-100 hover:text-gray-800'>
-            <a
-              href='#'
-              className='block px-4 py-2 text-lg 
-               hover:bg-gray-100'
-            >
-              Pricing
-            </a>
-          </li>{" "}
-          <li className='py-2 lg:py-0 lg:mx-4 hover:bg-gray-100 hover:text-gray-800'>
-            <a
-              href='#'
-              className='block px-4 py-2 text-lg 
-               hover:bg-gray-100'
-            >
-              Developers
-            </a>
-          </li>
-          <li className='py-2 lg:py-0 lg:mx-4 hover:bg-gray-100 hover:text-gray-800'>
-            <a
-              href='#'
-              className='block px-4 py-2 text-lg 
-               hover:bg-gray-100'
-            >
-              Pricing
-            </a>
-          </li>
-        </ul>
-      )}
+        ))}
+      </ul>
     </div>
   );
-}
+};
 
 export default MobileNav;

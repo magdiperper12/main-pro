@@ -48,7 +48,7 @@ const PricingPage: React.FC<PageProps> = () => {
       <div className=''>
         <div className='flex flex-col h-auto  my-16'>
           <div className='bg-slate-600 h-auto flex flex-col justify-center py-32  text-white items-center space-y-3'>
-            <h1 className='text-3xl lg:text-5xl md:text-4xl sm:text-3xl font-bold'>
+            <h1 className='text-xl md:text-3xl lg:text-5xl font-bold'>
               Affordable Plans for Every Need
             </h1>
             <p className='text-lg lg:text-2xl md:text-xl sm:text-lg '>
@@ -217,7 +217,7 @@ const PricingPage: React.FC<PageProps> = () => {
             </div>
           </div>
           <div className='text-center my-20 space-y-5 '>
-            <h1 className='text-3xl lg:text-6xl md:text-4xl sm:text-3xl font-bold text-blue-950'>
+            <h1 className='text-xl md:text-3xl lg:text-5xl font-bold text-blue-950'>
               smarter automation.better conversation
             </h1>
             <p className='text-xl lg:text-3xl md:text-2xl sm:text-xl sm:w-full lg:w-1/3 text-wrap m-auto  text-blue-950'>

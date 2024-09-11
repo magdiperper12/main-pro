@@ -1,17 +1,14 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import "../styles/global.css";
-import Layout from "../component/layout/layout";
-import image3 from "../images/customer_support.webp";
-import Imagehead from "../component/conversation/image-head";
-import SecoundConvfooter from "../component/conversation/secound-conv-footer";
-import ThirdConvcontent from "../component/conversation/third-conv-content";
+import "../../styles/global.css";
+import Layout from "../../component/layout/layout";
+import image3 from "../../images/customer_support.webp";
 import { FaImage } from "react-icons/fa";
 import { FaCircleArrowRight } from "react-icons/fa6";
-import Question from "../component/conversation/Question";
-import ImageHead from "../component/conversation/image-head";
-import ThirdConvContent from "../component/conversation/third-conv-content";
-import SecoundConvFooter from "../component/conversation/secound-conv-footer";
+import Question from "../../component/conversation/Question";
+import SecoundConvFooter from "../../component/conversation/secound-conv-footer";
+import ThirdConvContent from "../../component/conversation/third-conv-content";
+import ImageHead from "../../component/conversation/image-head";
 
 const dispachitems = [
   {
@@ -30,7 +27,7 @@ const dispachitems = [
       "Get technical support and assistance in troubleshooting through our comprehensive support resources",
     explor: "explor Support",
     arrow: FaCircleArrowRight,
-    url: "/support-Resorce/SescoundSupport",
+    url: "/support-Resorce/sescound-support",
   },
   {
     icon: FaImage,

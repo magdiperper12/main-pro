@@ -1,7 +1,5 @@
 import React from "react";
-import { IoIosArrowDropup, IoIosArrowDropdownCircle } from "react-icons/io";
-import { TiFlowMerge } from "react-icons/ti";
-
+import { FaCheckCircle } from "react-icons/fa";
 interface Item {
   first: string;
   secound: string;
@@ -20,13 +18,13 @@ interface ExperienceProps {
 
 const TableExplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
   return (
-    <div className='py-10'>
+    <div className='my-10 md:my-16'>
       {experienceItems.map((featureItem, featureIndex) => (
         <div
           key={featureIndex}
           className='relative overflow-x-auto mb-6 w-3/4 m-auto bg-zinc-50 my-24 px-5  pt-5 rounded-md  border'
         >
-          <div className='mb-2 text-lg font-semibold text-gray-800 '>
+          <div className='mb-5 text-lg md:text-xl font-semibold text-gray-800 '>
             {featureItem.tableName}
           </div>
           <table className='w-full text-sm text-left rtl:text-right text-gray-500 '>
@@ -48,11 +46,17 @@ const TableExplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
             </thead>
             <tbody>
               {featureItem.items.map((item, itemIndex) => (
-                <tr key={itemIndex} className=' border-t '>
-                  <td className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap '>
+                <tr
+                  key={itemIndex}
+                  className=' border-t text-md md:text-md text-black'
+                >
+                  <td className='px-6 py-4 font-medium whitespace-nowrap '>
                     {item.first}
                   </td>
-                  <td className='px-6 py-4'>{item.secound}</td>
+                  <td className='px-6 py-4 '>
+                    <FaCheckCircle className=' inline me-3 text-green-500 ' />
+                    {item.secound}
+                  </td>{" "}
                   <td className='px-6 py-4'>
                     {item.date.toLocaleDateString()}
                   </td>

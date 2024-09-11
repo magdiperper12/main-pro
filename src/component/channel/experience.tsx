@@ -13,7 +13,7 @@ interface ExperienceProps {
 
 const Experience: React.FC<ExperienceProps> = ({ experianceitems }) => {
   return (
-    <div className='py-16'>
+    <div className="my-10 md:my-16">
       <div className='container mx-auto px-4 text-center'>
         <div className='flex flex-col space-y-24'>
           {/* Step 1 */}

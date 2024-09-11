@@ -197,6 +197,7 @@ const SupportLayout: React.FC<PageProps> = () => {
 
   const [direction, setDirection] = useState<string>("ltr");
   const [activeMenuItem, setActiveMenuItem] = useState<string>("Platform");
+
   useEffect(() => {
     const savedDirection = localStorage.getItem("direction") || "ltr";
     setDirection(savedDirection);
@@ -230,43 +231,43 @@ const SupportLayout: React.FC<PageProps> = () => {
   const { experienceItems } = getDataForActiveMenu();
 
   return (
-    <div dir={direction} id='root' className='min-h-screen bg-white font-cairo'>
-      <Helmet defer={false}>
-        <link
-          rel='icon'
-          type='image/svg+xml'
-          href='https://botbat.blr1.digitaloceanspaces.com/botbat.logo.io.svg'
-        />
-      </Helmet>
-      <header className={direction}>
-        <nav className='w-full shadow-sm flex lg:justify-between lg:border-b-2 lg:border-blue-50 items-center py-2 space-x-4 flex-nowrap justify-around p-10 text-center'>
-          <div className='flex items-center justify-center'>
-            <MobileNav />
-          </div>
-          <div
-            className='hidden lg:flex lg:flex-grow lg:items-center px-4 m-auto'
-            id='navbarSupportedContent1'
-          >
-            <ul className='flex flex-col lg:flex-row list-none space-y-4 lg:space-y-0 lg:space-x-6 gap-16 justify-center w-full p-8'>
-              {menuItems.map((item, index) => (
-                <li
-                  key={item.name}
-                  className='my-2 lg:my-0 opacity-0 animate-fadeIn focus:border-b-4 duration-300 ease-in-out border-blue-900'
-                  style={{ animationDelay: `${index * 150}ms` }}
-                >
-                  <button
-                    className='text-black/80 transition-colors duration-200 hover:text-black/90 font-bold focus:text-blue-600  '
-                    onClick={() => handleMenuClick(item.btn)}
+    <div className='mt-10 md:mt-16'>
+      <div dir={direction} id='root' className=' bg-white font-cairo'>
+        <div className='  text-center text-3xl font-bold'>
+          Explore Support Categories
+        </div>
+        <header className={direction}>
+          <nav className='w-full flex  lg:justify-between items-center space-x-4 flex-nowrap justify-around pt-4 px-10 text-center'>
+            <div className=' sm:flex sm:flex-grow sm:items-center px-4 m-auto'>
+              <ul className='flex flex-col lg:flex-row  list-none space-y-4 lg:space-y-0   justify-between w-full lg:border-b-2 border-zinc-200   lg:w-10/12 m-auto'>
+                {menuItems.map((item, index) => (
+                  <li
+                    key={item.name}
+                    className={`my-2 lg:my-0 opacity-0 lg:px-3 animate-fadeIn duration-300 ease-in-out py-4 border-b-2  text-nowrap ${
+                      activeMenuItem === item.btn
+                        ? "border-blue-500"
+                        : "border-transparent"
+                    }`}
+                    style={{ animationDelay: `${index * 150}ms` }}
                   >
-                    {item.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <Supportexplor experienceItems={experienceItems} />
+                    <button
+                      className={`text-black/80 transition-colors duration-200 hover:text-black/90 font-bold ${
+                        activeMenuItem === item.btn
+                          ? "text-blue-600"
+                          : "focus:text-blue-600"
+                      }`}
+                      onClick={() => handleMenuClick(item.btn)}
+                    >
+                      {item.name}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
+        </header>
+        <Supportexplor experienceItems={experienceItems} />
+      </div>
     </div>
   );
 };

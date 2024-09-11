@@ -3,7 +3,6 @@ import type { HeadFC, PageProps } from "gatsby";
 import "../../styles/global.css";
 import { FaImage } from "react-icons/fa";
 import Layout from "../../component/layout/layout";
-import Convcontent from "../../component/conversation/conv-content";
 import SupportLayout from "../../component/support/support-layout";
 import ConvContent from "../../component/conversation/conv-content";
 // Define service features
@@ -37,52 +36,29 @@ const serviceFeatures = [
 const Support: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <div>
-        <div className='mt-24 md:mt-32 lg:mt-40 shadow-lg shadow-blue-100 w-full m-auto text-center p-10 space-y-7'>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
-            Support Center
+      <div className='my-10 md:my-16'>
+        <div className=' shadow-custom shadow-gray-500 w-full m-auto text-center pt-4 pb-10 space-y-7'>
+          <h1 className='text-2xl md:text-3xl lg:text-3xl font-extrabold mt-5 leading-tight'>
+            Search for the support you need...
           </h1>
-          <form className='max-w-md mx-auto'>
-            <label
-              htmlFor='search'
-              className='mb-2 text-sm font-medium text-gray-900 sr-only'
-            >
-              Search for the help you need... (e.g., reset password)
-            </label>
+          <form className='w-full mx-auto'>
             <div className='relative'>
-              <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
-                <svg
-                  className='w-4 h-4 text-gray-500'
-                  aria-hidden='true'
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 20 20'
-                >
-                  <path
-                    stroke='currentColor'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'
-                  />
-                </svg>
-              </div>
               <input
                 type='search'
-                id='search'
-                className='block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500'
-                placeholder='Search support topics...'
+                id='default-search'
+                className='block  p-3 ps-10 text-md text-gray-900 border border-gray-400 rounded-lg bg-white focus:ring-blue-400 focus:border-blue-400 outline-none w-3/4 md:w-1/2 m-auto'
+                placeholder='Search for documents or articles...'
                 required
               />
             </div>
           </form>
         </div>
 
-        <div className='mt-24 shadow-blue-100  md:mt-32 lg:mt-40 shadow-lg w-10/12 m-auto text-center my-7 md:my-12 space-y-3'>
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
+        <div className=' shadow-custom shadow-gray-400 py-2  w-10/12 m-auto text-center  my-10 md:my-16 space-y-4'>
+          <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight'>
             Specialized Consulting by Experts
           </h1>
-          <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4 p-10'>
+          <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4 px-10 pb-7'>
             Do you need help selecting the right solutions for your business?
             Our team of experts is here to assist you every step of the way.
           </p>
@@ -95,48 +71,54 @@ const Support: React.FC<PageProps> = () => {
         dispachitems={serviceFeatures} // Assuming 'dispatchItems' is the correct prop name
       />
 
-      <div className='p-10 text-center text-3xl font-bold'>
-        Explore Support Categories
-      </div>
+      <SupportLayout
+        direction={""}
+        menuItems={[]}
+        activeMenuItem={""}
+        handleMenuClick={function (btn: string): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
 
-      <SupportLayout />
-
-      <div className='mt-24 shadow-blue-100  md:mt-32 lg:mt-40 shadow-lg w-10/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10'>
-        <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight'>
+      <div className=' my-10 md:my-16 shadow-custom shadow-gray-300  w-10/12 m-auto text-center   py-8'>
+        <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold  leading-tight'>
           Direct Contact
         </h1>
-        <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4 p-10'>
+        <p className='text-md md:text-lg lg:text-xl m-auto w-3/4 mt-4 mb-8 '>
           Get in touch with our support team via chat or phone for immediate
           assistance
         </p>
-        <div className='mt-8 md:mt-10 flex flex-col md:flex-row justify-center items-center mx-3 md:mx-0 lg:mx-0 gap-5'>
-          <button className='bg-blue-700 text-white rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-auto'>
+        <div className=' flex flex-col md:flex-row justify-center items-center mx-3 md:mx-0 lg:mx-0 gap-5'>
+          <button className='bg-blue-700 text-white rounded-md px-4 py-3  w-full lg:w-1/6 md:w-auto'>
             Call Us
           </button>
-          <button className='bg-white text-blue-900 border border-blue-600 rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-auto'>
+          <button className='bg-white text-blue-900 border border-blue-800 rounded-lg px-4 py-3  w-full lg:w-1/6 md:w-auto'>
             Start Chat Now
           </button>
         </div>
       </div>
-      <div className='mt-24 shadow-blue-100  md:mt-32 lg:mt-40 shadow-lg w-10/12 m-auto text-center my-7 md:my-12 space-y-3 pb-10 '>
+      <div className='pb-6  shadow-custom shadow-gray-300 w-10/12 m-auto text-center  my-10 md:my-16 space-y-6  '>
+        <h1 className='pt-6 text-xl md:text-3xl lg:text-5xl font-extrabold  leading-tight'>
+          Direct Contact
+        </h1>
         <input
           type='text'
           id='username'
-          className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 block w-3/4 p-2.5 m-auto outline-none'
+          className='bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 block w-3/4 p-2.5 m-auto outline-none'
           placeholder='Full Name'
           required
         />
         <input
           type='email'
           id='email'
-          className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500  block w-3/4 p-2.5 m-auto outline-none'
+          className='bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500  block w-3/4 p-2.5 m-auto outline-none'
           placeholder='Email Address'
           required
         />
 
         <select
           id='countries'
-          className='bg-gray-50 border border-gray-300 text-blue-900 text-sm rounded-lg focus:ring-blue-500  block w-3/4 p-2.5 m-auto outline-none '
+          className='bg-gray-50 border border-gray-400 text-blue-900 text-sm rounded-lg focus:ring-blue-500  block w-3/4 p-2.5 m-auto outline-none '
         >
           <option selected>select Category</option>
           <option value='Category'>select Category</option>
@@ -147,7 +129,7 @@ const Support: React.FC<PageProps> = () => {
         <textarea
           id='message'
           rows='4'
-          class='block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500  m-auto outline-none'
+          class='block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-400 focus:ring-blue-500  m-auto outline-none'
           placeholder='Detailed Description of the issue'
         ></textarea>
         <button className='bg-blue-600 text-white rounded-lg px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-auto '>

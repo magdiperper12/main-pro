@@ -21,8 +21,8 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
 
   return (
     <div className={`${direction}`}>
-      <nav className='fixed top-0 z-50 w-full bg-zinc-50 shadow-lg sm:fixed flex lg:justify-between lg:border-b-2 lg:border-blue-50 items-center py-2 space-x-4 flex-nowrap justify-around'>
-        {/* <div className='container w-full flex  justify-around  '> */}
+      <div className='w-full h-20 top-0'></div>
+      <nav className='fixed top-0 z-50 w-full bg-zinc-50 shadow-slate-200 shadow-lg sm:fixed flex lg:justify-between lg:border-b-2 lg:border-blue-50 items-center py-2 space-x-4 flex-nowrap justify-around'>
         <div className='flex items-center justify-center '>
           <MobileNav />
           <LogoWithText />
@@ -36,8 +36,11 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
             {[
               { name: "Products", url: "/products" },
               { name: "Solutions", url: "/solution" },
-              { name: "Resources & Support", url: "/Resources" },
-              { name: "Developers", url: "/#" },
+              {
+                name: "Resources & Support",
+                url: "/support-Resorce/resources",
+              },
+              { name: "Developers", url: "/developer/devloper" },
               { name: "Pricing", url: "/pricing" },
             ].map((item, index) => (
               <li
@@ -55,7 +58,7 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
             ))}
           </ul>
         </div>
-        <div className='flex items-center justify-center '>
+        <div className='flex items-center justify-center  '>
           <div className='relative'>
             <button
               className='flex font-bold items-center text-gray-700  py-2 px-4  transition-transform duration-300 hover:scale-105'
@@ -65,7 +68,7 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
               {direction === "ltr" ? "EN" : "ع"}
             </button>
             {isDropdownOpen && (
-              <div className='absolute font-bold right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50'>
+              <div className='absolute font-bold end-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50'>
                 <ul className='py-1'>
                   <li>
                     <button
