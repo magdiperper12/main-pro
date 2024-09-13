@@ -15,7 +15,7 @@ const ChannelFooter: React.FC<Channelfooterprops> = ({
 }) => {
   return (
     <div className=' my-10 md:my-16 '>
-      <div className='container mx-auto text-center'>
+      <div className='container mx-auto text-center px-2 md:px-0 lg:px-0'>
         <div className='sm:rounded-0 text-center'>
           {/* Header of the page */}
           <div>
@@ -27,11 +27,11 @@ const ChannelFooter: React.FC<Channelfooterprops> = ({
             </p>
           </div>
           {/* Buttons */}
-          <div className='mt-8 md:mt-10 flex flex-col md:flex-row justify-center items-center mx-3 md:mx-0 lg:mx-0 gap-5'>
-            <button className='bg-blue-700 text-white rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-auto'>
+          <div className='mt-8 md:mt-10 flex flex-col md:flex-row justify-center items-center mx-3 md:mx-0 lg:mx-0 md:gap-5'>
+            <button className='bg-blue-700 text-white rounded-md px-4 py-3 mb-4 md:mb-0  w-full lg:w-1/6 md:w-1/3 '>
               {button}
             </button>
-            <button className='bg-white text-blue-900 border border-blue-600 rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-auto'>
+            <button className='bg-white text-blue-900 border border-blue-600 rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-1/3'>
               {secoundButton}
             </button>
           </div>
