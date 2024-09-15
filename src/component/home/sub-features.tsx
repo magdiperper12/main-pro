@@ -3,7 +3,7 @@ import image from "../../images/header.jpg";
 
 function SubFeatures() {
   return (
-    <div className='my-5 md:my-0'>
+    <div className='my-7 md:my-0'>
       <div className='text-gray-700 px-4 md:px-0 md:p-10 text-center'>
         <div className='container mx-auto md:px-5 md:py-2 lg:px-32 lg:pt-12'>
           <div className='flex flex-wrap -m-2'>

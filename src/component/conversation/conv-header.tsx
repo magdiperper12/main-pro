@@ -31,12 +31,12 @@ const ConvHeader: React.FC<Channelheaderprops> = ({
             </div>
           </div>
         </div>
-        <div className='flex w-full sm:w-full md:w-1/2 lg:w-1/2 order-1 md:order-2 rtl:order-1 '>
-          <div className='w-full p-2 md:p-4'>
+        <div className='flex w-full sm:w-full md:w-1/2 lg:w-1/2 h-auto order-1 md:order-2 rtl:order-1 '>
+          <div className=''>
             <img
               src={image}
               alt=''
-              className= 'w-12/12  h-auto md:h-96 m-auto lg:h-96'
+              className='w-12/12  h-auto md:h-96 m-auto lg:h-96'
             />
           </div>
         </div>

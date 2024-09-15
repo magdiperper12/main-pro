@@ -94,7 +94,7 @@ const DigitalPage: React.FC<PageProps> = () => {
         image={image1}
         sbtn=' Get a Free Demo'
         fbtn='Contact an Expert'
-      />
+      /> <div className="md:-mt-10 lg:-mt-20  "></div>
       <SecoundDispatch
         theheader='   Benefit from a wide range of features that make us your ideal
               partner'

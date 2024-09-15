@@ -72,9 +72,9 @@ const Testimonial = () => {
   };
 
   return (
-    <div className='mt-12'>
-      <div className='mt-20 relative'>
-        <div className='flex justify-between absolute top-5 md:top-14 w-full '>
+    <div className='mt-0 md:mt-12'>
+      <div className='mt-8 md:mt-20 relative'>
+        <div className='flex justify-between absolute top-10 md:top-14 w-full '>
           <div
             className='border-2 rounded-full w-10 h-10 lg:w-20 md:w-20 sm:w-10 lg:h-20 md:h-20 sm:h-10 flex justify-center relative  cursor-pointer mx-3 lg:mx-10 md:10  order-1 rtl:order-2'
             onClick={prevSlide}
@@ -92,9 +92,8 @@ const Testimonial = () => {
         {slides.map((item, index) => (
           <div
             key={index}
-            className={`text-center w-full mb-7 ${
-              index === currentSlide ? "" : "hidden"
-            }`}
+            className={`text-center w-full mb-7 ${index === currentSlide ? "" : "hidden"
+              }`}
           >
             <div className='text-center w-full flex justify-center text-lg md:text-xl lg:text-2xl pt-10 gap-1 mb-5'>
               {item.stars}
@@ -139,9 +138,8 @@ const Testimonial = () => {
           {slides.map((_, index) => (
             <span
               key={index}
-              className={`text-2xl ${
-                index === currentSlide ? "opacity-100" : "opacity-30"
-              } inline-block`}
+              className={`text-2xl ${index === currentSlide ? "opacity-100" : "opacity-30"
+                } inline-block`}
             >
               <GoDotFill />
             </span>

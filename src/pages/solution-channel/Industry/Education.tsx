@@ -63,7 +63,7 @@ const experianceitems = [
   {
     heading: "Training Staff and Engaging Students with Botbat",
     text: "Ensure maximum benefit from the Botbat system by training staff and engaging students",
-    image: image4,
+    image: image1,
     list: [
       "    Train administrators and teachers on using the Botbat system",
       "   Guide students in using educational platforms",

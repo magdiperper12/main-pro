@@ -13,7 +13,7 @@ const Features: React.FC = () => {
   return (
     <div>
       {/* Header of the page */}
-      <div className='text-center mt-4 md:my-12'>
+      <div className='text-center  my-4 md:my-12'>
         <p className='text-lg md:text-xl lg:text-2xl font-extrabold'>Journey</p>
         <h1 className='text-xl md:text-3xl lg:text-4xl font-extrabold mt-2 md:mt-5 leading-tight'>
           Your Success Journey with Botbat

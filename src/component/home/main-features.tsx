@@ -8,7 +8,7 @@ import { FaBullhorn } from "react-icons/fa";
 
 const MainFeatures = () => {
   return (
-    <section className='bg-gray-100 py-10 md:py-20'>
+    <section className='bg-gray-100 py-12 md:py-20'>
       <div className='container mx-auto px-4'>
         <div className='text-center pb-10 md:pb-20'>
           <p className='text-lg md:text-xl lg:text-2xl font-extrabold'>

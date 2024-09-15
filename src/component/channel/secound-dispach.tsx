@@ -21,11 +21,11 @@ const SecoundDispatch: React.FC<DispatchProps> = ({
     <div>
       <section className='my-10 md:my-16'>
         <div className='container mx-auto px-0 lg:px-4 md:px-4 sm:px-0'>
-          <div className='text-center pb-20'>
-            <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight w-3/4 md:w-3/4 lg:w-2/4 m-auto'>
+          <div className='text-center pb-8 md:pb-16 lg:pb-20'>
+            <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight w-11/12 md:w-3/4 lg:w-2/4 m-auto'>
               {theheader}
             </h1>
-            <p className='text-lg md:text-xl lg:text-2xl mt-5 flex w-3/4 m-auto'>
+            <p className='text-lg md:text-xl lg:text-2xl mt-3 md:mt-5 flex w-11/12 md:w-3/4 m-auto'>
               {thescoundheader}
             </p>
           </div>
@@ -33,7 +33,7 @@ const SecoundDispatch: React.FC<DispatchProps> = ({
             {dispachitems.map((item, index) => (
               <div
                 key={index}
-                className='text-center bg-blue-50 shadow-md shadow-blue-100 p-7 sm:p-16  md:p-3   h-auto lg:min-h-96 md:min-h-80 sm:min-h-52 rounded-xl  hover:rotate-3 hover:shadow-blue-200 hover:shadow-xl  duration-300 mb-7 '
+                className='mx-1 md:mx-0 text-center bg-blue-50 shadow-md shadow-blue-100 p-7 sm:p-16  md:p-3   h-auto lg:min-h-96 md:min-h-80 sm:min-h-52 rounded-xl  hover:rotate-3 hover:shadow-blue-200 hover:shadow-xl  duration-300 mb-3 md:mb-7 '
               >
                 <item.icon className='text-5xl md:text-5xl lg:text-8xl text-blue-600  mx-auto my-8  hover:scale-105 duration-300 hover:drop-shadow-lg' />
                 <p className='text-3xl font-bold text-gray-800 mb-3'>

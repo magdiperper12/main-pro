@@ -64,7 +64,7 @@ const experianceitems = [
   {
     heading: "Implementing the Solution and Training Your Team",
     text: "We apply the solutions and ensure your team is equipped with the knowledge and tools necessary to use our solutions, guaranteeing the highest levels of efficiency and performance",
-    image: image4,
+    image: image1,
     list: [
       "   Efficient solution implementation and team training",
       "   Ongoing technical support to ensure successful operations",

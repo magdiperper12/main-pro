@@ -64,7 +64,7 @@ const experianceitems = [
   {
     heading: "Implementing Solutions and Training Teams",
     text: "Efficiently implement new solutions while providing comprehensive team training to ensure rapid adaptation and optimal use of modern technologies",
-    image: image4,
+    image: image1,
     list: [
       "   Seamless integration with existing government systems",
       "    Providing specialized training for different teams",

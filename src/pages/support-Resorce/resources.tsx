@@ -81,7 +81,7 @@ const Resources: React.FC<PageProps> = () => {
         image={image3}
         title='Resources and Support for All Your Needs'
         paragraph='Explore the solutions we offer to support and enhance your business using our advanced tools while ensuring complete security for your data'
-      />
+      /> <div className="-mt-4 md:-mt-16 "></div>
       <ThirdConvContent
         dispachitems={dispachitems}
         theheader='Explore our support and resources sections to find the solutions and information you need.'

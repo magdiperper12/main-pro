@@ -26,12 +26,12 @@ const SupportExplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
   };
 
   return (
-    <div className='mb-10 md:mb-16'>
+    <div className='mb-10 md:mb-16 -mt-10 md:-mt-0'>
       <div className='container mx-auto lg:px-4 sm:px-1 text-center'>
-        <div className='flex flex-col space-y-4'>
+        <div className='flex flex-col space-y-4 '>
           {experienceItems.map((item, index) => (
             <div
-              className='flex flex-col md:flex-row-reverse md:space-x-8 '
+              className='flex flex-col md:flex-row-reverse md:space-x-8  '
               key={index}
             >
               {item.image ? (
@@ -47,9 +47,8 @@ const SupportExplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
               )}
 
               <div
-                className={`w-full px-12 ${
-                  item.image ? "md:w-1/2" : "md:w-full"
-                } text-start mt-8 md:mt-12`}
+                className={`w-full px-4 md:px-0 lg:px-12 ${item.image ? "md:w-1/2" : "md:w-full"
+                  } text-start mt-8 md:mt-12`}
               >
                 <h2 className='text-2xl md:text-3xl font-semibold mb-4'>
                   {item.heading}
@@ -77,11 +76,10 @@ const SupportExplor: React.FC<ExperienceProps> = ({ experienceItems }) => {
                       </div>
 
                       <div
-                        className={`overflow-hidden transition-max-height duration-500 ease-in-out ${
-                          expandedIndex === faqIndex
-                            ? "max-h-64 opacity-100"
-                            : "max-h-0 opacity-0"
-                        }`}
+                        className={`overflow-hidden transition-max-height duration-500 ease-in-out ${expandedIndex === faqIndex
+                          ? "max-h-64 opacity-100"
+                          : "max-h-0 opacity-0"
+                          }`}
                       >
                         <p className='text-base  md:text-lg sm:text-base text-blue-900 '>
                           {faq.answer}

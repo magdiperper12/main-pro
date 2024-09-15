@@ -16,7 +16,7 @@ const ChannelHeader: React.FC<Channelheaderprops> = ({
   sbtn,
 }) => {
   return (
-    <div className='mb-16 md:mb-36 lg:mb-60 -mt-10 lg:-mt-5 px-5 md:px-3 lg:px-0'>
+    <div className='mb-8 md:mb-20 lg:mb-36 -mt-10 lg:-mt-5 px-5 md:px-3 lg:px-0'>
       <div className='flex item-center w-full  lg:px-12 py-2 md:pt-12 flex-wrap mx-auto '>
         <div className='flex w-full sm:w-full md:w-1/2 lg:w-1/2 order-1 md:order-2 rtl:order-1 '>
           <div className='w-full p-2 md:p-4'>

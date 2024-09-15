@@ -13,18 +13,18 @@ const ImageHead: React.FC<Channelheaderprops> = ({
 }) => {
   return (
     <div>
-      <div className='my-10 md:my-16'>
+      <div className='mt-7 md:mt-0 md:my-12'>
         <div className='text-center  md:mb-3 mb-2 md:mt-12 space-y-3'>
-          <h1 className='text-xl md:text-3xl lg:text-5xl w-7/12 m-auto font-extrabold mt-5 leading-tight'>
+          <h1 className='text-xl md:text-3xl lg:text-5xl w-10/12 md:9/12 lg:w-7/12 m-auto font-extrabold mt-5 leading-tight'>
             {title}
           </h1>
-          <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4'>
+          <p className='text-lg md:text-xl lg:text-2xl m-auto  w-10/12  md:9/12 lg:w-3/4'>
             {paragraph}
           </p>
         </div>
       </div>
-      <div className='w-full h-96 sm:mb-10 md:mb-32 overflow-hidden '>
-        <img src={image} alt='' className='w-3/4 m-auto bg-cover ' />
+      <div className='w-full h-auto mb-0 md:mb-32 overflow-hidden md:-mt-10 '>
+        <img src={image} alt='' className=' w-full md:w-3/4 m-auto bg-cover ' />
       </div>
     </div>
   );

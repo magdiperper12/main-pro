@@ -2,7 +2,7 @@ import React from "react";
 
 function CallToSubscribe() {
   return (
-    <div className=' pb-10 pt-3 md:py-24  md:mt-20'>
+    <div className=' pb-10 pt-4 md:py-24  md:mt-20'>
       <div className='container mx-auto text-center'>
         <div className='sm:rounded-0 text-center'>
           {/* Header of the page */}
