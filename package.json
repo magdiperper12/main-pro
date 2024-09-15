@@ -26,8 +26,6 @@
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-source-graphql": "^5.13.1",
-    "gatsby-source-strapi": "^3.3.3",
-    "gatsby-source-strapi-graphql": "^6.1.2",
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "postcss": "^8.4.39",
