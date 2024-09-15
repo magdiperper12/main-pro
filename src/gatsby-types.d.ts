@@ -28,6 +28,16 @@ type Scalars = {
   GatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData;
   /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
   JSON: Record<string, unknown>;
+  /** A date string, such as 2007-12-03, compliant with the `full-date` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar. */
+  STRAPI_Date: any;
+  /** A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar. */
+  STRAPI_DateTime: any;
+  /** A string used to identify an i18n locale */
+  STRAPI_I18NLocaleCode: any;
+  /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
+  STRAPI_JSON: any;
+  /** The `Upload` scalar type represents a file upload. */
+  STRAPI_Upload: any;
 };
 
 type AVIFOptions = {
@@ -377,8 +387,6 @@ type File = Node & {
   readonly birthtime: Maybe<Scalars['Date']>;
   /** @deprecated Use `birthTime` instead */
   readonly birthtimeMs: Maybe<Scalars['Float']>;
-  readonly blksize: Maybe<Scalars['Int']>;
-  readonly blocks: Maybe<Scalars['Int']>;
   readonly changeTime: Scalars['Date'];
   /** Returns the first child node of type ImageSharp or null if there are no children of given type on this node */
   readonly childImageSharp: Maybe<ImageSharp>;
@@ -403,8 +411,6 @@ type File = Node & {
   readonly nlink: Scalars['Int'];
   readonly parent: Maybe<Node>;
   readonly prettySize: Scalars['String'];
-  /** Copy file to static directory and return public url to it */
-  readonly publicURL: Maybe<Scalars['String']>;
   readonly rdev: Scalars['Int'];
   readonly relativeDirectory: Scalars['String'];
   readonly relativePath: Scalars['String'];
@@ -524,8 +530,6 @@ type FileFieldSelector = {
   readonly birthTime: InputMaybe<FieldSelectorEnum>;
   readonly birthtime: InputMaybe<FieldSelectorEnum>;
   readonly birthtimeMs: InputMaybe<FieldSelectorEnum>;
-  readonly blksize: InputMaybe<FieldSelectorEnum>;
-  readonly blocks: InputMaybe<FieldSelectorEnum>;
   readonly changeTime: InputMaybe<FieldSelectorEnum>;
   readonly childImageSharp: InputMaybe<ImageSharpFieldSelector>;
   readonly children: InputMaybe<NodeFieldSelector>;
@@ -548,7 +552,6 @@ type FileFieldSelector = {
   readonly nlink: InputMaybe<FieldSelectorEnum>;
   readonly parent: InputMaybe<NodeFieldSelector>;
   readonly prettySize: InputMaybe<FieldSelectorEnum>;
-  readonly publicURL: InputMaybe<FieldSelectorEnum>;
   readonly rdev: InputMaybe<FieldSelectorEnum>;
   readonly relativeDirectory: InputMaybe<FieldSelectorEnum>;
   readonly relativePath: InputMaybe<FieldSelectorEnum>;
@@ -567,8 +570,6 @@ type FileFilterInput = {
   readonly birthTime: InputMaybe<DateQueryOperatorInput>;
   readonly birthtime: InputMaybe<DateQueryOperatorInput>;
   readonly birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  readonly blksize: InputMaybe<IntQueryOperatorInput>;
-  readonly blocks: InputMaybe<IntQueryOperatorInput>;
   readonly changeTime: InputMaybe<DateQueryOperatorInput>;
   readonly childImageSharp: InputMaybe<ImageSharpFilterInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
@@ -591,7 +592,6 @@ type FileFilterInput = {
   readonly nlink: InputMaybe<IntQueryOperatorInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
   readonly prettySize: InputMaybe<StringQueryOperatorInput>;
-  readonly publicURL: InputMaybe<StringQueryOperatorInput>;
   readonly rdev: InputMaybe<IntQueryOperatorInput>;
   readonly relativeDirectory: InputMaybe<StringQueryOperatorInput>;
   readonly relativePath: InputMaybe<StringQueryOperatorInput>;
@@ -651,8 +651,6 @@ type FileSortInput = {
   readonly birthTime: InputMaybe<SortOrderEnum>;
   readonly birthtime: InputMaybe<SortOrderEnum>;
   readonly birthtimeMs: InputMaybe<SortOrderEnum>;
-  readonly blksize: InputMaybe<SortOrderEnum>;
-  readonly blocks: InputMaybe<SortOrderEnum>;
   readonly changeTime: InputMaybe<SortOrderEnum>;
   readonly childImageSharp: InputMaybe<ImageSharpSortInput>;
   readonly children: InputMaybe<NodeSortInput>;
@@ -675,7 +673,6 @@ type FileSortInput = {
   readonly nlink: InputMaybe<SortOrderEnum>;
   readonly parent: InputMaybe<NodeSortInput>;
   readonly prettySize: InputMaybe<SortOrderEnum>;
-  readonly publicURL: InputMaybe<SortOrderEnum>;
   readonly rdev: InputMaybe<SortOrderEnum>;
   readonly relativeDirectory: InputMaybe<SortOrderEnum>;
   readonly relativePath: InputMaybe<SortOrderEnum>;
@@ -721,6 +718,128 @@ type GatsbyImagePlaceholder =
   | 'dominantColor'
   | 'none'
   | 'tracedSVG';
+
+type GraphQLSource = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly fieldName: Maybe<Scalars['String']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly parent: Maybe<Node>;
+  readonly typeName: Maybe<Scalars['String']>;
+};
+
+type GraphQLSourceConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<GraphQLSourceEdge>;
+  readonly group: ReadonlyArray<GraphQLSourceGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<GraphQLSource>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type GraphQLSourceConnection_distinctArgs = {
+  field: GraphQLSourceFieldSelector;
+};
+
+
+type GraphQLSourceConnection_groupArgs = {
+  field: GraphQLSourceFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type GraphQLSourceConnection_maxArgs = {
+  field: GraphQLSourceFieldSelector;
+};
+
+
+type GraphQLSourceConnection_minArgs = {
+  field: GraphQLSourceFieldSelector;
+};
+
+
+type GraphQLSourceConnection_sumArgs = {
+  field: GraphQLSourceFieldSelector;
+};
+
+type GraphQLSourceEdge = {
+  readonly next: Maybe<GraphQLSource>;
+  readonly node: GraphQLSource;
+  readonly previous: Maybe<GraphQLSource>;
+};
+
+type GraphQLSourceFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly fieldName: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly typeName: InputMaybe<FieldSelectorEnum>;
+};
+
+type GraphQLSourceFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly fieldName: InputMaybe<StringQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly typeName: InputMaybe<StringQueryOperatorInput>;
+};
+
+type GraphQLSourceGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<GraphQLSourceEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<GraphQLSourceGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<GraphQLSource>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type GraphQLSourceGroupConnection_distinctArgs = {
+  field: GraphQLSourceFieldSelector;
+};
+
+
+type GraphQLSourceGroupConnection_groupArgs = {
+  field: GraphQLSourceFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type GraphQLSourceGroupConnection_maxArgs = {
+  field: GraphQLSourceFieldSelector;
+};
+
+
+type GraphQLSourceGroupConnection_minArgs = {
+  field: GraphQLSourceFieldSelector;
+};
+
+
+type GraphQLSourceGroupConnection_sumArgs = {
+  field: GraphQLSourceFieldSelector;
+};
+
+type GraphQLSourceSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly fieldName: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly typeName: InputMaybe<SortOrderEnum>;
+};
 
 type ImageCropFocus =
   | 17
@@ -1308,6 +1427,7 @@ type PotraceTurnPolicy =
 type Query = {
   readonly allDirectory: DirectoryConnection;
   readonly allFile: FileConnection;
+  readonly allGraphQlSource: GraphQLSourceConnection;
   readonly allImageSharp: ImageSharpConnection;
   readonly allSite: SiteConnection;
   readonly allSiteBuildMetadata: SiteBuildMetadataConnection;
@@ -1316,12 +1436,14 @@ type Query = {
   readonly allSitePlugin: SitePluginConnection;
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
+  readonly graphQlSource: Maybe<GraphQLSource>;
   readonly imageSharp: Maybe<ImageSharp>;
   readonly site: Maybe<Site>;
   readonly siteBuildMetadata: Maybe<SiteBuildMetadata>;
   readonly siteFunction: Maybe<SiteFunction>;
   readonly sitePage: Maybe<SitePage>;
   readonly sitePlugin: Maybe<SitePlugin>;
+  readonly strapi: STRAPI;
 };
 
 
@@ -1338,6 +1460,14 @@ type Query_allFileArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ReadonlyArray<InputMaybe<FileSortInput>>>;
+};
+
+
+type Query_allGraphQlSourceArgs = {
+  filter: InputMaybe<GraphQLSourceFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<GraphQLSourceSortInput>>>;
 };
 
 
@@ -1437,8 +1567,6 @@ type Query_fileArgs = {
   birthTime: InputMaybe<DateQueryOperatorInput>;
   birthtime: InputMaybe<DateQueryOperatorInput>;
   birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  blksize: InputMaybe<IntQueryOperatorInput>;
-  blocks: InputMaybe<IntQueryOperatorInput>;
   changeTime: InputMaybe<DateQueryOperatorInput>;
   childImageSharp: InputMaybe<ImageSharpFilterInput>;
   children: InputMaybe<NodeFilterListInput>;
@@ -1461,7 +1589,6 @@ type Query_fileArgs = {
   nlink: InputMaybe<IntQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
   prettySize: InputMaybe<StringQueryOperatorInput>;
-  publicURL: InputMaybe<StringQueryOperatorInput>;
   rdev: InputMaybe<IntQueryOperatorInput>;
   relativeDirectory: InputMaybe<StringQueryOperatorInput>;
   relativePath: InputMaybe<StringQueryOperatorInput>;
@@ -1469,6 +1596,16 @@ type Query_fileArgs = {
   size: InputMaybe<IntQueryOperatorInput>;
   sourceInstanceName: InputMaybe<StringQueryOperatorInput>;
   uid: InputMaybe<IntQueryOperatorInput>;
+};
+
+
+type Query_graphQlSourceArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  fieldName: InputMaybe<StringQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  typeName: InputMaybe<StringQueryOperatorInput>;
 };
 
 
@@ -1555,6 +1692,1445 @@ type Query_sitePluginArgs = {
   resolve: InputMaybe<StringQueryOperatorInput>;
   ssrAPIs: InputMaybe<StringQueryOperatorInput>;
   version: InputMaybe<StringQueryOperatorInput>;
+};
+
+type STRAPI = {
+  readonly blog: Maybe<STRAPI_BlogEntityResponse>;
+  readonly blogs: Maybe<STRAPI_BlogEntityResponseCollection>;
+  readonly features: Maybe<STRAPI_FeaturesEntityResponse>;
+  readonly featuresHeadline: Maybe<STRAPI_FeaturesHeadlineEntityResponse>;
+  readonly featuresHeadlines: Maybe<STRAPI_FeaturesHeadlineEntityResponseCollection>;
+  readonly footer: Maybe<STRAPI_FooterEntityResponse>;
+  readonly footerItem: Maybe<STRAPI_FooterItemEntityResponse>;
+  readonly footerItems: Maybe<STRAPI_FooterItemEntityResponseCollection>;
+  readonly hero: Maybe<STRAPI_HeroEntityResponse>;
+  readonly heroes: Maybe<STRAPI_HeroEntityResponseCollection>;
+  readonly home: Maybe<STRAPI_HomeEntityResponse>;
+  readonly i18NLocale: Maybe<STRAPI_I18NLocaleEntityResponse>;
+  readonly i18NLocales: Maybe<STRAPI_I18NLocaleEntityResponseCollection>;
+  readonly me: Maybe<STRAPI_UsersPermissionsMe>;
+  readonly menu: Maybe<STRAPI_MenuEntityResponse>;
+  readonly menueItem: Maybe<STRAPI_MenueItemEntityResponse>;
+  readonly menueItems: Maybe<STRAPI_MenueItemEntityResponseCollection>;
+  readonly resFeatures: Maybe<STRAPI_FeaturesEntityResponseCollection>;
+  readonly siteSettings: Maybe<STRAPI_SiteSettingsEntityResponse>;
+  readonly uploadFile: Maybe<STRAPI_UploadFileEntityResponse>;
+  readonly uploadFiles: Maybe<STRAPI_UploadFileEntityResponseCollection>;
+  readonly uploadFolder: Maybe<STRAPI_UploadFolderEntityResponse>;
+  readonly uploadFolders: Maybe<STRAPI_UploadFolderEntityResponseCollection>;
+  readonly usersPermissionsRole: Maybe<STRAPI_UsersPermissionsRoleEntityResponse>;
+  readonly usersPermissionsRoles: Maybe<STRAPI_UsersPermissionsRoleEntityResponseCollection>;
+  readonly usersPermissionsUser: Maybe<STRAPI_UsersPermissionsUserEntityResponse>;
+  readonly usersPermissionsUsers: Maybe<STRAPI_UsersPermissionsUserEntityResponseCollection>;
+};
+
+
+type STRAPI_blogArgs = {
+  id: InputMaybe<Scalars['ID']>;
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+};
+
+
+type STRAPI_blogsArgs = {
+  filters: InputMaybe<STRAPI_BlogFiltersInput>;
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_featuresArgs = {
+  id: InputMaybe<Scalars['ID']>;
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+};
+
+
+type STRAPI_featuresHeadlineArgs = {
+  id: InputMaybe<Scalars['ID']>;
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+};
+
+
+type STRAPI_featuresHeadlinesArgs = {
+  filters: InputMaybe<STRAPI_FeaturesHeadlineFiltersInput>;
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_footerArgs = {
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+};
+
+
+type STRAPI_footerItemArgs = {
+  id: InputMaybe<Scalars['ID']>;
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+};
+
+
+type STRAPI_footerItemsArgs = {
+  filters: InputMaybe<STRAPI_FooterItemFiltersInput>;
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_heroArgs = {
+  id: InputMaybe<Scalars['ID']>;
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+};
+
+
+type STRAPI_heroesArgs = {
+  filters: InputMaybe<STRAPI_HeroFiltersInput>;
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_homeArgs = {
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+};
+
+
+type STRAPI_i18NLocaleArgs = {
+  id: InputMaybe<Scalars['ID']>;
+};
+
+
+type STRAPI_i18NLocalesArgs = {
+  filters: InputMaybe<STRAPI_I18NLocaleFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_menuArgs = {
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+};
+
+
+type STRAPI_menueItemArgs = {
+  id: InputMaybe<Scalars['ID']>;
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+};
+
+
+type STRAPI_menueItemsArgs = {
+  filters: InputMaybe<STRAPI_MenueItemFiltersInput>;
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_resFeaturesArgs = {
+  filters: InputMaybe<STRAPI_FeaturesFiltersInput>;
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_siteSettingsArgs = {
+  locale: InputMaybe<Scalars['STRAPI_I18NLocaleCode']>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+};
+
+
+type STRAPI_uploadFileArgs = {
+  id: InputMaybe<Scalars['ID']>;
+};
+
+
+type STRAPI_uploadFilesArgs = {
+  filters: InputMaybe<STRAPI_UploadFileFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_uploadFolderArgs = {
+  id: InputMaybe<Scalars['ID']>;
+};
+
+
+type STRAPI_uploadFoldersArgs = {
+  filters: InputMaybe<STRAPI_UploadFolderFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_usersPermissionsRoleArgs = {
+  id: InputMaybe<Scalars['ID']>;
+};
+
+
+type STRAPI_usersPermissionsRolesArgs = {
+  filters: InputMaybe<STRAPI_UsersPermissionsRoleFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_usersPermissionsUserArgs = {
+  id: InputMaybe<Scalars['ID']>;
+};
+
+
+type STRAPI_usersPermissionsUsersArgs = {
+  filters: InputMaybe<STRAPI_UsersPermissionsUserFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+type STRAPI_Blog = {
+  readonly author: Maybe<Scalars['String']>;
+  readonly content: Maybe<Scalars['STRAPI_JSON']>;
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly locale: Maybe<Scalars['String']>;
+  readonly localizations: Maybe<STRAPI_BlogRelationResponseCollection>;
+  readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly publishedDate: Maybe<Scalars['STRAPI_Date']>;
+  readonly slug: Maybe<Scalars['String']>;
+  readonly tags: Maybe<Scalars['String']>;
+  readonly title: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+
+type STRAPI_Blog_localizationsArgs = {
+  filters: InputMaybe<STRAPI_BlogFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+type STRAPI_BlogEntity = {
+  readonly attributes: Maybe<STRAPI_Blog>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_BlogEntityResponse = {
+  readonly data: Maybe<STRAPI_BlogEntity>;
+};
+
+type STRAPI_BlogEntityResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_BlogEntity>;
+  readonly meta: STRAPI_ResponseCollectionMeta;
+};
+
+type STRAPI_BlogFiltersInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_BlogFiltersInput>>>;
+  readonly author: InputMaybe<STRAPI_StringFilterInput>;
+  readonly content: InputMaybe<STRAPI_JSONFilterInput>;
+  readonly createdAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly id: InputMaybe<STRAPI_IDFilterInput>;
+  readonly locale: InputMaybe<STRAPI_StringFilterInput>;
+  readonly localizations: InputMaybe<STRAPI_BlogFiltersInput>;
+  readonly not: InputMaybe<STRAPI_BlogFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_BlogFiltersInput>>>;
+  readonly publishedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly publishedDate: InputMaybe<STRAPI_DateFilterInput>;
+  readonly slug: InputMaybe<STRAPI_StringFilterInput>;
+  readonly tags: InputMaybe<STRAPI_StringFilterInput>;
+  readonly title: InputMaybe<STRAPI_StringFilterInput>;
+  readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+};
+
+type STRAPI_BlogInput = {
+  readonly author: InputMaybe<Scalars['String']>;
+  readonly content: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly publishedDate: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly slug: InputMaybe<Scalars['String']>;
+  readonly tags: InputMaybe<Scalars['String']>;
+  readonly title: InputMaybe<Scalars['String']>;
+};
+
+type STRAPI_BlogRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_BlogEntity>;
+};
+
+type STRAPI_BooleanFilterInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Boolean']>>>;
+  readonly between: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Boolean']>>>;
+  readonly contains: InputMaybe<Scalars['Boolean']>;
+  readonly containsi: InputMaybe<Scalars['Boolean']>;
+  readonly endsWith: InputMaybe<Scalars['Boolean']>;
+  readonly eq: InputMaybe<Scalars['Boolean']>;
+  readonly eqi: InputMaybe<Scalars['Boolean']>;
+  readonly gt: InputMaybe<Scalars['Boolean']>;
+  readonly gte: InputMaybe<Scalars['Boolean']>;
+  readonly in: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Boolean']>>>;
+  readonly lt: InputMaybe<Scalars['Boolean']>;
+  readonly lte: InputMaybe<Scalars['Boolean']>;
+  readonly ne: InputMaybe<Scalars['Boolean']>;
+  readonly nei: InputMaybe<Scalars['Boolean']>;
+  readonly not: InputMaybe<STRAPI_BooleanFilterInput>;
+  readonly notContains: InputMaybe<Scalars['Boolean']>;
+  readonly notContainsi: InputMaybe<Scalars['Boolean']>;
+  readonly notIn: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Boolean']>>>;
+  readonly notNull: InputMaybe<Scalars['Boolean']>;
+  readonly null: InputMaybe<Scalars['Boolean']>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Boolean']>>>;
+  readonly startsWith: InputMaybe<Scalars['Boolean']>;
+};
+
+type STRAPI_ComponentCallToActionsActions = {
+  readonly buttonText: Maybe<Scalars['String']>;
+  readonly buttonUrl: Maybe<Scalars['String']>;
+  readonly id: Scalars['ID'];
+};
+
+type STRAPI_ComponentCallToActionsActionsFiltersInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_ComponentCallToActionsActionsFiltersInput>>>;
+  readonly buttonText: InputMaybe<STRAPI_StringFilterInput>;
+  readonly buttonUrl: InputMaybe<STRAPI_StringFilterInput>;
+  readonly not: InputMaybe<STRAPI_ComponentCallToActionsActionsFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_ComponentCallToActionsActionsFiltersInput>>>;
+};
+
+type STRAPI_ComponentCallToActionsActionsInput = {
+  readonly buttonText: InputMaybe<Scalars['String']>;
+  readonly buttonUrl: InputMaybe<Scalars['String']>;
+  readonly id: InputMaybe<Scalars['ID']>;
+};
+
+type STRAPI_ComponentCallToActionsCallToAction = {
+  readonly id: Scalars['ID'];
+};
+
+type STRAPI_DateFilterInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_Date']>>>;
+  readonly between: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_Date']>>>;
+  readonly contains: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly containsi: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly endsWith: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly eq: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly eqi: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly gt: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly gte: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly in: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_Date']>>>;
+  readonly lt: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly lte: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly ne: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly nei: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly not: InputMaybe<STRAPI_DateFilterInput>;
+  readonly notContains: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly notContainsi: InputMaybe<Scalars['STRAPI_Date']>;
+  readonly notIn: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_Date']>>>;
+  readonly notNull: InputMaybe<Scalars['Boolean']>;
+  readonly null: InputMaybe<Scalars['Boolean']>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_Date']>>>;
+  readonly startsWith: InputMaybe<Scalars['STRAPI_Date']>;
+};
+
+type STRAPI_DateTimeFilterInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_DateTime']>>>;
+  readonly between: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_DateTime']>>>;
+  readonly contains: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly containsi: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly endsWith: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly eq: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly eqi: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly gt: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly gte: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly in: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_DateTime']>>>;
+  readonly lt: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly lte: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly ne: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly nei: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly not: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly notContains: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly notContainsi: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly notIn: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_DateTime']>>>;
+  readonly notNull: InputMaybe<Scalars['Boolean']>;
+  readonly null: InputMaybe<Scalars['Boolean']>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_DateTime']>>>;
+  readonly startsWith: InputMaybe<Scalars['STRAPI_DateTime']>;
+};
+
+type STRAPI_Features = {
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly dicription: Maybe<Scalars['STRAPI_JSON']>;
+  readonly header: Scalars['String'];
+  readonly locale: Maybe<Scalars['String']>;
+  readonly localizations: Maybe<STRAPI_FeaturesRelationResponseCollection>;
+  readonly mediaUrl: Maybe<STRAPI_UploadFileRelationResponseCollection>;
+  readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly subtitle: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+
+type STRAPI_Features_localizationsArgs = {
+  filters: InputMaybe<STRAPI_FeaturesFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_Features_mediaUrlArgs = {
+  filters: InputMaybe<STRAPI_UploadFileFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+type STRAPI_FeaturesEntity = {
+  readonly attributes: Maybe<STRAPI_Features>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_FeaturesEntityResponse = {
+  readonly data: Maybe<STRAPI_FeaturesEntity>;
+};
+
+type STRAPI_FeaturesEntityResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_FeaturesEntity>;
+  readonly meta: STRAPI_ResponseCollectionMeta;
+};
+
+type STRAPI_FeaturesFiltersInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_FeaturesFiltersInput>>>;
+  readonly createdAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly dicription: InputMaybe<STRAPI_JSONFilterInput>;
+  readonly header: InputMaybe<STRAPI_StringFilterInput>;
+  readonly id: InputMaybe<STRAPI_IDFilterInput>;
+  readonly locale: InputMaybe<STRAPI_StringFilterInput>;
+  readonly localizations: InputMaybe<STRAPI_FeaturesFiltersInput>;
+  readonly not: InputMaybe<STRAPI_FeaturesFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_FeaturesFiltersInput>>>;
+  readonly publishedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly subtitle: InputMaybe<STRAPI_StringFilterInput>;
+  readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+};
+
+type STRAPI_FeaturesHeadline = {
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly description: Maybe<Scalars['STRAPI_JSON']>;
+  readonly features: Maybe<STRAPI_FeaturesRelationResponseCollection>;
+  readonly header: Maybe<Scalars['String']>;
+  readonly locale: Maybe<Scalars['String']>;
+  readonly localizations: Maybe<STRAPI_FeaturesHeadlineRelationResponseCollection>;
+  readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly subTitle: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+
+type STRAPI_FeaturesHeadline_featuresArgs = {
+  filters: InputMaybe<STRAPI_FeaturesFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_FeaturesHeadline_localizationsArgs = {
+  filters: InputMaybe<STRAPI_FeaturesHeadlineFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+type STRAPI_FeaturesHeadlineEntity = {
+  readonly attributes: Maybe<STRAPI_FeaturesHeadline>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_FeaturesHeadlineEntityResponse = {
+  readonly data: Maybe<STRAPI_FeaturesHeadlineEntity>;
+};
+
+type STRAPI_FeaturesHeadlineEntityResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_FeaturesHeadlineEntity>;
+  readonly meta: STRAPI_ResponseCollectionMeta;
+};
+
+type STRAPI_FeaturesHeadlineFiltersInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_FeaturesHeadlineFiltersInput>>>;
+  readonly createdAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly description: InputMaybe<STRAPI_JSONFilterInput>;
+  readonly features: InputMaybe<STRAPI_FeaturesFiltersInput>;
+  readonly header: InputMaybe<STRAPI_StringFilterInput>;
+  readonly id: InputMaybe<STRAPI_IDFilterInput>;
+  readonly locale: InputMaybe<STRAPI_StringFilterInput>;
+  readonly localizations: InputMaybe<STRAPI_FeaturesHeadlineFiltersInput>;
+  readonly not: InputMaybe<STRAPI_FeaturesHeadlineFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_FeaturesHeadlineFiltersInput>>>;
+  readonly publishedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly subTitle: InputMaybe<STRAPI_StringFilterInput>;
+  readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+};
+
+type STRAPI_FeaturesHeadlineInput = {
+  readonly description: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly features: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly header: InputMaybe<Scalars['String']>;
+  readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly subTitle: InputMaybe<Scalars['String']>;
+};
+
+type STRAPI_FeaturesHeadlineRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_FeaturesHeadlineEntity>;
+};
+
+type STRAPI_FeaturesInput = {
+  readonly dicription: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly header: InputMaybe<Scalars['String']>;
+  readonly mediaUrl: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly subtitle: InputMaybe<Scalars['String']>;
+};
+
+type STRAPI_FeaturesRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_FeaturesEntity>;
+};
+
+type STRAPI_FileInfoInput = {
+  readonly alternativeText: InputMaybe<Scalars['String']>;
+  readonly caption: InputMaybe<Scalars['String']>;
+  readonly name: InputMaybe<Scalars['String']>;
+};
+
+type STRAPI_FloatFilterInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Float']>>>;
+  readonly between: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Float']>>>;
+  readonly contains: InputMaybe<Scalars['Float']>;
+  readonly containsi: InputMaybe<Scalars['Float']>;
+  readonly endsWith: InputMaybe<Scalars['Float']>;
+  readonly eq: InputMaybe<Scalars['Float']>;
+  readonly eqi: InputMaybe<Scalars['Float']>;
+  readonly gt: InputMaybe<Scalars['Float']>;
+  readonly gte: InputMaybe<Scalars['Float']>;
+  readonly in: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Float']>>>;
+  readonly lt: InputMaybe<Scalars['Float']>;
+  readonly lte: InputMaybe<Scalars['Float']>;
+  readonly ne: InputMaybe<Scalars['Float']>;
+  readonly nei: InputMaybe<Scalars['Float']>;
+  readonly not: InputMaybe<STRAPI_FloatFilterInput>;
+  readonly notContains: InputMaybe<Scalars['Float']>;
+  readonly notContainsi: InputMaybe<Scalars['Float']>;
+  readonly notIn: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Float']>>>;
+  readonly notNull: InputMaybe<Scalars['Boolean']>;
+  readonly null: InputMaybe<Scalars['Boolean']>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Float']>>>;
+  readonly startsWith: InputMaybe<Scalars['Float']>;
+};
+
+type STRAPI_Footer = {
+  readonly copyrights: Maybe<Scalars['String']>;
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly description: Maybe<Scalars['String']>;
+  readonly description2: Maybe<Scalars['String']>;
+  readonly footer_items: Maybe<STRAPI_FooterItemRelationResponseCollection>;
+  readonly locale: Maybe<Scalars['String']>;
+  readonly localizations: Maybe<STRAPI_FooterRelationResponseCollection>;
+  readonly logo: Maybe<STRAPI_UploadFileEntityResponse>;
+  readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly social_facebook: Maybe<Scalars['String']>;
+  readonly social_instagram: Maybe<Scalars['String']>;
+  readonly social_linkedin: Maybe<Scalars['String']>;
+  readonly social_whatsapp: Maybe<Scalars['String']>;
+  readonly social_x: Maybe<Scalars['String']>;
+  readonly social_youtube: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+
+type STRAPI_Footer_footer_itemsArgs = {
+  filters: InputMaybe<STRAPI_FooterItemFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_Footer_localizationsArgs = {
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+};
+
+type STRAPI_FooterEntity = {
+  readonly attributes: Maybe<STRAPI_Footer>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_FooterEntityResponse = {
+  readonly data: Maybe<STRAPI_FooterEntity>;
+};
+
+type STRAPI_FooterInput = {
+  readonly copyrights: InputMaybe<Scalars['String']>;
+  readonly description: InputMaybe<Scalars['String']>;
+  readonly description2: InputMaybe<Scalars['String']>;
+  readonly footer_items: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly logo: InputMaybe<Scalars['ID']>;
+  readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly social_facebook: InputMaybe<Scalars['String']>;
+  readonly social_instagram: InputMaybe<Scalars['String']>;
+  readonly social_linkedin: InputMaybe<Scalars['String']>;
+  readonly social_whatsapp: InputMaybe<Scalars['String']>;
+  readonly social_x: InputMaybe<Scalars['String']>;
+  readonly social_youtube: InputMaybe<Scalars['String']>;
+};
+
+type STRAPI_FooterItem = {
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly group_name: Maybe<Scalars['String']>;
+  readonly locale: Maybe<Scalars['String']>;
+  readonly localizations: Maybe<STRAPI_FooterItemRelationResponseCollection>;
+  readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly title: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly url: Maybe<Scalars['String']>;
+};
+
+
+type STRAPI_FooterItem_localizationsArgs = {
+  filters: InputMaybe<STRAPI_FooterItemFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+type STRAPI_FooterItemEntity = {
+  readonly attributes: Maybe<STRAPI_FooterItem>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_FooterItemEntityResponse = {
+  readonly data: Maybe<STRAPI_FooterItemEntity>;
+};
+
+type STRAPI_FooterItemEntityResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_FooterItemEntity>;
+  readonly meta: STRAPI_ResponseCollectionMeta;
+};
+
+type STRAPI_FooterItemFiltersInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_FooterItemFiltersInput>>>;
+  readonly createdAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly group_name: InputMaybe<STRAPI_StringFilterInput>;
+  readonly id: InputMaybe<STRAPI_IDFilterInput>;
+  readonly locale: InputMaybe<STRAPI_StringFilterInput>;
+  readonly localizations: InputMaybe<STRAPI_FooterItemFiltersInput>;
+  readonly not: InputMaybe<STRAPI_FooterItemFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_FooterItemFiltersInput>>>;
+  readonly publishedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly title: InputMaybe<STRAPI_StringFilterInput>;
+  readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly url: InputMaybe<STRAPI_StringFilterInput>;
+};
+
+type STRAPI_FooterItemInput = {
+  readonly group_name: InputMaybe<Scalars['String']>;
+  readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly title: InputMaybe<Scalars['String']>;
+  readonly url: InputMaybe<Scalars['String']>;
+};
+
+type STRAPI_FooterItemRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_FooterItemEntity>;
+};
+
+type STRAPI_FooterRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_FooterEntity>;
+};
+
+type STRAPI_GenericMorph = STRAPI_Blog | STRAPI_ComponentCallToActionsActions | STRAPI_ComponentCallToActionsCallToAction | STRAPI_Features | STRAPI_FeaturesHeadline | STRAPI_Footer | STRAPI_FooterItem | STRAPI_Hero | STRAPI_Home | STRAPI_I18NLocale | STRAPI_Menu | STRAPI_MenueItem | STRAPI_SiteSettings | STRAPI_UploadFile | STRAPI_UploadFolder | STRAPI_UsersPermissionsPermission | STRAPI_UsersPermissionsRole | STRAPI_UsersPermissionsUser;
+
+type STRAPI_Hero = {
+  readonly actions: Maybe<ReadonlyArray<Maybe<STRAPI_ComponentCallToActionsActions>>>;
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly description: Maybe<Scalars['STRAPI_JSON']>;
+  readonly locale: Maybe<Scalars['String']>;
+  readonly localizations: Maybe<STRAPI_HeroRelationResponseCollection>;
+  readonly media: Maybe<STRAPI_UploadFileRelationResponseCollection>;
+  readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly subtitle: Maybe<Scalars['String']>;
+  readonly title: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+
+type STRAPI_Hero_actionsArgs = {
+  filters: InputMaybe<STRAPI_ComponentCallToActionsActionsFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_Hero_localizationsArgs = {
+  filters: InputMaybe<STRAPI_HeroFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_Hero_mediaArgs = {
+  filters: InputMaybe<STRAPI_UploadFileFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+type STRAPI_HeroEntity = {
+  readonly attributes: Maybe<STRAPI_Hero>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_HeroEntityResponse = {
+  readonly data: Maybe<STRAPI_HeroEntity>;
+};
+
+type STRAPI_HeroEntityResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_HeroEntity>;
+  readonly meta: STRAPI_ResponseCollectionMeta;
+};
+
+type STRAPI_HeroFiltersInput = {
+  readonly actions: InputMaybe<STRAPI_ComponentCallToActionsActionsFiltersInput>;
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_HeroFiltersInput>>>;
+  readonly createdAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly description: InputMaybe<STRAPI_JSONFilterInput>;
+  readonly id: InputMaybe<STRAPI_IDFilterInput>;
+  readonly locale: InputMaybe<STRAPI_StringFilterInput>;
+  readonly localizations: InputMaybe<STRAPI_HeroFiltersInput>;
+  readonly not: InputMaybe<STRAPI_HeroFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_HeroFiltersInput>>>;
+  readonly publishedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly subtitle: InputMaybe<STRAPI_StringFilterInput>;
+  readonly title: InputMaybe<STRAPI_StringFilterInput>;
+  readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+};
+
+type STRAPI_HeroInput = {
+  readonly actions: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_ComponentCallToActionsActionsInput>>>;
+  readonly description: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly media: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly subtitle: InputMaybe<Scalars['String']>;
+  readonly title: InputMaybe<Scalars['String']>;
+};
+
+type STRAPI_HeroRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_HeroEntity>;
+};
+
+type STRAPI_Home = {
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly introHero: Maybe<STRAPI_HeroEntityResponse>;
+  readonly lastHero: Maybe<STRAPI_HeroEntityResponse>;
+  readonly locale: Maybe<Scalars['String']>;
+  readonly localizations: Maybe<STRAPI_HomeRelationResponseCollection>;
+  readonly name: Maybe<Scalars['String']>;
+  readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly sections: Maybe<STRAPI_FeaturesHeadlineRelationResponseCollection>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+
+type STRAPI_Home_localizationsArgs = {
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+};
+
+
+type STRAPI_Home_sectionsArgs = {
+  filters: InputMaybe<STRAPI_FeaturesHeadlineFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+type STRAPI_HomeEntity = {
+  readonly attributes: Maybe<STRAPI_Home>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_HomeEntityResponse = {
+  readonly data: Maybe<STRAPI_HomeEntity>;
+};
+
+type STRAPI_HomeInput = {
+  readonly introHero: InputMaybe<Scalars['ID']>;
+  readonly lastHero: InputMaybe<Scalars['ID']>;
+  readonly name: InputMaybe<Scalars['String']>;
+  readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly sections: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+};
+
+type STRAPI_HomeRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_HomeEntity>;
+};
+
+type STRAPI_I18NLocale = {
+  readonly code: Maybe<Scalars['String']>;
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly name: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+type STRAPI_I18NLocaleEntity = {
+  readonly attributes: Maybe<STRAPI_I18NLocale>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_I18NLocaleEntityResponse = {
+  readonly data: Maybe<STRAPI_I18NLocaleEntity>;
+};
+
+type STRAPI_I18NLocaleEntityResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_I18NLocaleEntity>;
+  readonly meta: STRAPI_ResponseCollectionMeta;
+};
+
+type STRAPI_I18NLocaleFiltersInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_I18NLocaleFiltersInput>>>;
+  readonly code: InputMaybe<STRAPI_StringFilterInput>;
+  readonly createdAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly id: InputMaybe<STRAPI_IDFilterInput>;
+  readonly name: InputMaybe<STRAPI_StringFilterInput>;
+  readonly not: InputMaybe<STRAPI_I18NLocaleFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_I18NLocaleFiltersInput>>>;
+  readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+};
+
+type STRAPI_IDFilterInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly between: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly contains: InputMaybe<Scalars['ID']>;
+  readonly containsi: InputMaybe<Scalars['ID']>;
+  readonly endsWith: InputMaybe<Scalars['ID']>;
+  readonly eq: InputMaybe<Scalars['ID']>;
+  readonly eqi: InputMaybe<Scalars['ID']>;
+  readonly gt: InputMaybe<Scalars['ID']>;
+  readonly gte: InputMaybe<Scalars['ID']>;
+  readonly in: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly lt: InputMaybe<Scalars['ID']>;
+  readonly lte: InputMaybe<Scalars['ID']>;
+  readonly ne: InputMaybe<Scalars['ID']>;
+  readonly nei: InputMaybe<Scalars['ID']>;
+  readonly not: InputMaybe<STRAPI_IDFilterInput>;
+  readonly notContains: InputMaybe<Scalars['ID']>;
+  readonly notContainsi: InputMaybe<Scalars['ID']>;
+  readonly notIn: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly notNull: InputMaybe<Scalars['Boolean']>;
+  readonly null: InputMaybe<Scalars['Boolean']>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly startsWith: InputMaybe<Scalars['ID']>;
+};
+
+type STRAPI_IntFilterInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Int']>>>;
+  readonly between: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Int']>>>;
+  readonly contains: InputMaybe<Scalars['Int']>;
+  readonly containsi: InputMaybe<Scalars['Int']>;
+  readonly endsWith: InputMaybe<Scalars['Int']>;
+  readonly eq: InputMaybe<Scalars['Int']>;
+  readonly eqi: InputMaybe<Scalars['Int']>;
+  readonly gt: InputMaybe<Scalars['Int']>;
+  readonly gte: InputMaybe<Scalars['Int']>;
+  readonly in: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Int']>>>;
+  readonly lt: InputMaybe<Scalars['Int']>;
+  readonly lte: InputMaybe<Scalars['Int']>;
+  readonly ne: InputMaybe<Scalars['Int']>;
+  readonly nei: InputMaybe<Scalars['Int']>;
+  readonly not: InputMaybe<STRAPI_IntFilterInput>;
+  readonly notContains: InputMaybe<Scalars['Int']>;
+  readonly notContainsi: InputMaybe<Scalars['Int']>;
+  readonly notIn: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Int']>>>;
+  readonly notNull: InputMaybe<Scalars['Boolean']>;
+  readonly null: InputMaybe<Scalars['Boolean']>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Int']>>>;
+  readonly startsWith: InputMaybe<Scalars['Int']>;
+};
+
+type STRAPI_JSONFilterInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_JSON']>>>;
+  readonly between: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_JSON']>>>;
+  readonly contains: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly containsi: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly endsWith: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly eq: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly eqi: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly gt: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly gte: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly in: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_JSON']>>>;
+  readonly lt: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly lte: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly ne: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly nei: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly not: InputMaybe<STRAPI_JSONFilterInput>;
+  readonly notContains: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly notContainsi: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly notIn: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_JSON']>>>;
+  readonly notNull: InputMaybe<Scalars['Boolean']>;
+  readonly null: InputMaybe<Scalars['Boolean']>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<Scalars['STRAPI_JSON']>>>;
+  readonly startsWith: InputMaybe<Scalars['STRAPI_JSON']>;
+};
+
+type STRAPI_Menu = {
+  readonly actions: Maybe<ReadonlyArray<Maybe<STRAPI_ComponentCallToActionsActions>>>;
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly locale: Maybe<Scalars['String']>;
+  readonly localizations: Maybe<STRAPI_MenuRelationResponseCollection>;
+  readonly logo: Maybe<STRAPI_UploadFileEntityResponse>;
+  readonly menue_items: Maybe<STRAPI_MenueItemRelationResponseCollection>;
+  readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly sitename: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+
+type STRAPI_Menu_actionsArgs = {
+  filters: InputMaybe<STRAPI_ComponentCallToActionsActionsFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_Menu_localizationsArgs = {
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+};
+
+
+type STRAPI_Menu_menue_itemsArgs = {
+  filters: InputMaybe<STRAPI_MenueItemFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+type STRAPI_MenuEntity = {
+  readonly attributes: Maybe<STRAPI_Menu>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_MenuEntityResponse = {
+  readonly data: Maybe<STRAPI_MenuEntity>;
+};
+
+type STRAPI_MenuInput = {
+  readonly actions: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_ComponentCallToActionsActionsInput>>>;
+  readonly logo: InputMaybe<Scalars['ID']>;
+  readonly menue_items: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly sitename: InputMaybe<Scalars['String']>;
+};
+
+type STRAPI_MenuRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_MenuEntity>;
+};
+
+type STRAPI_MenueItem = {
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly locale: Maybe<Scalars['String']>;
+  readonly localizations: Maybe<STRAPI_MenueItemRelationResponseCollection>;
+  readonly name: Maybe<Scalars['String']>;
+  readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly route: Maybe<Scalars['String']>;
+  readonly sub_menue_items: Maybe<STRAPI_MenueItemRelationResponseCollection>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+
+type STRAPI_MenueItem_localizationsArgs = {
+  filters: InputMaybe<STRAPI_MenueItemFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_MenueItem_sub_menue_itemsArgs = {
+  filters: InputMaybe<STRAPI_MenueItemFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+type STRAPI_MenueItemEntity = {
+  readonly attributes: Maybe<STRAPI_MenueItem>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_MenueItemEntityResponse = {
+  readonly data: Maybe<STRAPI_MenueItemEntity>;
+};
+
+type STRAPI_MenueItemEntityResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_MenueItemEntity>;
+  readonly meta: STRAPI_ResponseCollectionMeta;
+};
+
+type STRAPI_MenueItemFiltersInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_MenueItemFiltersInput>>>;
+  readonly createdAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly id: InputMaybe<STRAPI_IDFilterInput>;
+  readonly locale: InputMaybe<STRAPI_StringFilterInput>;
+  readonly localizations: InputMaybe<STRAPI_MenueItemFiltersInput>;
+  readonly name: InputMaybe<STRAPI_StringFilterInput>;
+  readonly not: InputMaybe<STRAPI_MenueItemFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_MenueItemFiltersInput>>>;
+  readonly publishedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly route: InputMaybe<STRAPI_StringFilterInput>;
+  readonly sub_menue_items: InputMaybe<STRAPI_MenueItemFiltersInput>;
+  readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+};
+
+type STRAPI_MenueItemInput = {
+  readonly name: InputMaybe<Scalars['String']>;
+  readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly route: InputMaybe<Scalars['String']>;
+  readonly sub_menue_items: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+};
+
+type STRAPI_MenueItemRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_MenueItemEntity>;
+};
+
+type STRAPI_Pagination = {
+  readonly page: Scalars['Int'];
+  readonly pageCount: Scalars['Int'];
+  readonly pageSize: Scalars['Int'];
+  readonly total: Scalars['Int'];
+};
+
+type STRAPI_PaginationArg = {
+  readonly limit: InputMaybe<Scalars['Int']>;
+  readonly page: InputMaybe<Scalars['Int']>;
+  readonly pageSize: InputMaybe<Scalars['Int']>;
+  readonly start: InputMaybe<Scalars['Int']>;
+};
+
+type STRAPI_PublicationState =
+  | 'LIVE'
+  | 'PREVIEW';
+
+type STRAPI_ResponseCollectionMeta = {
+  readonly pagination: STRAPI_Pagination;
+};
+
+type STRAPI_SiteSettings = {
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly locale: Maybe<Scalars['String']>;
+  readonly localizations: Maybe<STRAPI_SiteSettingsRelationResponseCollection>;
+  readonly logo: Maybe<STRAPI_UploadFileEntityResponse>;
+  readonly name: Maybe<Scalars['String']>;
+  readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly slogan: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+
+type STRAPI_SiteSettings_localizationsArgs = {
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+};
+
+type STRAPI_SiteSettingsEntity = {
+  readonly attributes: Maybe<STRAPI_SiteSettings>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_SiteSettingsEntityResponse = {
+  readonly data: Maybe<STRAPI_SiteSettingsEntity>;
+};
+
+type STRAPI_SiteSettingsInput = {
+  readonly logo: InputMaybe<Scalars['ID']>;
+  readonly name: InputMaybe<Scalars['String']>;
+  readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
+  readonly slogan: InputMaybe<Scalars['String']>;
+};
+
+type STRAPI_SiteSettingsRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_SiteSettingsEntity>;
+};
+
+type STRAPI_StringFilterInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+  readonly between: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+  readonly contains: InputMaybe<Scalars['String']>;
+  readonly containsi: InputMaybe<Scalars['String']>;
+  readonly endsWith: InputMaybe<Scalars['String']>;
+  readonly eq: InputMaybe<Scalars['String']>;
+  readonly eqi: InputMaybe<Scalars['String']>;
+  readonly gt: InputMaybe<Scalars['String']>;
+  readonly gte: InputMaybe<Scalars['String']>;
+  readonly in: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+  readonly lt: InputMaybe<Scalars['String']>;
+  readonly lte: InputMaybe<Scalars['String']>;
+  readonly ne: InputMaybe<Scalars['String']>;
+  readonly nei: InputMaybe<Scalars['String']>;
+  readonly not: InputMaybe<STRAPI_StringFilterInput>;
+  readonly notContains: InputMaybe<Scalars['String']>;
+  readonly notContainsi: InputMaybe<Scalars['String']>;
+  readonly notIn: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+  readonly notNull: InputMaybe<Scalars['Boolean']>;
+  readonly null: InputMaybe<Scalars['Boolean']>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+  readonly startsWith: InputMaybe<Scalars['String']>;
+};
+
+type STRAPI_UploadFile = {
+  readonly alternativeText: Maybe<Scalars['String']>;
+  readonly caption: Maybe<Scalars['String']>;
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly ext: Maybe<Scalars['String']>;
+  readonly formats: Maybe<Scalars['STRAPI_JSON']>;
+  readonly hash: Scalars['String'];
+  readonly height: Maybe<Scalars['Int']>;
+  readonly mime: Scalars['String'];
+  readonly name: Scalars['String'];
+  readonly previewUrl: Maybe<Scalars['String']>;
+  readonly provider: Scalars['String'];
+  readonly provider_metadata: Maybe<Scalars['STRAPI_JSON']>;
+  readonly related: Maybe<ReadonlyArray<Maybe<STRAPI_GenericMorph>>>;
+  readonly size: Scalars['Float'];
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly url: Scalars['String'];
+  readonly width: Maybe<Scalars['Int']>;
+};
+
+type STRAPI_UploadFileEntity = {
+  readonly attributes: Maybe<STRAPI_UploadFile>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_UploadFileEntityResponse = {
+  readonly data: Maybe<STRAPI_UploadFileEntity>;
+};
+
+type STRAPI_UploadFileEntityResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_UploadFileEntity>;
+  readonly meta: STRAPI_ResponseCollectionMeta;
+};
+
+type STRAPI_UploadFileFiltersInput = {
+  readonly alternativeText: InputMaybe<STRAPI_StringFilterInput>;
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_UploadFileFiltersInput>>>;
+  readonly caption: InputMaybe<STRAPI_StringFilterInput>;
+  readonly createdAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly ext: InputMaybe<STRAPI_StringFilterInput>;
+  readonly folder: InputMaybe<STRAPI_UploadFolderFiltersInput>;
+  readonly folderPath: InputMaybe<STRAPI_StringFilterInput>;
+  readonly formats: InputMaybe<STRAPI_JSONFilterInput>;
+  readonly hash: InputMaybe<STRAPI_StringFilterInput>;
+  readonly height: InputMaybe<STRAPI_IntFilterInput>;
+  readonly id: InputMaybe<STRAPI_IDFilterInput>;
+  readonly mime: InputMaybe<STRAPI_StringFilterInput>;
+  readonly name: InputMaybe<STRAPI_StringFilterInput>;
+  readonly not: InputMaybe<STRAPI_UploadFileFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_UploadFileFiltersInput>>>;
+  readonly previewUrl: InputMaybe<STRAPI_StringFilterInput>;
+  readonly provider: InputMaybe<STRAPI_StringFilterInput>;
+  readonly provider_metadata: InputMaybe<STRAPI_JSONFilterInput>;
+  readonly size: InputMaybe<STRAPI_FloatFilterInput>;
+  readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly url: InputMaybe<STRAPI_StringFilterInput>;
+  readonly width: InputMaybe<STRAPI_IntFilterInput>;
+};
+
+type STRAPI_UploadFileInput = {
+  readonly alternativeText: InputMaybe<Scalars['String']>;
+  readonly caption: InputMaybe<Scalars['String']>;
+  readonly ext: InputMaybe<Scalars['String']>;
+  readonly folder: InputMaybe<Scalars['ID']>;
+  readonly folderPath: InputMaybe<Scalars['String']>;
+  readonly formats: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly hash: InputMaybe<Scalars['String']>;
+  readonly height: InputMaybe<Scalars['Int']>;
+  readonly mime: InputMaybe<Scalars['String']>;
+  readonly name: InputMaybe<Scalars['String']>;
+  readonly previewUrl: InputMaybe<Scalars['String']>;
+  readonly provider: InputMaybe<Scalars['String']>;
+  readonly provider_metadata: InputMaybe<Scalars['STRAPI_JSON']>;
+  readonly size: InputMaybe<Scalars['Float']>;
+  readonly url: InputMaybe<Scalars['String']>;
+  readonly width: InputMaybe<Scalars['Int']>;
+};
+
+type STRAPI_UploadFileRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_UploadFileEntity>;
+};
+
+type STRAPI_UploadFolder = {
+  readonly children: Maybe<STRAPI_UploadFolderRelationResponseCollection>;
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly files: Maybe<STRAPI_UploadFileRelationResponseCollection>;
+  readonly name: Scalars['String'];
+  readonly parent: Maybe<STRAPI_UploadFolderEntityResponse>;
+  readonly path: Scalars['String'];
+  readonly pathId: Scalars['Int'];
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+
+type STRAPI_UploadFolder_childrenArgs = {
+  filters: InputMaybe<STRAPI_UploadFolderFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_UploadFolder_filesArgs = {
+  filters: InputMaybe<STRAPI_UploadFileFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+type STRAPI_UploadFolderEntity = {
+  readonly attributes: Maybe<STRAPI_UploadFolder>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_UploadFolderEntityResponse = {
+  readonly data: Maybe<STRAPI_UploadFolderEntity>;
+};
+
+type STRAPI_UploadFolderEntityResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_UploadFolderEntity>;
+  readonly meta: STRAPI_ResponseCollectionMeta;
+};
+
+type STRAPI_UploadFolderFiltersInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_UploadFolderFiltersInput>>>;
+  readonly children: InputMaybe<STRAPI_UploadFolderFiltersInput>;
+  readonly createdAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly files: InputMaybe<STRAPI_UploadFileFiltersInput>;
+  readonly id: InputMaybe<STRAPI_IDFilterInput>;
+  readonly name: InputMaybe<STRAPI_StringFilterInput>;
+  readonly not: InputMaybe<STRAPI_UploadFolderFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_UploadFolderFiltersInput>>>;
+  readonly parent: InputMaybe<STRAPI_UploadFolderFiltersInput>;
+  readonly path: InputMaybe<STRAPI_StringFilterInput>;
+  readonly pathId: InputMaybe<STRAPI_IntFilterInput>;
+  readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+};
+
+type STRAPI_UploadFolderInput = {
+  readonly children: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly files: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly name: InputMaybe<Scalars['String']>;
+  readonly parent: InputMaybe<Scalars['ID']>;
+  readonly path: InputMaybe<Scalars['String']>;
+  readonly pathId: InputMaybe<Scalars['Int']>;
+};
+
+type STRAPI_UploadFolderRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_UploadFolderEntity>;
+};
+
+type STRAPI_UsersPermissionsCreateRolePayload = {
+  readonly ok: Scalars['Boolean'];
+};
+
+type STRAPI_UsersPermissionsDeleteRolePayload = {
+  readonly ok: Scalars['Boolean'];
+};
+
+type STRAPI_UsersPermissionsLoginInput = {
+  readonly identifier: Scalars['String'];
+  readonly password: Scalars['String'];
+  readonly provider: Scalars['String'];
+};
+
+type STRAPI_UsersPermissionsLoginPayload = {
+  readonly jwt: Maybe<Scalars['String']>;
+  readonly user: STRAPI_UsersPermissionsMe;
+};
+
+type STRAPI_UsersPermissionsMe = {
+  readonly blocked: Maybe<Scalars['Boolean']>;
+  readonly confirmed: Maybe<Scalars['Boolean']>;
+  readonly email: Maybe<Scalars['String']>;
+  readonly id: Scalars['ID'];
+  readonly role: Maybe<STRAPI_UsersPermissionsMeRole>;
+  readonly username: Scalars['String'];
+};
+
+type STRAPI_UsersPermissionsMeRole = {
+  readonly description: Maybe<Scalars['String']>;
+  readonly id: Scalars['ID'];
+  readonly name: Scalars['String'];
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type STRAPI_UsersPermissionsPasswordPayload = {
+  readonly ok: Scalars['Boolean'];
+};
+
+type STRAPI_UsersPermissionsPermission = {
+  readonly action: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly role: Maybe<STRAPI_UsersPermissionsRoleEntityResponse>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+type STRAPI_UsersPermissionsPermissionEntity = {
+  readonly attributes: Maybe<STRAPI_UsersPermissionsPermission>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_UsersPermissionsPermissionFiltersInput = {
+  readonly action: InputMaybe<STRAPI_StringFilterInput>;
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_UsersPermissionsPermissionFiltersInput>>>;
+  readonly createdAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly id: InputMaybe<STRAPI_IDFilterInput>;
+  readonly not: InputMaybe<STRAPI_UsersPermissionsPermissionFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_UsersPermissionsPermissionFiltersInput>>>;
+  readonly role: InputMaybe<STRAPI_UsersPermissionsRoleFiltersInput>;
+  readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+};
+
+type STRAPI_UsersPermissionsPermissionRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_UsersPermissionsPermissionEntity>;
+};
+
+type STRAPI_UsersPermissionsRegisterInput = {
+  readonly email: Scalars['String'];
+  readonly password: Scalars['String'];
+  readonly username: Scalars['String'];
+};
+
+type STRAPI_UsersPermissionsRole = {
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly description: Maybe<Scalars['String']>;
+  readonly name: Scalars['String'];
+  readonly permissions: Maybe<STRAPI_UsersPermissionsPermissionRelationResponseCollection>;
+  readonly type: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly users: Maybe<STRAPI_UsersPermissionsUserRelationResponseCollection>;
+};
+
+
+type STRAPI_UsersPermissionsRole_permissionsArgs = {
+  filters: InputMaybe<STRAPI_UsersPermissionsPermissionFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+
+type STRAPI_UsersPermissionsRole_usersArgs = {
+  filters: InputMaybe<STRAPI_UsersPermissionsUserFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+type STRAPI_UsersPermissionsRoleEntity = {
+  readonly attributes: Maybe<STRAPI_UsersPermissionsRole>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_UsersPermissionsRoleEntityResponse = {
+  readonly data: Maybe<STRAPI_UsersPermissionsRoleEntity>;
+};
+
+type STRAPI_UsersPermissionsRoleEntityResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_UsersPermissionsRoleEntity>;
+  readonly meta: STRAPI_ResponseCollectionMeta;
+};
+
+type STRAPI_UsersPermissionsRoleFiltersInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_UsersPermissionsRoleFiltersInput>>>;
+  readonly createdAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly description: InputMaybe<STRAPI_StringFilterInput>;
+  readonly id: InputMaybe<STRAPI_IDFilterInput>;
+  readonly name: InputMaybe<STRAPI_StringFilterInput>;
+  readonly not: InputMaybe<STRAPI_UsersPermissionsRoleFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_UsersPermissionsRoleFiltersInput>>>;
+  readonly permissions: InputMaybe<STRAPI_UsersPermissionsPermissionFiltersInput>;
+  readonly type: InputMaybe<STRAPI_StringFilterInput>;
+  readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly users: InputMaybe<STRAPI_UsersPermissionsUserFiltersInput>;
+};
+
+type STRAPI_UsersPermissionsRoleInput = {
+  readonly description: InputMaybe<Scalars['String']>;
+  readonly name: InputMaybe<Scalars['String']>;
+  readonly permissions: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly type: InputMaybe<Scalars['String']>;
+  readonly users: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+};
+
+type STRAPI_UsersPermissionsUpdateRolePayload = {
+  readonly ok: Scalars['Boolean'];
+};
+
+type STRAPI_UsersPermissionsUser = {
+  readonly blocked: Maybe<Scalars['Boolean']>;
+  readonly confirmed: Maybe<Scalars['Boolean']>;
+  readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly email: Scalars['String'];
+  readonly provider: Maybe<Scalars['String']>;
+  readonly role: Maybe<STRAPI_UsersPermissionsRoleEntityResponse>;
+  readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly username: Scalars['String'];
+};
+
+type STRAPI_UsersPermissionsUserEntity = {
+  readonly attributes: Maybe<STRAPI_UsersPermissionsUser>;
+  readonly id: Maybe<Scalars['ID']>;
+};
+
+type STRAPI_UsersPermissionsUserEntityResponse = {
+  readonly data: Maybe<STRAPI_UsersPermissionsUserEntity>;
+};
+
+type STRAPI_UsersPermissionsUserEntityResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_UsersPermissionsUserEntity>;
+  readonly meta: STRAPI_ResponseCollectionMeta;
+};
+
+type STRAPI_UsersPermissionsUserFiltersInput = {
+  readonly and: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_UsersPermissionsUserFiltersInput>>>;
+  readonly blocked: InputMaybe<STRAPI_BooleanFilterInput>;
+  readonly confirmationToken: InputMaybe<STRAPI_StringFilterInput>;
+  readonly confirmed: InputMaybe<STRAPI_BooleanFilterInput>;
+  readonly createdAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly email: InputMaybe<STRAPI_StringFilterInput>;
+  readonly id: InputMaybe<STRAPI_IDFilterInput>;
+  readonly not: InputMaybe<STRAPI_UsersPermissionsUserFiltersInput>;
+  readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_UsersPermissionsUserFiltersInput>>>;
+  readonly password: InputMaybe<STRAPI_StringFilterInput>;
+  readonly provider: InputMaybe<STRAPI_StringFilterInput>;
+  readonly resetPasswordToken: InputMaybe<STRAPI_StringFilterInput>;
+  readonly role: InputMaybe<STRAPI_UsersPermissionsRoleFiltersInput>;
+  readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly username: InputMaybe<STRAPI_StringFilterInput>;
+};
+
+type STRAPI_UsersPermissionsUserInput = {
+  readonly blocked: InputMaybe<Scalars['Boolean']>;
+  readonly confirmationToken: InputMaybe<Scalars['String']>;
+  readonly confirmed: InputMaybe<Scalars['Boolean']>;
+  readonly email: InputMaybe<Scalars['String']>;
+  readonly password: InputMaybe<Scalars['String']>;
+  readonly provider: InputMaybe<Scalars['String']>;
+  readonly resetPasswordToken: InputMaybe<Scalars['String']>;
+  readonly role: InputMaybe<Scalars['ID']>;
+  readonly username: InputMaybe<Scalars['String']>;
+};
+
+type STRAPI_UsersPermissionsUserRelationResponseCollection = {
+  readonly data: ReadonlyArray<STRAPI_UsersPermissionsUserEntity>;
 };
 
 type Site = Node & {
