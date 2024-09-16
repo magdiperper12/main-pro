@@ -1,31 +1,131 @@
-import React from "react";
-import image from "../../images/doctor2.jpg";
-interface CarouselItem {
-  heading: string;
-  text: string;
-  buttonText: string;
-  image: string;
+import React, { useEffect, useState } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+interface FeaturesProps {
+  data: {
+    strapi: {
+      featuresHeadlines: {
+        data: Array<{
+          id: string;
+          attributes: {
+            features: {
+              data: Array<{
+                id: string;
+                attributes: {
+                  header: string;
+                  dicription: string;
+                  subtitle: string;
+                  mediaUrl: {
+                    data: {
+                      attributes: {
+                        previewUrl: string;
+                        url: string;
+                        width: number;
+                      };
+                    };
+                  };
+                };
+              }>;
+            };
+          };
+        }>;
+      };
+    };
+  };
 }
 
-const Features: React.FC = () => {
-  
+// Component
+const Features: React.FC<FeaturesProps> = () => {
+  const [discription, setDiscription] = useState("")
+  // const features = data?.strapi?.featuresHeadlines?.data[0];
+  const myData = useStaticQuery(graphql`
+query MyQuery {
+  strapi {
+    home {
+      data {
+        id
+        attributes {
+          sections {
+            data {
+              id
+              attributes {
+                description
+                header
+                subTitle
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`);
 
+  useEffect(() => {
+    console.log("ffff", myData.strapi.home.data.attributes.sections.data[0].attributes.description[0].children[0].text)
+    setDiscription(myData.strapi.home.data.attributes.sections.data[0].attributes.description[0].children[0].text)
+  }, [])
   return (
     <div>
-      {/* Header of the page */}
-      <div className='text-center  my-4 md:my-12'>
-        <p className='text-lg md:text-xl lg:text-2xl font-extrabold'>Journey</p>
-        <h1 className='text-xl md:text-3xl lg:text-4xl font-extrabold mt-2 md:mt-5 leading-tight'>
+      <div className="text-center mt-4 md:my-12">
+        <p className="text-lg md:text-xl lg:text-2xl font-extrabold">Journey</p>
+        <h1 className="text-xl md:text-3xl lg:text-4xl font-extrabold mt-2 md:mt-5 leading-tight">
           Your Success Journey with Botbat
         </h1>
-        <p className='text-base md:text-lg lg:text-xl mt-5 flex w-3/4 m-auto'>
-          Build Event Driven Flows and Bots to automate your communication
-          workload. Connect your apps and services with Botbat and automate your
-          communication workload.
+        <p className="text-base md:text-lg lg:text-xl mt-5 flex w-3/4 m-auto">
+          {discription}
+
         </p>
       </div>
+      {/* Rendering features from Strapi */}
+      {/* <div>
+        {features.map((feature) => (
+          <div key={feature.id}>
+            <h2>{feature.attributes.header}</h2>
+            <p>{feature.attributes.description}</p>
+            {feature.attributes.mediaUrl && (
+              <img
+                src={feature.attributes.mediaUrl.data.attributes.url}
+                alt={feature.attributes.header}
+              />
+            )}
+          </div>
+        ))}
+      </div> */}
     </div>
   );
 };
-
+// GraphQL query
+// export const query = graphql`
+//  query MyQuery {
+//     strapi {
+//       featuresHeadlines {
+//         data {
+//           id
+//           attributes {
+//             features {
+//               data {
+//                 id
+//                 attributes {
+//                   header
+//                   dicription
+//                   subtitle
+//                   mediaUrl {
+//                     data {
+//                       attributes {
+//                         previewUrl
+//                         url
+//                         width
+//                       }
+//                     }
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 export default Features;
