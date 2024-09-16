@@ -163,7 +163,7 @@ const experienceItems: FeatureItem[] = [
 const SecoundSupport: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <div className='my-10 md:my-16'>
+      <div className='my-10 md:my-16 relative'>
         <div className='  shadow-custom shadow-gray-400 md:mt-32 lg:mt-40 w-10/12 m-auto text-center my-7 md:my-12  py-7'>
           <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold leading-tight'>
             Botbat system status
@@ -184,7 +184,7 @@ const SecoundSupport: React.FC<PageProps> = () => {
             our platform
           </p>
         </div>
-        <div className='space-y-3 py-5 px-3  shadow-md shadow-gray-400 rounded-lg md:absolute md:bottom-5 md:start-5  bg-white sm:m-auto'>
+        <div className='absoulute md:absolute md:bottom-1/3 md:start-4 lg:bottom-5 space-y-3 py-5 px-3  shadow-md shadow-gray-400 rounded-lg  lg:start-5  bg-white sm:m-auto'>
           <ul>
             <li>
               <span className='bg-green-700 rounded-full w-5 h-5 inline-block me-2'></span>
@@ -251,7 +251,7 @@ const SecoundSupport: React.FC<PageProps> = () => {
       </div>
 
       <div>
-        <div className=' shadow-custom shadow-gray-400   m-auto text-center my-10 md:my-16  py-3 md:w-1/4 sm:w-3/4 rounded-lg text-3xl md:text-4xl lg:text-5xl text-gray-800 font-extrabold mt-5 leading-tight  w-auto'>
+        <div className=' shadow-custom shadow-gray-400   m-auto text-center my-10 md:my-16  py-3 w-3/4 md:w-2/4 lg:w-1/4  rounded-lg text-3xl md:text-4xl lg:text-5xl text-gray-800 font-extrabold mt-5 leading-tight '>
           Report an Issue
         </div>
 

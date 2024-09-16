@@ -68,6 +68,7 @@ const SolutionPage: React.FC<PageProps> = () => {
         title=' Innovative Solutions for Every Need'
         paragraph='  Explore the solutions we offer to enhance your business'
       />
+      <div className="md:-mt-20 "></div>
       <SecoundConvContent
         theheader=' Unique Advantages That Make Our Service Your Optimal Choice'
         dispachitems={dispachitems}

@@ -58,13 +58,13 @@ const Support: React.FC<PageProps> = () => {
           <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight'>
             Specialized Consulting by Experts
           </h1>
-          <p className='text-lg md:text-xl lg:text-2xl m-auto w-3/4 px-10 pb-7'>
+          <p className='text-lg md:text-xl lg:text-2xl m-auto w-full  lg:w-3/4 px-10 pb-7'>
             Do you need help selecting the right solutions for your business?
             Our team of experts is here to assist you every step of the way.
           </p>
         </div>
       </div>
-
+      <div className="mt-7 md:mt-32 lg:mt-36"></div>
       <ConvContent
         theheader=''
         thescoundheader=''

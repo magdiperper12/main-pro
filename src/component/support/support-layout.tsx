@@ -243,19 +243,17 @@ const SupportLayout: React.FC<PageProps> = () => {
                 {menuItems.map((item, index) => (
                   <li
                     key={item.name}
-                    className={`my-2 lg:my-0 opacity-0 lg:px-3 animate-fadeIn duration-300 ease-in-out py-4 border-b-2  text-nowrap ${
-                      activeMenuItem === item.btn
-                        ? "border-blue-500"
-                        : "border-transparent"
-                    }`}
+                    className={` lg:my-0 opacity-0 lg:px-3 animate-fadeIn duration-300 ease-in-out lg:py-4 py-2 border-b-2  text-nowrap ${activeMenuItem === item.btn
+                      ? "border-blue-500"
+                      : "border-transparent"
+                      }`}
                     style={{ animationDelay: `${index * 150}ms` }}
                   >
                     <button
-                      className={`text-black/80 transition-colors duration-200 hover:text-black/90 font-bold ${
-                        activeMenuItem === item.btn
-                          ? "text-blue-600"
-                          : "focus:text-blue-600"
-                      }`}
+                      className={`text-black/80 transition-colors duration-200 hover:text-black/90 font-bold ${activeMenuItem === item.btn
+                        ? "text-blue-600"
+                        : "focus:text-blue-600"
+                        }`}
                       onClick={() => handleMenuClick(item.btn)}
                     >
                       {item.name}

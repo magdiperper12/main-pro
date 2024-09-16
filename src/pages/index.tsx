@@ -54,7 +54,7 @@ const IndexPage: React.FC<PageProps> = () => {
         newsitem={newsitem}
       />
       <CallToSubscribe />
-     
+
     </Layout>
   );
 };

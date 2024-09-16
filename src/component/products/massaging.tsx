@@ -61,7 +61,7 @@ const items: FeatureItem[] = [
     heading: "Facebook_Messenger",
     paragraph:
       "Connect your apps and services with Botbat and automate your communication  powerful API.",
-    url: "/messaging/FacebookMessenger-channel",
+    url: "/messaging/facebook-messenger-channel",
     list: [
       "integration tracking",
       "platform tracking",
@@ -81,6 +81,7 @@ const items: FeatureItem[] = [
       "platform integration tracking",
       "platform tracking",
     ],
+
   },
   {
     icon: FaEnvelope,
@@ -88,6 +89,19 @@ const items: FeatureItem[] = [
     paragraph:
       "Connect your apps and services with Botbat and automate your communication  powerful API.",
     url: "/messaging/SMS-channel",
+    list: [
+      "integration tracking",
+      "platform tracking",
+      "platform integration tracking",
+      "platform tracking",
+    ],
+  },
+  {
+    icon: FaEnvelope,
+    heading: "byoc",
+    paragraph:
+      "Connect your apps and services with Botbat and automate your communication  powerful API.",
+    url: "/messaging/byoc-channel",
     list: [
       "integration tracking",
       "platform tracking",

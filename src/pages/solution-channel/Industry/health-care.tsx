@@ -63,7 +63,7 @@ const experianceitems = [
   {
     heading: "Providing Continuous Support Around the Clock",
     text: "Offer continuous support to patients through a virtual assistant that reduces staff workload and improves patient experience",
-    image: image4,
+    image: image1,
     list: [
       "   Create a comprehensive knowledge base for common questions",
       "  Provide guidance on medications and treatment",

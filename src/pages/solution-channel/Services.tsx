@@ -67,7 +67,7 @@ const ServicesPage: React.FC<PageProps> = () => {
         title='Integrated AI Services Solutions for Your Business'
         paragraph='  We offer a comprehensive range of professional services and digital transformation solutionsto enhance your business using advanced
             artificial intelligence technologies'
-      />
+      /><div className="md:-mt-16  "></div>
       <SecoundConvContent
         theheader=' Unique Advantages That Make Our Service Your Optimal Choice'
         dispachitems={dispachitems}

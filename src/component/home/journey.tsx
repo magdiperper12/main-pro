@@ -29,7 +29,7 @@ const items = [
 
 function Journey() {
   return (
-    <div className='py-9 md:py-16'>
+    <div className='py-11 md:py-16'>
       <div className='container mx-auto  md:px-4 text-center'>
         <div className='flex flex-col space-y-10 md:space-y-20'>
           {items.map((item, index) => (

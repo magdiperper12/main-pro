@@ -64,7 +64,7 @@ const experianceitems = [
   {
     heading: "Task Execution with Full Supervision",
     text: "Once your needs are identified, our team begins executing the required tasks efficiently and under our full supervision",
-    image: image4,
+    image: image3,
     list: [
       "   Setting up communication channels and work tools",
       "   Establishing Key Performance Indicators (KPIs)",
@@ -75,7 +75,7 @@ const experianceitems = [
   {
     heading: "Performance Monitoring and Continuous Improvement",
     text: "Regular review of team performance and work results to ensure the best outcomes and continuous development",
-    image: image3,
+    image: image1,
     list: [
       "    Continuous monitoring of work quality and performance",
       "   Providing periodic reports on work progress",

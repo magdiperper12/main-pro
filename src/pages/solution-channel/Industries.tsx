@@ -78,6 +78,7 @@ const IndustriesPage: React.FC<PageProps> = () => {
             solutions designed to enhance efficiency and deliver exceptional
             results across diverse industrial sectors'
       />
+      <div className="md:-mt-16  "></div>
       <SecoundConvContent
         theheader='Leverage advanced solutions tailored to each Industry, ensuring your
             excellence and leadership in your field'

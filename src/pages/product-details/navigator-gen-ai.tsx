@@ -55,7 +55,7 @@ const Navigator: React.FC<PageProps> = () => {
               satisfying.'
         btn='Get a Free Demo'
       />
-      <div className='flex  items-center  m-auto mb-20 w-2/4 h-auto bg-zinc-100 rounded-xl '>
+      <div className='flex  items-center md:-mt-32  m-auto mb-5 md:mb-28 lg:mb-20 w-full md:w-2/3 lg:w-2/4 h-auto bg-zinc-100 rounded-xl '>
         <img src={image3} alt='' />
       </div>
       <ConvContent

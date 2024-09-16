@@ -81,8 +81,8 @@ const Secure: React.FC<PageProps> = () => {
           </p>
         </div>
         <div className='flex items-center justify-center  '>
-          <div className='grid grid-cols-1 gap-5  w-full text-center'>
-            <div className='col  shadow-custom shadow-gray-400 m-auto py-1  w-3/4 md:w-5/12 ps-3 pe-7  text-start rounded-lg hover:shadow-xl duration-150'>
+          <div className='grid grid-cols-1 gap-5  w-full text-center mt-5'>
+            <div className='col  shadow-custom shadow-gray-400 m-auto py-1 mx-2 md:mx-0 w-full m-auto md:w-3/4 lg:w-6/12 ps-3 pe-7  text-start rounded-lg hover:shadow-xl duration-150'>
               <img
                 src={image3}
                 className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
@@ -91,7 +91,7 @@ const Secure: React.FC<PageProps> = () => {
                 End-to-end encryption for all sensitive data
               </div>
             </div>
-            <div className='col  shadow-custom shadow-gray-400 m-auto py-1   w-3/4 md:w-5/12 ps-3 pe-7 text-start rounded-lg hover:shadow-xl duration-150'>
+            <div className='col  shadow-custom shadow-gray-400 m-auto py-1 mx-2 md:mx-0   w-full md:w-3/4 lg:w-6/12 ps-3 pe-7 text-start rounded-lg hover:shadow-xl duration-150'>
               <img
                 src={image2}
                 className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'
@@ -100,7 +100,7 @@ const Secure: React.FC<PageProps> = () => {
                 Continuous monitoring and threat detection
               </div>
             </div>
-            <div className='col  shadow-custom shadow-gray-400  m-auto py-1   w-3/4 md:w-5/12 ps-3 pe-7  text-start rounded-lg hover:shadow-xl duration-150 space-x-5'>
+            <div className='col  shadow-custom shadow-gray-400  m-auto py-1 mx-2 md:mx-0   w-full md:w-3/4 lg:w-6/12 ps-3 pe-7  text-start rounded-lg hover:shadow-xl duration-150 space-x-5'>
               <img
                 src={image1}
                 className=' text-blue-600  hover:scale-105 duration-300  inline mx-3'

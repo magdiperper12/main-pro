@@ -22,13 +22,13 @@ const ThirdConvContent: React.FC<DispatchProps> = ({
     <div className='my-10 md:my-16'>
       <section className='flex justify-center'>
         <div className='container mx-auto px-0 lg:px-4 md:px-4 sm:px-0'>
-          <div className='text-center pb-20'>
-            <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight w-3/4 md:w-3/4 lg:w-2/4 m-auto'>
+          <div className='text-center pb-10 md:pb-16 lg:pb-20'>
+            <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight w-11/12 md:w-10/12 lg:w-3/4 m-auto'>
               {theheader}
             </h1>
           </div>
           <div
-            className={`flex flex-col lg:flex-row md:flex-row flex-wrap gap-10 items-center w-full m-auto justify-center`}
+            className={`grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 items-start w-11/12 m-auto`}
           >
             {dispachitems.map((item, index) => {
               const Icon = item.icon;
@@ -36,7 +36,7 @@ const ThirdConvContent: React.FC<DispatchProps> = ({
               return (
                 <div
                   key={index}
-                  className='hover:shadow-lg duration-200 text-center bg-zinc-100 p-2 rounded-lg min-h-80 max-w-sm'
+                  className='hover:shadow-lg duration-200 text-center bg-zinc-100 p-2 rounded-lg min-h-80 max-w-md mx-1 md:mx-0'
                 >
                   {typeof Icon === "string" ? (
                     <img
