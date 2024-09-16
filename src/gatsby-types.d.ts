@@ -1625,6 +1625,7 @@ type Query_imageSharpArgs = {
 type Query_siteArgs = {
   buildTime: InputMaybe<DateQueryOperatorInput>;
   children: InputMaybe<NodeFilterListInput>;
+  flags: InputMaybe<SiteFlagsFilterInput>;
   graphqlTypegen: InputMaybe<SiteGraphqlTypegenFilterInput>;
   host: InputMaybe<StringQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
@@ -3136,6 +3137,7 @@ type STRAPI_UsersPermissionsUserRelationResponseCollection = {
 type Site = Node & {
   readonly buildTime: Maybe<Scalars['Date']>;
   readonly children: ReadonlyArray<Node>;
+  readonly flags: Maybe<SiteFlags>;
   readonly graphqlTypegen: Maybe<SiteGraphqlTypegen>;
   readonly host: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
@@ -3331,6 +3333,7 @@ type SiteEdge = {
 type SiteFieldSelector = {
   readonly buildTime: InputMaybe<FieldSelectorEnum>;
   readonly children: InputMaybe<NodeFieldSelector>;
+  readonly flags: InputMaybe<SiteFlagsFieldSelector>;
   readonly graphqlTypegen: InputMaybe<SiteGraphqlTypegenFieldSelector>;
   readonly host: InputMaybe<FieldSelectorEnum>;
   readonly id: InputMaybe<FieldSelectorEnum>;
@@ -3347,6 +3350,7 @@ type SiteFieldSelector = {
 type SiteFilterInput = {
   readonly buildTime: InputMaybe<DateQueryOperatorInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
+  readonly flags: InputMaybe<SiteFlagsFilterInput>;
   readonly graphqlTypegen: InputMaybe<SiteGraphqlTypegenFilterInput>;
   readonly host: InputMaybe<StringQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
@@ -3358,6 +3362,22 @@ type SiteFilterInput = {
   readonly port: InputMaybe<IntQueryOperatorInput>;
   readonly siteMetadata: InputMaybe<SiteSiteMetadataFilterInput>;
   readonly trailingSlash: InputMaybe<StringQueryOperatorInput>;
+};
+
+type SiteFlags = {
+  readonly FAST_REFRESH: Maybe<Scalars['Boolean']>;
+};
+
+type SiteFlagsFieldSelector = {
+  readonly FAST_REFRESH: InputMaybe<FieldSelectorEnum>;
+};
+
+type SiteFlagsFilterInput = {
+  readonly FAST_REFRESH: InputMaybe<BooleanQueryOperatorInput>;
+};
+
+type SiteFlagsSortInput = {
+  readonly FAST_REFRESH: InputMaybe<SortOrderEnum>;
 };
 
 type SiteFunction = Node & {
@@ -3886,6 +3906,7 @@ type SiteSiteMetadataSortInput = {
 type SiteSortInput = {
   readonly buildTime: InputMaybe<SortOrderEnum>;
   readonly children: InputMaybe<NodeSortInput>;
+  readonly flags: InputMaybe<SiteFlagsSortInput>;
   readonly graphqlTypegen: InputMaybe<SiteGraphqlTypegenSortInput>;
   readonly host: InputMaybe<SortOrderEnum>;
   readonly id: InputMaybe<SortOrderEnum>;
@@ -3950,6 +3971,11 @@ type GatsbyImageSharpFluid_withWebp_noBase64Fragment = { readonly aspectRatio: n
 type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: string | null, readonly aspectRatio: number, readonly src: string, readonly srcSet: string, readonly srcWebp: string | null, readonly srcSetWebp: string | null, readonly sizes: string };
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
+
+type MyQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type MyQueryQuery = { readonly strapi: { readonly home: { readonly data: { readonly id: string | null, readonly attributes: { readonly sections: { readonly data: ReadonlyArray<{ readonly id: string | null, readonly attributes: { readonly description: any | null, readonly header: string | null, readonly subTitle: string | null } | null }> } | null } | null } | null } | null } };
 
 
 }

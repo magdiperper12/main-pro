@@ -5,13 +5,15 @@ dotenv.config({
 });
 console.log('Strapi API URL:', process.env.STRAPI_API_URL);
 console.log('Strapi API Token:', process.env.STRAPI_API_TOKEN);
-
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `BotBat`,
     siteUrl: `https://www.botbat.io`,
   },
   graphqlTypegen: true,
+  flags: {
+    FAST_REFRESH: false,  // Disable Fast Refresh
+  },
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
@@ -53,8 +55,6 @@ const config: GatsbyConfig = {
         },
       },
     }
-    
   ],
 };
-
 export default config;
