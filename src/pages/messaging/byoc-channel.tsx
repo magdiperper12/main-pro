@@ -82,23 +82,24 @@ const Byoc: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title='  Seamlessly Integrate Your Service Provider with BOTBAT'
-        paragraph='Now you can easily integrate your telecommunications provider with our robust and secure infrastructure for exceptional performance that meets all your business needs'
+        title="  Seamlessly Integrate Your Service Provider with BOTBAT"
+        paragraph="Now you can easily integrate your telecommunications provider with our robust and secure infrastructure for exceptional performance that meets all your business needs"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="mt-0 md:mt-36"></div>
       <Dispatch
-        theheader='Unlock the Full Potential of Your Business with BOTBAT’s BYOC Service'
+        theheader="Unlock the Full Potential of Your Business with BOTBAT’s BYOC Service"
         thescoundheader="  BYOC service gives you complete control over your business communications, with the flexibility to choose your own service provider while leveraging BOTBAT's trusted platform"
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title='    BOTBAT: The Ideal SMS Tool for Achieving Your Business Goals'
-        secoundTitle=' Elevate your communication to new levels and increase your business growth specifically designed to efficiently achieve your goals'
-        button='Start for free'
-        secoundButton='see price'
+        title="    BOTBAT: The Ideal SMS Tool for Achieving Your Business Goals"
+        secoundTitle=" Elevate your communication to new levels and increase your business growth specifically designed to efficiently achieve your goals"
+        button="Start for free"
+        secoundButton="see price"
       />
     </Layout>
   );

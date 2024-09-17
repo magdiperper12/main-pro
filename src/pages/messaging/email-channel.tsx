@@ -88,24 +88,25 @@ const EmailPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title=' Integrate Email API for dependable high-volume message delivery'
-        paragraph='Designed for optimal delivery rates, speed, and throughput via SMTP or HTTP API, regardless of volume or location'
+        title=" Integrate Email API for dependable high-volume message delivery"
+        paragraph="Designed for optimal delivery rates, speed, and throughput via SMTP or HTTP API, regardless of volume or location"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="mt-0 md:mt-36"></div>
       <Dispatch
-        theheader='  Dispatch operational emails and promotional campaigns via a solid platform'
-        thescoundheader='   Robust Platform for Operational Emails and Marketing Campaigns: Easily Connect to Our API and Swiftly Deliver Massive Email Volumes in Minutes'
+        theheader="  Dispatch operational emails and promotional campaigns via a solid platform"
+        thescoundheader="   Robust Platform for Operational Emails and Marketing Campaigns: Easily Connect to Our API and Swiftly Deliver Massive Email Volumes in Minutes"
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title='  Boost Your Email Capabilities with a Reliable API'
-        secoundTitle='Optimized Performance, Seamless Scaling, and Comprehensive
-              Management for All Your Needs'
-        button='Start for free'
-        secoundButton='see price'
+        title="  Boost Your Email Capabilities with a Reliable API"
+        secoundTitle="Optimized Performance, Seamless Scaling, and Comprehensive
+              Management for All Your Needs"
+        button="Start for free"
+        secoundButton="see price"
       />
     </Layout>
   );

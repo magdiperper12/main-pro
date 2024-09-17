@@ -87,23 +87,24 @@ const InstagramPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title='The optimal solution for communication via Instagram'
-        paragraph='Our integrated solutions enhance effective communication and increase sales through Instagram by attracting potential customers, boosting sales, and providing instant responses'
+        title="The optimal solution for communication via Instagram"
+        paragraph="Our integrated solutions enhance effective communication and increase sales through Instagram by attracting potential customers, boosting sales, and providing instant responses"
         image={image1}
-        sbtn='Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn="Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="mt-0 md:mt-36"></div>
       <Dispatch
-        theheader='Transform Your Instagram Account into an Integrated Marketing and Customer Service Hub'
+        theheader="Transform Your Instagram Account into an Integrated Marketing and Customer Service Hub"
         thescoundheader="Turn your company's Instagram account into an interactive platform for marketing and customer service. Boost sales and enhance customer experience"
         dispachitems={dispatchItems}
       />
       <Experience experianceitems={experienceItems} />
       <ChannelFooter
-        title='Efficiently Manage Instagram Interactions'
-        secoundTitle='Centralize all your Instagram interactions in one dashboard to boost agent productivity and offer personalized responses'
-        button='Start for free'
-        secoundButton='See price'
+        title="Efficiently Manage Instagram Interactions"
+        secoundTitle="Centralize all your Instagram interactions in one dashboard to boost agent productivity and offer personalized responses"
+        button="Start for free"
+        secoundButton="See price"
       />
     </Layout>
   );

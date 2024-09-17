@@ -87,23 +87,24 @@ const TransportationPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title='  Smart and Secure Transportation Solutions with Botbat'
-        paragraph='Empower your transportation and logistics operations with intelligent, multi-channel communication solutions that enhance efficiency, security, and superior customer experience'
+        title="  Smart and Secure Transportation Solutions with Botbat"
+        paragraph="Empower your transportation and logistics operations with intelligent, multi-channel communication solutions that enhance efficiency, security, and superior customer experience"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="md:-mt-10 lg:-mt-20  "></div>
       <SecoundDispatch
-        theheader='Innovation at Every Step with Our Transportation Solutions'
+        theheader="Innovation at Every Step with Our Transportation Solutions"
         thescoundheader="Benefit from an integrated experience with Botbat's smart solutions that combine security, flexibility, and seamless integration to meet all your transportation industry needs"
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title=' Leverage Smart Transportation Solutions Today'
+        title=" Leverage Smart Transportation Solutions Today"
         secoundTitle="Take the first step towards enhancing operational efficiency and increasing security with Botbat's innovative transportation solutions"
-        button='Start for  free'
-        secoundButton='see price'
+        button="Start for  free"
+        secoundButton="see price"
       />
     </Layout>
   );

@@ -87,25 +87,25 @@ const ProfessionalPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title=' Professional Servicesto Enhance Your Operational Performance'
+        title=" Professional Servicesto Enhance Your Operational Performance"
         paragraph=" Elevate your business operations through our advanced AI-powered professional services, custom-designed to meet your organization's unique needs"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
       <div className="md:-mt-10 lg:-mt-20  "></div>
       <SecoundDispatch
-        theheader=' customized professional solution for your business needs'
-        thescoundheader='we are committed delivering added value to your business through our professional services ,which are distinguished by their quality and flexbility'
+        theheader=" customized professional solution for your business needs"
+        thescoundheader="we are committed delivering added value to your business through our professional services ,which are distinguished by their quality and flexbility"
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title=' Transform Your Business with
-AI-Powered Professional Services'
-        secoundTitle=' Make the decision now and leverage our professional services to achieve your goals'
-        button='Start for free'
-        secoundButton='see price'
+        title=" Transform Your Business with
+AI-Powered Professional Services"
+        secoundTitle=" Make the decision now and leverage our professional services to achieve your goals"
+        button="Start for free"
+        secoundButton="see price"
       />
     </Layout>
   );

@@ -87,28 +87,29 @@ const SmsPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title='BOTBAT - Versatile SMS Messaging Platform'
+        title="BOTBAT - Versatile SMS Messaging Platform"
         paragraph=" Connect with your audience globally using BOTBAT's robust and
               scalable SMS messaging service, designed to meet diverse business
               needs"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="mt-0 md:mt-36"></div>
       <Dispatch
-        theheader='  Engage Your Audience Globally with BOTBAT Reliable SMS Messaging
-              and Scalable API Solutions'
-        thescoundheader='   Discover the powerful features that make BOTBAT the perfect choice
-              for all your SMS communication needs'
+        theheader="  Engage Your Audience Globally with BOTBAT Reliable SMS Messaging
+              and Scalable API Solutions"
+        thescoundheader="   Discover the powerful features that make BOTBAT the perfect choice
+              for all your SMS communication needs"
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title=' BOTBAT: The Ultimate SMS Tool for Achieving Your Business Goals'
-        secoundTitle='  Elevate your communication. Boost your business growth with
-              innovative, effective SMS solutions'
-        button=' Start for free'
-        secoundButton='see price'
+        title=" BOTBAT: The Ultimate SMS Tool for Achieving Your Business Goals"
+        secoundTitle="  Elevate your communication. Boost your business growth with
+              innovative, effective SMS solutions"
+        button=" Start for free"
+        secoundButton="see price"
       />
     </Layout>
   );

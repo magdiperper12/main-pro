@@ -86,12 +86,13 @@ const EducationPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title=' Smart Educational Solutions from Botbat for a Better Future'
-        paragraph='Botbat offers innovative educational solutions powered by artificial intelligence to enhance learning experiences and boost administrative efficiency for educational institutions'
+        title=" Smart Educational Solutions from Botbat for a Better Future"
+        paragraph="Botbat offers innovative educational solutions powered by artificial intelligence to enhance learning experiences and boost administrative efficiency for educational institutions"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="md:-mt-10 lg:-mt-20  "></div>
       <SecoundDispatch
         theheader="Discover How Botbat's Smart Solutions Improve Educational Processes and Streamline Academic Administration"
         thescoundheader="Features that make Botbat's educational solutions the best choice for achieving your educational goals"
@@ -99,10 +100,10 @@ const EducationPage: React.FC<PageProps> = () => {
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title='Elevate Your Educational Institution Today with Botbat'
+        title="Elevate Your Educational Institution Today with Botbat"
         secoundTitle=" Join leading educational institutions that utilize Botbat's smart solutions to enhance academic and administrative efficiency"
-        button='Start for free'
-        secoundButton='see price'
+        button="Start for free"
+        secoundButton="see price"
       />
     </Layout>
   );

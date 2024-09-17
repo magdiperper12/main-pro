@@ -49,32 +49,32 @@ const Navigator: React.FC<PageProps> = () => {
     <Layout>
       <ConvHeader
         image={image3}
-        title=' Gen Al Website Navigator'
-        paragraph='   Our intelligent tool helps you navigate your websites easily and
+        title=" Gen Al Website Navigator"
+        paragraph="   Our intelligent tool helps you navigate your websites easily and
               efficiently, making the user experience smoother and more
-              satisfying.'
-        btn='Get a Free Demo'
+              satisfying."
+        btn="Get a Free Demo"
       />
-      <div className='flex  items-center md:-mt-32  m-auto mb-5 md:mb-28 lg:mb-20 w-full md:w-2/3 lg:w-2/4 h-auto bg-zinc-100 rounded-xl '>
-        <img src={image3} alt='' />
+      <div className="flex  items-center md:-mt-36 lg:-mt-44  m-auto  md:mb-32 lg:mb-28 w-full md:w-2/3 lg:w-2/4 h-auto bg-zinc-100 rounded-xl ">
+        <img src={image3} alt="" />
       </div>
       <ConvContent
-        theheader='  Seamless navigation and enhanced experience with Gen Al Website
-            Navigator'
-        thescoundheader='  Analyze and guide your website visitors effectively with Gen AI
+        theheader="  Seamless navigation and enhanced experience with Gen Al Website
+            Navigator"
+        thescoundheader="  Analyze and guide your website visitors effectively with Gen AI
             Website Navigator, helping them find what they are looking for
             quickly and easily. This improves the user experience, increases
-            visitor satisfaction, and extends their time spent on your site.'
+            visitor satisfaction, and extends their time spent on your site."
         dispachitems={dispachitems}
       />
 
       <ConvFooter
-        title='    Empower Your Business with Gen AI Website Navigator'
-        secondTitle='  Leverage our advanced AI tool to gain valuable insights and make
+        title="    Empower Your Business with Gen AI Website Navigator"
+        secondTitle="  Leverage our advanced AI tool to gain valuable insights and make
               informed decisions, enhancing both user experience and business
-              performance.'
-        button='Start for Free'
-        secondButton='See Price'
+              performance."
+        button="Start for Free"
+        secondButton="See Price"
       />
     </Layout>
   );

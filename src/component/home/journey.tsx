@@ -23,40 +23,40 @@ const items = [
   {
     heading: "Involve your Agent whenever you need.",
     text: "Seamlessly transition from automated bots to human agents whenever necessary. Ensure your customers get the best support experience.",
-    image: image4,
+    image: image1,
   },
 ];
 
 function Journey() {
   return (
-    <div className='py-11 md:py-16'>
-      <div className='container mx-auto  md:px-4 text-center'>
-        <div className='flex flex-col space-y-10 md:space-y-20'>
+    <div className="py-11 md:pt-16  md:py-0">
+      <div className="container mx-auto  md:px-4 text-center">
+        <div className="flex flex-col space-y-10 md:space-y-20">
           {items.map((item, index) => (
             <div
               className={`flex flex-col ${
                 index % 2 == 0 ? "md:flex-row-reverse" : "md:flex-row"
               } items-start  md:space-x-8 `}
             >
-              <div className='w-full md:w-1/2 px-4 md:px-14'>
+              <div className="w-full md:w-1/2 px-4 md:px-8 lg:px-10 ">
                 <img
                   src={item.image}
-                  alt='Automate communication'
-                  className='rounded-lg object-cover object-center'
+                  alt="Automate communication"
+                  className="rounded-lg object-cover object-center"
                 />
               </div>
               <div
-                className={`w-full px-8  md:px-12 md:w-1/2 text-start   md:mt-0`}
+                className={`w-full px-8 md:px-0  lg:px-12 md:w-1/2 text-start   lg:mt-10`}
               >
-                <p className='relative px-8 font-bold my-1'>
-                  <span className='absolute start-0 top-0 h-full w-3 bg-blue-500'></span>
+                <p className="relative px-8 font-bold my-1">
+                  <span className="absolute start-0 top-0 h-full w-3 bg-blue-500"></span>
                   Product Name
                 </p>
 
-                <h2 className='text-xl md:text-2xl font-semibold my-1'>
+                <h2 className="text-xl md:text-xl lg:text-2xl font-semibold my-1">
                   {item.heading}
                 </h2>
-                <p className='text-md md:text-lg my-1'>{item.text}</p>
+                <p className="text-md md:text-lg  my-1">{item.text}</p>
               </div>
             </div>
           ))}

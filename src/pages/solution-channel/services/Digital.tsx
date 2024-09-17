@@ -87,29 +87,30 @@ const DigitalPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title='   Comprehensive Digital Transformation Services'
-        paragraph='  Elevate your organization to the digital age with our
+        title="   Comprehensive Digital Transformation Services"
+        paragraph="  Elevate your organization to the digital age with our
               comprehensive digital transformation solutions, powered by the
-              latest AI technologies'
+              latest AI technologies"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
-      /> <div className="md:-mt-10 lg:-mt-20  "></div>
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
+      />{" "}
+      <div className="md:-mt-10 lg:-mt-20  "></div>
       <SecoundDispatch
-        theheader='   Benefit from a wide range of features that make us your ideal
-              partner'
-        thescoundheader='   We provide integrated solutions ensuring a seamless and effective
-              digital transformation for your organization'
+        theheader="   Benefit from a wide range of features that make us your ideal
+              partner"
+        thescoundheader="   We provide integrated solutions ensuring a seamless and effective
+              digital transformation for your organization"
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
         title=" It's time to transform your organization into an integrated
               digital entity"
-        secoundTitle='  Start your journey towards digital transformation with us and
-              achieve the growth you deserve'
-        button='Start for free'
-        secoundButton='see price'
+        secoundTitle="  Start your journey towards digital transformation with us and
+              achieve the growth you deserve"
+        button="Start for free"
+        secoundButton="see price"
       />
     </Layout>
   );

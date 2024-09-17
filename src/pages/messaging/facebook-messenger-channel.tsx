@@ -88,28 +88,29 @@ const FacebookMessengerpage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title='   Easily Connect with Your Customers via Facebook Messenger'
-        paragraph='  Automate customer engagement and support with our Facebook
-              Messenger chatbot'
+        title="   Easily Connect with Your Customers via Facebook Messenger"
+        paragraph="  Automate customer engagement and support with our Facebook
+              Messenger chatbot"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="mt-0 md:mt-36"></div>
       <Dispatch
-        theheader='  Integrated Solutions to Enhance Customer Satisfaction and Increase
-              Loyalty'
-        thescoundheader='     Discover the power of effective customer communication by
+        theheader="  Integrated Solutions to Enhance Customer Satisfaction and Increase
+              Loyalty"
+        thescoundheader="     Discover the power of effective customer communication by
               transforming your Facebook page into an advanced support center to
-              deliver an unforgettable, exceptional experience'
+              deliver an unforgettable, exceptional experience"
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title='  Enhance your business with AI-driven chatbots'
-        secoundTitle=' Boost sales and efficiency with advanced AI chatbots for
-              personalized customer support.'
-        button='Start for free'
-        secoundButton='see price'
+        title="  Enhance your business with AI-driven chatbots"
+        secoundTitle=" Boost sales and efficiency with advanced AI chatbots for
+              personalized customer support."
+        button="Start for free"
+        secoundButton="see price"
       />
     </Layout>
   );

@@ -86,24 +86,25 @@ const RetailPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title=' Deliver Unparalleled Digital Shopping Experiences with AI'
-        paragraph='Elevate your business to new heights using advanced AI solutions
-We offer an integrated shopping experience across all channels, enhancing customer satisfaction and growing your business'
+        title=" Deliver Unparalleled Digital Shopping Experiences with AI"
+        paragraph="Elevate your business to new heights using advanced AI solutions
+We offer an integrated shopping experience across all channels, enhancing customer satisfaction and growing your business"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="md:-mt-10 lg:-mt-20  "></div>
       <SecoundDispatch
-        theheader='Discover the Power of AI in Enhancing Retail'
-        thescoundheader=' Our solutions combine cutting-edge technology with a deep understanding of customer behavior, allowing you to deliver the best shopping experience'
+        theheader="Discover the Power of AI in Enhancing Retail"
+        thescoundheader=" Our solutions combine cutting-edge technology with a deep understanding of customer behavior, allowing you to deliver the best shopping experience"
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title=' Get Ready to Transform Your Business Future Now'
-        secoundTitle=' Join market leaders and start your journey towards exceptional success in retail and e-commerce'
-        button='Start for free'
-        secoundButton='see price '
+        title=" Get Ready to Transform Your Business Future Now"
+        secoundTitle=" Join market leaders and start your journey towards exceptional success in retail and e-commerce"
+        button="Start for free"
+        secoundButton="see price "
       />
     </Layout>
   );

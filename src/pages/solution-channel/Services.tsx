@@ -64,21 +64,22 @@ const ServicesPage: React.FC<PageProps> = () => {
     <Layout>
       <Imagehead
         image={image3}
-        title='Integrated AI Services Solutions for Your Business'
-        paragraph='  We offer a comprehensive range of professional services and digital transformation solutionsto enhance your business using advanced
-            artificial intelligence technologies'
-      /><div className="md:-mt-16  "></div>
+        title="Integrated AI Services Solutions for Your Business"
+        paragraph="  We offer a comprehensive range of professional services and digital transformation solutionsto enhance your business using advanced
+            artificial intelligence technologies"
+      />
+      <div className="md:-mt-16  "></div>
       <SecoundConvContent
-        theheader=' Unique Advantages That Make Our Service Your Optimal Choice'
+        theheader=" Unique Advantages That Make Our Service Your Optimal Choice"
         dispachitems={dispachitems}
       />
 
       <SecoundConvFooter
-        title='  Get started with our Solutions for free'
-        secondTitle=' Join now and unlock impactful solutions designed to drive your
-              success.'
-        button='Start for Free'
-        secondButton=' Explore our solutions'
+        title="  Get started with our Solutions for free"
+        secondTitle=" Join now and unlock impactful solutions designed to drive your
+              success."
+        button="Start for Free"
+        secondButton=" Explore our solutions"
         image={image3}
       />
     </Layout>

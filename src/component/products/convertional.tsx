@@ -69,34 +69,34 @@ const items: FeatureItem[] = [
 
 function Convertional() {
   return (
-    <section className='bg-gray-100 py-20 mt-20'>
-      <div className='container mx-auto px-0 lg:px-4 md:px-4 sm:px-0 '>
-        <div className='text-center pb-10'>
-          <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight'>
+    <section className="bg-gray-100 py-20 mt-20">
+      <div className="container mx-auto px-0 lg:px-4 md:px-4 sm:px-0 ">
+        <div className="text-center pb-10">
+          <h1 className="text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight">
             Conversational
           </h1>
-          <p className='text-lg md:text-xl lg:text-2xl mt-5 flex w-3/4 m-auto'>
+          <p className="text-lg md:text-xl lg:text-2xl mt-5 flex w-3/4 m-auto">
             Experience nature and seamless interaction AI system ansurge build
             && surge or software that responds and understand human
             conversetions almost like a human
           </p>
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-10 items-start w-11/12 m-auto'>
+        <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-10 lg:gap-5 items-start w-11/12 m-auto">
           {items.map((item, index) => (
-            <div key={index} className='text-center'>
-              <item.icon className='text-8xl text-blue-600 mb-7 mx-auto shadow-lg shadow-blue-200 rounded-full p-5 hover:-rotate-45  duration-500 ' />
+            <div key={index} className="text-center">
+              <item.icon className="text-7xl lg:text-8xl text-blue-600 mb-7 mx-auto shadow-lg shadow-blue-200 rounded-full p-5 hover:-rotate-45  duration-500 " />
               <a
-                className='text-3xl font-bold text-blue-950 hover:text-blue-800 duration'
+                className="text-3xl font-bold text-blue-950 hover:text-blue-800 duration"
                 href={item.url}
               >
                 {item.heading}
               </a>
-              <p className='text-lg mt-5 text-gray-600'>{item.paragraph}</p>
-              <ul className='text-lg text-gray-600 list-disc text-start px-0 md:px-4 lg:px-8  list-inside my-5  marker:text-blue-700'>
+              <p className="text-lg mt-5 text-gray-600">{item.paragraph}</p>
+              <ul className="text-lg text-gray-600 list-disc text-start px-8 md:px-4 lg:px-2  list-inside my-5  marker:text-blue-700">
                 {item.list.map((listItem, idx) => (
                   <li
                     key={idx}
-                    className='hover:translate-x-3 duration-300 hover:text-blue-800'
+                    className="hover:translate-x-3 duration-300 hover:text-blue-800"
                   >
                     {listItem}
                   </li>

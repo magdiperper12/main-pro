@@ -37,7 +37,7 @@ const dispachitems: FeatureItem[] = [
       "Our solutions support doctors and nurses in providing better care to enhance healthcare quality, manage health records, and improve patient experience",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/Industry/Healthcare",
+    url: "/solution-channel/Industry/health-care",
   },
   {
     icon: FaImage,
@@ -73,24 +73,24 @@ const IndustriesPage: React.FC<PageProps> = () => {
     <Layout>
       <Imagehead
         image={image3}
-        title=' Integrated and Intelligent Solutions for Various Business Sectors'
-        paragraph='  Discover how to transform your business with our customized AI
+        title=" Integrated and Intelligent Solutions for Various Business Sectors"
+        paragraph="  Discover how to transform your business with our customized AI
             solutions designed to enhance efficiency and deliver exceptional
-            results across diverse industrial sectors'
+            results across diverse industrial sectors"
       />
       <div className="md:-mt-16  "></div>
       <SecoundConvContent
-        theheader='Leverage advanced solutions tailored to each Industry, ensuring your
-            excellence and leadership in your field'
+        theheader="Leverage advanced solutions tailored to each Industry, ensuring your
+            excellence and leadership in your field"
         dispachitems={dispachitems}
       />
 
       <SecoundConvFooter
-        title='  Get started with our Solutions for free'
-        secondTitle=' Join now and unlock impactful solutions designed to drive your
-              success.'
-        button='Start for Free'
-        secondButton=' Explore our solutions'
+        title="  Get started with our Solutions for free"
+        secondTitle=" Join now and unlock impactful solutions designed to drive your
+              success."
+        button="Start for Free"
+        secondButton=" Explore our solutions"
         image={image3}
       />
     </Layout>

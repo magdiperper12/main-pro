@@ -87,25 +87,26 @@ const GovernmentPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title=' Leading Comprehensive Digital Transformation
-for Governments'
-        paragraph='We help governments improve efficiency and deliver high-quality government services to citizens through comprehensive and integrated AI solutions'
+        title=" Leading Comprehensive Digital Transformation
+for Governments"
+        paragraph="We help governments improve efficiency and deliver high-quality government services to citizens through comprehensive and integrated AI solutions"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="md:-mt-10 lg:-mt-20  "></div>
       <SecoundDispatch
         theheader="Discover How Botbat's Innovative Technologies Transform Government Services"
-        thescoundheader='  Learn how to transform government operations and increase citizen satisfaction using advanced AI solutions safely and reliably'
+        thescoundheader="  Learn how to transform government operations and increase citizen satisfaction using advanced AI solutions safely and reliably"
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title='     Be Among the Leading Governments in Using AI to Improve Services'
-        secoundTitle='    Let us help you build a more efficient and effective digital
-              future for your citizens today'
-        button='Start for free'
-        secoundButton='see price'
+        title="     Be Among the Leading Governments in Using AI to Improve Services"
+        secoundTitle="    Let us help you build a more efficient and effective digital
+              future for your citizens today"
+        button="Start for free"
+        secoundButton="see price"
       />
     </Layout>
   );

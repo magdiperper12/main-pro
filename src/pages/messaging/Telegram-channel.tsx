@@ -87,26 +87,27 @@ const TelegramPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title=' Telegram Bots Fully Encrypted and Easy to Build'
-        paragraph=' Expand your reach and enhance engagement with your customers using
-              Telegram'
+        title=" Telegram Bots Fully Encrypted and Easy to Build"
+        paragraph=" Expand your reach and enhance engagement with your customers using
+              Telegram"
         image={image1}
-        sbtn='Contact an Expert'
-        fbtn='Get a Free Demo'
+        sbtn="Contact an Expert"
+        fbtn="Get a Free Demo"
       />
+      <div className="mt-0 md:mt-36"></div>
       <Dispatch
-        theheader=' Transform Your WhatsApp Experience with BOTBAT AI Solutions'
-        thescoundheader=' Unleash the Power of AI-Driven Chatbots and Automated Messaging
-              for Seamless Customer Engagement'
+        theheader=" Transform Your WhatsApp Experience with BOTBAT AI Solutions"
+        thescoundheader=" Unleash the Power of AI-Driven Chatbots and Automated Messaging
+              for Seamless Customer Engagement"
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title='Enhance Your Customer Experience with BOTBAT’s Telegram Bots'
-        secoundTitle=' Utilize BOTBAT’s Telegram bots to improve customer communication
-              and achieve your marketing goals effectively'
-        button='   Start for free'
-        secoundButton=' see price'
+        title="Enhance Your Customer Experience with BOTBAT’s Telegram Bots"
+        secoundTitle=" Utilize BOTBAT’s Telegram bots to improve customer communication
+              and achieve your marketing goals effectively"
+        button="   Start for free"
+        secoundButton=" see price"
       />
     </Layout>
   );

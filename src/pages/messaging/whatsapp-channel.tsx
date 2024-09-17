@@ -86,23 +86,24 @@ const WhatsappPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title='   WhatsApp Business API: Build Your Custom ChatBot'
+        title="   WhatsApp Business API: Build Your Custom ChatBot"
         paragraph="  Automate Customer Communication with WhatsApp Chatbots and Secure Live Chat, Powered by the World's Most Popular Messaging Platform"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="mt-0 md:mt-36"></div>
       <Dispatch
-        theheader=' Transform Your WhatsApp Experience with BOTBAT AI Solutions'
-        thescoundheader='    Unleash the Power of AI-Driven Chatbots and Automated Messaging for Seamless Customer Engagement'
+        theheader=" Transform Your WhatsApp Experience with BOTBAT AI Solutions"
+        thescoundheader="    Unleash the Power of AI-Driven Chatbots and Automated Messaging for Seamless Customer Engagement"
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title='     Enhance Your WhatsApp Engagement with BOTBAT'
-        secoundTitle='  Take the first step towards effortless customer interaction with our flexible'
-        button='Start for free'
-        secoundButton='see price'
+        title="     Enhance Your WhatsApp Engagement with BOTBAT"
+        secoundTitle="  Take the first step towards effortless customer interaction with our flexible"
+        button="Start for free"
+        secoundButton="see price"
       />
     </Layout>
   );

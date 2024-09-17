@@ -88,26 +88,27 @@ const AgentPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title='    Elevate Your Business Management with AI from Botbat'
-        paragraph=' With Botbat’s Agent Offshoring service, we provide you with a specialized AI team to handle all aspects of your account management, from training to execution, allowing you to focus on growing your business'
+        title="    Elevate Your Business Management with AI from Botbat"
+        paragraph=" With Botbat’s Agent Offshoring service, we provide you with a specialized AI team to handle all aspects of your account management, from training to execution, allowing you to focus on growing your business"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="md:-mt-10 lg:-mt-20  "></div>
       <SecoundDispatch
-        theheader=' Why is Agent Offshoring the Perfect Solution for Your Business?'
-        thescoundheader=' Discover how Agent Offshoring can improve your operational
-              efficiency, save time, and optimize resources.'
+        theheader=" Why is Agent Offshoring the Perfect Solution for Your Business?"
+        thescoundheader=" Discover how Agent Offshoring can improve your operational
+              efficiency, save time, and optimize resources."
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title='  Elevate Your Business to Success with Agent Offshoring'
-        secoundTitle='  Start now and take advantage of the free trial to enhance your
+        title="  Elevate Your Business to Success with Agent Offshoring"
+        secoundTitle="  Start now and take advantage of the free trial to enhance your
               business, save time, and focus on growth using a specialized team
-              that professionally manages your account'
-        button='Start for free'
-        secoundButton='see price'
+              that professionally manages your account"
+        button="Start for free"
+        secoundButton="see price"
       />
     </Layout>
   );

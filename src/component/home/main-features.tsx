@@ -16,7 +16,7 @@ const MainFeatures: React.FC = () => {
   const [url, seturl] = useState("");
 
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query Myaauery {
       strapi {
         home {
           data {
@@ -95,7 +95,7 @@ const MainFeatures: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-7 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-7 items-start">
           <div className="text-center">
             <img
               src={url}
@@ -166,171 +166,3 @@ const MainFeatures: React.FC = () => {
 };
 
 export default MainFeatures;
-
-// <div className='grid grid-cols-1 md:grid-cols-3 gap-7 items-center'>
-//           {features.map((feature) => (
-//             <div key={feature.id} className='text-center'>
-//               <feature.Icon className='text-5xl md:text-6xl text-blue-600 mb-2 mx-auto' />
-//               <h2 className='text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-2'>
-//                 {feature.title}
-//               </h2>
-//               <p className='text-md text-gray-600'>
-//                 {feature.description}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-
-// import React, { useEffect, useState } from "react";
-// import { useStaticQuery, graphql } from 'gatsby';
-
-// // Define the types for the GraphQL query response
-// interface FeatureAttributes {
-//   url: string;
-//   description: string;
-//   header: string;
-// }
-
-// interface FeaturesData {
-//   id: string;
-//   attributes: FeatureAttributes;
-// }
-
-// interface SectionAttributes {
-//   description: { data: { attributes: { text: string } }[] };
-//   header: string;
-//   subTitle: string;
-//   features: { data: FeaturesData[] };
-// }
-
-// interface SectionData {
-//   id: string;
-//   attributes: SectionAttributes;
-// }
-
-// interface Sections {
-//   data: SectionData[];
-// }
-
-// interface HomeAttributes {
-//   sections: Sections;
-// }
-
-// interface HomeData {
-//   id: string;
-//   attributes: HomeAttributes;
-// }
-
-// interface StrapiData {
-//   home: HomeData;
-// }
-
-// interface MyQueryData {
-//   strapi: StrapiData;
-// }
-
-// const MainFeatures = () => {
-//   const [title, setTitle] = useState<string>("");
-//   const [text, setText] = useState<string>("");
-//   const [subTitle, setSubTitle] = useState<string>("");
-//   const [features, setFeatures] = useState<FeatureAttributes[]>([]);
-
-//   const data = useStaticQuery<MyQueryData>(graphql`
-//     query MyQuery {
-//       strapi {
-//         home {
-//           data {
-//             id
-//             attributes {
-//               sections {
-//                 data {
-//                   id
-//                   attributes {
-//                     description {
-//                       data {
-//                         attributes {
-//                           text
-//                         }
-//                       }
-//                     }
-//                     header
-//                     subTitle
-//                     features {
-//                       data {
-//                         id
-//                         attributes {
-//                           description {
-//                             data {
-//                               attributes {
-//                                 text
-//                               }
-//                             }
-//                           }
-//                           header
-//                           mediaUrl {
-//                             data {
-//                               attributes {
-//                                 url
-//                               }
-//                             }
-//                           }
-//                         }
-//                       }
-//                     }
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `);
-
-//   useEffect(() => {
-//     if (data?.strapi?.home?.data?.attributes?.sections?.data?.length) {
-//       const section = data.strapi.home.data.attributes.sections.data[0].attributes;
-//       setTitle(section.header);
-//       setSubTitle(section.subTitle);
-//       setText(section.description.map(desc => desc.data[0].attributes.text).join(" "));
-//       setFeatures(section.features.data.map(feature => ({
-//         url: feature.attributes.mediaUrl.data[0].attributes.url,
-//         description: feature.attributes.description.data[0].attributes.text,
-//         header: feature.attributes.header,
-//       })));
-//     }
-//   }, [data]);
-
-//   return (
-//     <section className='bg-gray-100 py-12 md:py-20'>
-//       <div className='container mx-auto px-4'>
-//         <div className='text-center pb-10 md:pb-20'>
-//           <p className='text-lg md:text-xl lg:text-2xl font-extrabold'>
-//             {subTitle}
-//           </p>
-//           <h1 className='text-xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-tight'>
-//             {title}
-//           </h1>
-//           <p className='text-base md:text-lg lg:text-xl mt-5 flex w-3/4 m-auto'>
-//             {text}
-//           </p>
-//         </div>
-//         <div className='grid grid-cols-1 md:grid-cols-3 gap-7 items-center'>
-//           {features.map((feature) => (
-//             <div key={feature.header} className='text-center'>
-//               <img src={feature.url} alt={feature.header} className='text-5xl md:text-6xl text-blue-600 mb-2 mx-auto' />
-//               <h2 className='text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-2'>
-//                 {feature.header}
-//               </h2>
-//               <p className='text-md text-gray-600'>
-//                 {feature.description}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default MainFeatures;

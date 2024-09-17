@@ -7,6 +7,7 @@ import {
   FaTelegram,
   FaEnvelope,
 } from "react-icons/fa";
+import { Link } from "gatsby";
 
 interface FeatureItem {
   icon: React.ElementType; // This defines the type for the icon component
@@ -81,7 +82,6 @@ const items: FeatureItem[] = [
       "platform integration tracking",
       "platform tracking",
     ],
-
   },
   {
     icon: FaEnvelope,
@@ -113,33 +113,33 @@ const items: FeatureItem[] = [
 
 function Massaging() {
   return (
-    <section className=' pt-10'>
-      <div className='container mx-auto  px-0 lg:px-4 md:px-4 sm:px-0'>
-        <div className='text-center pb-10'>
-          <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight'>
+    <section className=" pt-10">
+      <div className="container mx-auto  px-0 lg:px-4 md:px-4 sm:px-0">
+        <div className="text-center pb-10">
+          <h1 className="text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight">
             Messaging API'S
           </h1>
-          <p className='text-lg md:text-xl lg:text-2xl mt-5 flex w-3/4 m-auto'>
+          <p className="text-lg md:text-xl lg:text-2xl mt-5 flex w-3/4 m-auto">
             Utilize Botbat to engage with customer throught their preferred
             channal , ensure flexibility and global reach for your project
           </p>
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 items-start w-11/12 m-auto'>
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 items-start w-11/12 m-auto">
           {items.map((item, index) => (
-            <div key={index} className='text-center'>
-              <item.icon className='text-6xl text-blue-600 mb-5 mx-auto  hover:origin-center  duration-500   hover:rotate-45 cursor-pointer' />
-              <a
-                className='text-3xl font-bold text-blue-950 hover:text-blue-800 duration'
-                href={item.url}
+            <div key={index} className="text-center">
+              <item.icon className="text-4xl md:text-5xl lg:text-6xl text-blue-600 mb-3 lg:mb-5 mx-auto  hover:origin-center  duration-500   hover:rotate-45 cursor-pointer" />
+              <Link
+                className="text-3xl font-bold text-blue-950 hover:text-blue-800 duration"
+                to={item.url}
               >
                 {item.heading}
-              </a>
-              <p className='text-lg mt-5 text-gray-600'>{item.paragraph}</p>
-              <ul className='text-lg text-gray-600 list-disc text-start px-3 md:px-4 lg:px-8 list-inside   marker:text-blue-700'>
+              </Link>
+              <p className="text-lg mt-5 text-gray-600">{item.paragraph}</p>
+              <ul className="text-lg text-gray-600 list-disc text-start px-8 md:px-4 lg:px-2 list-inside   marker:text-blue-700">
                 {item.list.map((listItem, idx) => (
                   <li
                     key={idx}
-                    className='hover:translate-x-3 duration-300 hover:text-blue-800'
+                    className="hover:translate-x-3 duration-300 hover:text-blue-800"
                   >
                     {listItem}
                   </li>

@@ -79,7 +79,7 @@ function MainCarousel() {
             <p className="text-lg md:text-xl mt-3 md:mt-6">
               {description || "Description here"}
             </p>
-            <div className="mt-8 md:mt-10 flex flex-col md:flex-row justify-start gap-5">
+            <div className="mt-8 md:mt-10 flex flex-col md:flex-row justify-start gap-3 md:gap-5">
               {actions.length > 0 ? (
                 actions.map((action, index) => (
                   <a
@@ -89,7 +89,7 @@ function MainCarousel() {
                       index === 0
                         ? "bg-blue-700 hover:bg-blue-800 text-white"
                         : "bg-white hover:bg-blue-50 text-blue-900 border-2 border-blue-500"
-                    } rounded-md px-4 py-3 md:px-6 md:py-4 w-full lg:w-auto md:w-auto transition duration-300 ease-in-out`}
+                    } rounded-md px-4 py-3 md:px-6 md:py-4 w-full lg:w-auto md:w-auto transition duration-300 ease-in-out text-center md:text-start`}
                   >
                     {action.buttonText}
                   </a>

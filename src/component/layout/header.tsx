@@ -21,18 +21,18 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
 
   return (
     <div className={`${direction}`}>
-      <div className='w-full h-20 top-0'></div>
-      <nav className='fixed top-0 z-50 w-full bg-zinc-50 shadow-slate-200 shadow-lg sm:fixed flex lg:justify-between lg:border-b-2 lg:border-blue-50 items-center py-2 space-x-4 flex-nowrap justify-around'>
-        <div className='flex items-center justify-center '>
+      <div className="w-full h-20 top-0"></div>
+      <nav className="fixed top-0 z-50 w-full bg-zinc-50 shadow-slate-200 shadow-lg sm:fixed flex justify-between lg:border-b-2 lg:border-blue-50 items-center py-2 space-x-4 flex-nowrap px-2 ">
+        <div className="flex items-center justify-center ">
           <MobileNav />
           <LogoWithText />
         </div>
 
         <div
-          className='hidden  px-4 lg:flex lg:flex-grow lg:items-center'
-          id='navbarSupportedContent1'
+          className="hidden px-2 md:px-4 lg:flex lg:flex-grow lg:items-center"
+          id="navbarSupportedContent1"
         >
-          <ul className='flex flex-col px-4 lg:flex-row  list-none space-y-4 lg:space-y-0 lg:space-x-6 gap-5'>
+          <ul className="flex flex-col items-center justify-center h-auto ps-10 px-4 lg:flex-row  list-none space-y-4 lg:space-y-0  gap-5">
             {[
               { name: "Products", url: "/products" },
               { name: "Solutions", url: "/solution" },
@@ -49,7 +49,7 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <a
-                  className='text-black/80 transition-colors duration-200 hover:text-black/90 font-bold focus:text-blue-600'
+                  className="text-black/80 transition-colors duration-200 hover:text-black/90 font-bold focus:text-blue-600"
                   href={item.url}
                 >
                   {item.name}
@@ -58,18 +58,18 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
             ))}
           </ul>
         </div>
-        <div className='flex items-center justify-center  '>
-          <div className='relative'>
+        <div className="flex items-center justify-center  ">
+          <div className="relative">
             <button
-              className='flex font-bold items-center text-gray-700  py-2 px-4  transition-transform duration-300 hover:scale-105'
+              className="flex font-bold items-center text-gray-700  py-2 px-4  transition-transform duration-300 hover:scale-105"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
-              <HiGlobeAlt className='h-5 w-5 ms-2' />
+              <HiGlobeAlt className="h-5 w-5 ms-2" />
               {direction === "ltr" ? "EN" : "ع"}
             </button>
             {isDropdownOpen && (
-              <div className='absolute font-bold end-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50'>
-                <ul className='py-1'>
+              <div className="absolute font-bold end-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+                <ul className="py-1">
                   <li>
                     <button
                       className={`block w-full text-left px-4 py-2 text-sm ${

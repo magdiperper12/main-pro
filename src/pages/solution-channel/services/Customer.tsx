@@ -88,17 +88,18 @@ const CustomerPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title='  Elevate Customer Experience to New Heights with AI'
-        paragraph='  We offer innovative and tailored solutions to enhance customer
+        title="  Elevate Customer Experience to New Heights with AI"
+        paragraph="  We offer innovative and tailored solutions to enhance customer
               experience, helping you achieve customer satisfaction and foster
-              long-term loyalty'
+              long-term loyalty"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="md:-mt-10 lg:-mt-20  "></div>
       <SecoundDispatch
-        theheader='  Leverage a Wide Range of Features to Enhance Your Customer
-              Experience'
+        theheader="  Leverage a Wide Range of Features to Enhance Your Customer
+              Experience"
         thescoundheader="  We provide you with customized solutions to improve customer
               experience, based on deep analysis and a thorough understanding of
               your customers' needs"
@@ -106,10 +107,10 @@ const CustomerPage: React.FC<PageProps> = () => {
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title='Transform Your Customer Experience into a Competitive Advantage'
-        secoundTitle=' With CX Consultancy service, you can turn customer experience into  a differentiating factor that drives your business growth'
-        button='Start for free'
-        secoundButton='see price'
+        title="Transform Your Customer Experience into a Competitive Advantage"
+        secoundTitle=" With CX Consultancy service, you can turn customer experience into  a differentiating factor that drives your business growth"
+        button="Start for free"
+        secoundButton="see price"
       />
     </Layout>
   );

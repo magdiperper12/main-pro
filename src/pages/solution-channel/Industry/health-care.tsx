@@ -86,23 +86,24 @@ const HealthcarePage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <ChannelHeader
-        title=' Expanding Patient Communication with Integrated Digital Solutions'
-        paragraph='Enhance the healthcare experience by leveraging automated multi-channel communication solutions to deliver a fast and convenient patient experience'
+        title=" Expanding Patient Communication with Integrated Digital Solutions"
+        paragraph="Enhance the healthcare experience by leveraging automated multi-channel communication solutions to deliver a fast and convenient patient experience"
         image={image1}
-        sbtn=' Get a Free Demo'
-        fbtn='Contact an Expert'
+        sbtn=" Get a Free Demo"
+        fbtn="Contact an Expert"
       />
+      <div className="md:-mt-10 lg:-mt-20  "></div>
       <SecoundDispatch
-        theheader='Improving Healthcare Communication with a Comprehensive Unified Platform'
-        thescoundheader=' Deliver an integrated digital healthcare experience based on multi-channel communication, ensuring increased operational efficiency and cost reduction while boosting patient satisfaction'
+        theheader="Improving Healthcare Communication with a Comprehensive Unified Platform"
+        thescoundheader=" Deliver an integrated digital healthcare experience based on multi-channel communication, ensuring increased operational efficiency and cost reduction while boosting patient satisfaction"
         dispachitems={dispachitems}
       />
       <Experience experianceitems={experianceitems} />
       <ChannelFooter
-        title=' Expand Your Patient Communication with Integrated Solutions'
-        secoundTitle='Rely on our integrated solutions to improve your communication with patients across multiple channels'
-        button='Start for free'
-        secoundButton='see price'
+        title=" Expand Your Patient Communication with Integrated Solutions"
+        secoundTitle="Rely on our integrated solutions to improve your communication with patients across multiple channels"
+        button="Start for free"
+        secoundButton="see price"
       />
     </Layout>
   );

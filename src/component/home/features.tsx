@@ -74,24 +74,9 @@ query MyQuery {
         </h1>
         <p className="text-base md:text-lg lg:text-xl mt-5 flex w-3/4 m-auto">
           {discription}
-
         </p>
       </div>
-      {/* Rendering features from Strapi */}
-      {/* <div>
-        {features.map((feature) => (
-          <div key={feature.id}>
-            <h2>{feature.attributes.header}</h2>
-            <p>{feature.attributes.description}</p>
-            {feature.attributes.mediaUrl && (
-              <img
-                src={feature.attributes.mediaUrl.data.attributes.url}
-                alt={feature.attributes.header}
-              />
-            )}
-          </div>
-        ))}
-      </div> */}
+    
     </div>
   );
 };
