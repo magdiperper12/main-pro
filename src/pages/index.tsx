@@ -6,7 +6,7 @@ import Features from "../component/home/features";
 import SubFeatures from "../component/home/sub-features";
 import Channels from "../component/home/channels";
 import CallToSubscribe from "../component/home/call-to-subscribe";
-import Carousel from "../component/home/main-carousel";
+import MainCarousel from "../component/home/main-carousel";
 import MainFeatures from "../component/home/main-features";
 import Testimonial from "../component/home/testomonial";
 import Journey from "../component/home/journey";
@@ -38,9 +38,9 @@ const newsitem = [
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <Carousel />
+      <MainCarousel />
       <MainFeatures />
-      <Features />
+      <Features  />
       <Journey />
       <SubFeatures />
       <Channels />

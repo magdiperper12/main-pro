@@ -3946,6 +3946,11 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
+type carasoulQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type carasoulQueryQuery = { readonly strapi: { readonly home: { readonly data: { readonly id: string | null, readonly attributes: { readonly introHero: { readonly data: { readonly id: string | null, readonly attributes: { readonly description: any | null, readonly subtitle: string | null, readonly title: string | null, readonly actions: ReadonlyArray<{ readonly buttonText: string | null, readonly buttonUrl: string | null, readonly id: string } | null> | null } | null } | null } | null } | null } | null } | null } };
+
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
 type GatsbyImageSharpFixed_noBase64Fragment = { readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
