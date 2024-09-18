@@ -3,7 +3,7 @@ import LogoWithText from "./logo-text";
 import MobileNav from "./mobile-nav";
 import React, { useState } from "react";
 import { HiGlobeAlt } from "react-icons/hi";
-
+import { Link } from "gatsby";
 interface Props {
   direction: string;
   toggleDirection: () => void;
@@ -48,12 +48,12 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
                 className={`my-2 lg:my-0 opacity-0 animate-fadeIn`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <a
+                <Link
                   className="text-black/80 transition-colors duration-200 hover:text-black/90 font-bold focus:text-blue-600"
-                  href={item.url}
+                  to={item.url}
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -64,8 +64,20 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
               className="flex font-bold items-center text-gray-700  py-2 px-4  transition-transform duration-300 hover:scale-105"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
-              <HiGlobeAlt className="h-5 w-5 ms-2" />
+              <HiGlobeAlt className="h-5 w-5 ms-1" />
               {direction === "ltr" ? "EN" : "ع"}
+              <svg
+                className="-mr-1 h-5 text-gray-50"
+                viewBox="0 0 20 20"
+                fill="gray"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </button>
             {isDropdownOpen && (
               <div className="absolute font-bold end-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">

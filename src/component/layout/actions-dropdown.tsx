@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import { Link } from "gatsby";
+import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 const ActionsDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -7,6 +8,7 @@ const ActionsDropdown = () => {
     setIsOpen(!isOpen);
   };
 
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   return (
     <div className="relative">
       {/* Main button visible on small screens */}
@@ -15,18 +17,7 @@ const ActionsDropdown = () => {
         className="ease-in-out inline-flex sm:hidden leading-normal text-blue-500 hover:text-gray-400 transition duration-300 pe-2"
         onClick={toggleDropdown}
       >
-        <svg
-          className="-mr-1 h-5 text-gray-50"
-          viewBox="0 0 20 20"
-          fill="gray"
-          aria-hidden="true"
-        >
-          <path
-            fillRule="evenodd"
-            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-            clipRule="evenodd"
-          />
-        </svg>
+        <FaCaretUp className="mt-1 text-black text-3xl transition-transform transform rotate-180 hover:text-blue-700" />
       </button>
 
       {/* Dropdown content */}
@@ -67,12 +58,12 @@ const ActionsDropdown = () => {
 
       {/* Full view buttons for larger screens */}
       <div className="items-center gap-2 hidden sm:flex mx-auto md:me-4">
-        <a
+        <Link
           className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 text-nowrap"
-          href="/book-demo"
+          to="/book-demo"
         >
           Book a Demo
-        </a>
+        </Link>
         <button className="bg-transparent border border-blue-500 text-blue-500 hover:text-white hover:bg-blue-500 py-2 px-4 rounded-md transition duration-300 text-nowrap">
           Join for Free
         </button>

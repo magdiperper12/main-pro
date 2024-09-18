@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 
 interface FeatureItem {
@@ -40,15 +41,15 @@ const SecoundConvContent: React.FC<DispatchProps> = ({
                   {item.paragraph}
                 </p>
                 <div>
-                  <a
-                    href={item.url}
+                  <Link
+                    to={item.url}
                     className="text-lg text-start px-3 pb-3 flex gap-3 items-center  "
                   >
                     <span className=" underline text-blue-500  hover:text-blue-800 cursor-pointer">
                       {item.explor}
                     </span>
                     <item.arrow className="  rtl:rotate-180 text-blue-500  hover:text-blue-800 cursor-pointer" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

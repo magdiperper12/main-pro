@@ -10,7 +10,7 @@ const BookADemo: React.FC<PageProps> = () => {
     <Layout>
       <div>
         <div className=" grid grid-cols-2  items-center">
-          <div className="col-span-2 lg:col-span-1 md:col-span-1 sm:col-span-2 min-h-screen flex  flex-col ps-10 justify-center my-10">
+          <div className="col-span-2 lg:col-span-1 md:col-span-1 sm:col-span-2 lg:min-h-screen flex  flex-col ps-5 pe-5 lg:ps-10 justify-center  ">
             <div className="mb-5 lg:mb-12 md:mb-8">
               <h1 className="text-blue-950 text-xl md:text-3xl lg:text-5xl sm:text-4xl font-bold py-5">
                 Demo overview
@@ -57,9 +57,9 @@ const BookADemo: React.FC<PageProps> = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 md:col-span-1  sm:col-span-2  h-auto flex justify-center  my-20 ">
-            <div className="flex h-auto flex-col w-10/12 m-auto  px-6 py-12 lg:px-8 shadow-xl  shadow-blue-200">
+            <div className="flex h-auto flex-col w-11/12 lg:w-10/12 m-auto  px-6 py-12 lg:px-8 shadow-custom  shadow-blue-200">
               <div className="sm:mx-auto sm:w-full sm:max-w-lg ">
-                <h2 className="mt-3 text-center text-4xl lg:text-6xl md:text-5xl sm:text-4xl font-bold  leading-9 tracking-tight text-blue-950 pb-5 ">
+                <h2 className="mt-3 text-center text-3xl lg:text-6xl md:text-4xl sm:text-4xl font-bold  leading-9 tracking-tight text-blue-950 pb-5 ">
                   Book a Demo
                 </h2>
                 <p className="text-blue-900 text-lg lg:text-xl md:text-lg sm:text-lg font-medium text-center">

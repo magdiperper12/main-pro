@@ -80,34 +80,32 @@ const Secure: React.FC<PageProps> = () => {
             your data remains safe from any harm
           </p>
         </div>
-        <div className="flex items-center justify-center w-full ">
-          <div className="grid grid-cols-1 gap-5  w-full text-center mt-5 m-auto">
-            <div className="col  shadow-custom shadow-gray-400  py-1 mx-2 md:mx-0 w-full m-auto md:w-3/4 lg:w-6/12 ps-3 pe-7  text-start rounded-lg hover:shadow-xl duration-150">
-              <img
-                src={image3}
-                className=" text-blue-600  hover:scale-105 duration-300  inline mx-3"
-              />
-              <div className="text-lg md:text-xl lg:text-xl text-slate-500  font-semibold   inline   mx-5 ">
-                End-to-end encryption for all sensitive data
-              </div>
+        <div className="flex flex-col gap-5 mt-5 items-center justify-center w-full ">
+          <div className=" flex flex-row py-3 shadow-custom shadow-gray-400  m-auto md:py-1   w-11/12 md:w-3/4 lg:w-7/12 ps-3   text-start rounded-lg hover:shadow-xl duration-150 space-x-5">
+            <img
+              src={image3}
+              className=" text-blue-600 w-10 h-10 md:w-auto md:h-auto  hover:scale-105 duration-300  inline mx-1 md:mx-3"
+            />
+            <div className="text-sm md:text-xl lg:text-xl text-slate-500  font-semibold   inline mx-2  md:mx-5 ">
+              End-to-end encryption for all sensitive data
             </div>
-            <div className="col  shadow-custom shadow-gray-400 m-auto py-1 mx-2 md:mx-0   w-full md:w-3/4 lg:w-6/12 ps-3 pe-7 text-start rounded-lg hover:shadow-xl duration-150">
-              <img
-                src={image2}
-                className=" text-blue-600  hover:scale-105 duration-300  inline mx-3"
-              />
-              <div className="text-lg md:text-xl lg:text-xl text-slate-500  font-semibold   inline   mx-5">
-                Continuous monitoring and threat detection
-              </div>
+          </div>
+          <div className=" flex flex-row py-3 shadow-custom shadow-gray-400  m-auto md:py-1   w-11/12 md:w-3/4 lg:w-7/12 ps-3   text-start rounded-lg hover:shadow-xl duration-150 space-x-5">
+            <img
+              src={image2}
+              className=" text-blue-600 w-10 h-10 md:w-auto md:h-auto  hover:scale-105 duration-300  inline mx-1 md:mx-3"
+            />
+            <div className="text-sm md:text-xl lg:text-xl text-slate-500  font-semibold   inline mx-2  md:mx-5 ">
+              Continuous monitoring and threat detection
             </div>
-            <div className="col  shadow-custom shadow-gray-400  m-auto py-1 mx-2 md:mx-0   w-full md:w-3/4 lg:w-6/12 ps-3 pe-7  text-start rounded-lg hover:shadow-xl duration-150 space-x-5">
-              <img
-                src={image1}
-                className=" text-blue-600  hover:scale-105 duration-300  inline mx-3"
-              />
-              <div className="text-lg md:text-xl lg:text-xl text-slate-500 font-semibold   inline  mx-5 ">
-                Regular security audits and updates
-              </div>
+          </div>
+          <div className=" flex flex-row py-3 shadow-custom shadow-gray-400  m-auto md:py-1   w-11/12 md:w-3/4 lg:w-7/12 ps-3   text-start rounded-lg hover:shadow-xl duration-150 space-x-5">
+            <img
+              src={image1}
+              className=" text-blue-600 w-10 h-10 md:w-auto md:h-auto  hover:scale-105 duration-300  inline mx-1 md:mx-3"
+            />
+            <div className="text-sm md:text-xl lg:text-xl text-slate-500  font-semibold   inline mx-2  md:mx-5 ">
+              Regular security audits and updates
             </div>
           </div>
         </div>
@@ -153,16 +151,16 @@ const Secure: React.FC<PageProps> = () => {
         <h1 className="text-xl md:text-3xl lg:text-5xl font-extrabold mt-5 leading-tight">
           Join the elite organizations that trust Botbat to secure their data
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl m-auto w-3/4 p-10">
+        <p className="text-lg md:text-xl lg:text-2xl m-auto w-3/4 mt-3 md:mt-4 lg:7">
           Start Now and Benefit from Our Leading Technologies That Put Your
           Security First to protect your conversations and ensure a smooth and
           safe user experience
         </p>
-        <div className="mt-8 md:mt-10 flex flex-col md:flex-row justify-center items-center mx-3 md:mx-0 lg:mx-0 gap-5">
-          <button className="bg-blue-700 text-white rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-auto">
+        <div className="mt-3 md:mt-4 lg:7 flex flex-col md:flex-row justify-center items-center mx-3 md:mx-0 lg:mx-0 gap-5">
+          <button className="bg-blue-700 text-white rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-1/3">
             Start for free
           </button>
-          <button className="bg-white text-blue-900 border border-blue-600 rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-auto">
+          <button className="bg-white text-blue-900 border border-blue-600 rounded-md px-4 py-3 mb-2 md:mb-0  w-full lg:w-1/6 md:w-1/3">
             Contact an Expert
           </button>
         </div>

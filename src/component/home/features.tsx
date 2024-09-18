@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useEffect, useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
 interface FeaturesProps {
   data: {
     strapi: {
@@ -35,51 +35,54 @@ interface FeaturesProps {
 
 // Component
 const Features: React.FC<FeaturesProps> = () => {
-  const [discription, setDiscription] = useState("")
-  // const features = data?.strapi?.featuresHeadlines?.data[0];
-  const myData = useStaticQuery(graphql`
-query MyQuery {
-  strapi {
-    home {
-      data {
-        id
-        attributes {
-          sections {
-            data {
-              id
-              attributes {
-                description
-                header
-                subTitle
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`);
+  return <div></div>;
+  //   const [discription, setDiscription] = useState("")
+  //   // const features = data?.strapi?.featuresHeadlines?.data[0];
+  //   const myData = useStaticQuery(graphql`
+  // query MyQuery {
+  //   strapi {
+  //     home {
+  //       data {
+  //         id
+  //         attributes {
+  //           sections {
+  //             data {
+  //               id
+  //               attributes {
+  //                 description
+  //                 header
+  //                 subTitle
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // `);
 
-  useEffect(() => {
-    console.log("ffff", myData.strapi.home.data.attributes.sections.data[0].attributes.description[0].children[0].text)
-    setDiscription(myData.strapi.home.data.attributes.sections.data[0].attributes.description[0].children[0].text)
-  }, [])
-  return (
-    <div>
-      <div className="text-center mt-4 md:my-12">
-        <p className="text-lg md:text-xl lg:text-2xl font-extrabold">Journey</p>
-        <h1 className="text-xl md:text-3xl lg:text-4xl font-extrabold mt-2 md:mt-5 leading-tight">
-          Your Success Journey with Botbat
-        </h1>
-        <p className="text-base md:text-lg lg:text-xl mt-5 flex w-3/4 m-auto">
-          {discription}
-        </p>
-      </div>
-    
-    </div>
-  );
+  //   useEffect(() => {
+  //     console.log("ffff", myData.strapi.home.data.attributes.sections.data[0].attributes.description[0].children[0].text)
+  //     setDiscription(myData.strapi.home.data.attributes.sections.data[0].attributes.description[0].children[0].text)
+  //   }, [])
+  //   return (
+  //     <div>
+  //       <div className="text-center mt-4 md:my-12">
+  //         <p className="text-lg md:text-xl lg:text-2xl font-extrabold">Journey</p>
+  //         <h1 className="text-xl md:text-3xl lg:text-4xl font-extrabold mt-2 md:mt-5 leading-tight">
+  //           Your Success Journey with Botbat
+  //         </h1>
+  //         <p className="text-base md:text-lg lg:text-xl mt-5 flex w-3/4 m-auto">
+  //           {discription}
+  //         </p>
+  //       </div>
+
+  //     </div>
+  //   );
 };
+
+export default Features;
 // GraphQL query
 // export const query = graphql`
 //  query MyQuery {
@@ -113,4 +116,3 @@ query MyQuery {
 //     }
 //   }
 // `;
-export default Features;

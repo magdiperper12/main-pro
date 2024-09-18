@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { useState } from "react";
 
 const MobileNav: React.FC = () => {
@@ -16,29 +17,29 @@ const MobileNav: React.FC = () => {
   ];
 
   return (
-    <div className='relative'>
+    <div className="relative">
       {/* Hamburger Button */}
       <button
-        className='block border-0 bg-transparent px-2 text-gray-500 hover:text-black focus:text-black focus:outline-none lg:hidden'
-        type='button'
-        aria-controls='navbarSupportedContent1'
+        className="block border-0 bg-transparent px-2 text-gray-500 hover:text-black focus:text-black focus:outline-none lg:hidden"
+        type="button"
+        aria-controls="navbarSupportedContent1"
         aria-expanded={isOpen ? "true" : "false"}
-        aria-label='Toggle navigation'
+        aria-label="Toggle navigation"
         onClick={toggleMenu}
       >
         {/* Hamburger icon */}
         <svg
-          className='w-6 h-6 stroke-current'
-          xmlns='http://www.w3.org/2000/svg'
-          viewBox='0 0 24 24'
-          fill='none'
-          stroke='currentColor'
+          className="w-6 h-6 stroke-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
         >
           <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth='2'
-            d='M4 6h16M4 12h16M4 18h16'
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16M4 18h16"
           />
         </svg>
       </button>
@@ -50,7 +51,7 @@ const MobileNav: React.FC = () => {
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-1 pointer-events-none"
         }`}
-        id='navbarSupportedContent1'
+        id="navbarSupportedContent1"
       >
         {menuItems.map((item, index) => (
           <li
@@ -62,9 +63,9 @@ const MobileNav: React.FC = () => {
             }`}
             style={{ transitionDelay: `${index * 150}ms` }}
           >
-            <a href={item.link} className='px-4 text-lg block'>
+            <Link to={item.link} className="px-4 text-lg block">
               {item.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 
 interface FeatureItem {
@@ -50,12 +51,12 @@ const News: React.FC<DispatchProps> = ({
                   <p className=" text-start py-1  text-md lg:text-lg">
                     {item.text}
                   </p>
-                  <a
+                  <Link
                     className="text-md lg:text-lg text-blue-600 text-start py-2 hover:underline"
-                    href={item.url}
+                    to={item.url}
                   >
                     Read more {` >`}
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

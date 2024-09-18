@@ -3,6 +3,7 @@ import { FaRobot } from "react-icons/fa";
 import { TiFlowMerge } from "react-icons/ti";
 import { HiOutlineChatAlt2 } from "react-icons/hi";
 import { IoAnalyticsSharp } from "react-icons/io5";
+import { Link } from "gatsby";
 
 interface FeatureItem {
   icon: React.ElementType; // This defines the type for the icon component
@@ -85,12 +86,12 @@ function Convertional() {
           {items.map((item, index) => (
             <div key={index} className="text-center">
               <item.icon className="text-7xl lg:text-8xl text-blue-600 mb-7 mx-auto shadow-lg shadow-blue-200 rounded-full p-5 hover:-rotate-45  duration-500 " />
-              <a
+              <Link
                 className="text-3xl font-bold text-blue-950 hover:text-blue-800 duration"
-                href={item.url}
+                to={item.url}
               >
                 {item.heading}
-              </a>
+              </Link>
               <p className="text-lg mt-5 text-gray-600">{item.paragraph}</p>
               <ul className="text-lg text-gray-600 list-disc text-start px-8 md:px-4 lg:px-2  list-inside my-5  marker:text-blue-700">
                 {item.list.map((listItem, idx) => (
