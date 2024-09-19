@@ -46,7 +46,7 @@ const dispachitems: FeatureItem[] = [
       "We design innovative strategies to enhance customer experience and increase satisfaction using AI solutions.",
     explor: "explor solution",
     arrow: FaCircleArrowRight,
-    url: "/solution-channel/services/Customer",
+    url: "/solution-channel/services/CX",
   },
   {
     icon: FaImage,

@@ -3977,5 +3977,15 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: st
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
 
+type MyaaueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type MyaaueryQuery = { readonly strapi: { readonly home: { readonly data: { readonly id: string | null, readonly attributes: { readonly sections: { readonly data: ReadonlyArray<{ readonly id: string | null, readonly attributes: { readonly header: string | null, readonly description: any | null, readonly subTitle: string | null, readonly features: { readonly data: ReadonlyArray<{ readonly id: string | null, readonly attributes: { readonly header: string, readonly subtitle: string | null, readonly dicription: any | null, readonly mediaUrl: { readonly data: ReadonlyArray<{ readonly id: string | null, readonly attributes: { readonly url: string } | null }> } | null } | null }> } | null } | null }> } | null } | null } | null } | null } };
+
+type MyQaueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type MyQaueryQuery = { readonly strapi: { readonly home: { readonly data: { readonly id: string | null, readonly attributes: { readonly sections: { readonly data: ReadonlyArray<{ readonly id: string | null, readonly attributes: { readonly description: any | null, readonly header: string | null, readonly subTitle: string | null } | null }> } | null } | null } | null } | null } };
+
 
 }

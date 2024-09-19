@@ -27,7 +27,7 @@ const dispachitems = [
       "Get technical support and assistance in troubleshooting through our comprehensive support resources",
     explor: "explor Support",
     arrow: FaCircleArrowRight,
-    url: "/support-Resorce/sescound-support",
+    url: "/support-Resorce/services-status",
   },
   {
     icon: FaImage,
@@ -36,7 +36,7 @@ const dispachitems = [
       "Get technical support and assistance in troubleshooting through our comprehensive support resources",
     explor: "explor Support",
     arrow: FaCircleArrowRight,
-    url: "/support-Resorce/Secure",
+    url: "/support-Resorce/data-security",
   },
 ];
 
@@ -79,22 +79,22 @@ const Resources: React.FC<PageProps> = () => {
     <Layout>
       <ImageHead
         image={image3}
-        title='Resources and Support for All Your Needs'
-        paragraph='Explore the solutions we offer to support and enhance your business using our advanced tools while ensuring complete security for your data'
-      /> <div className="-mt-4 md:-mt-16 "></div>
+        title="Resources and Support for All Your Needs"
+        paragraph="Explore the solutions we offer to support and enhance your business using our advanced tools while ensuring complete security for your data"
+      />{" "}
+      <div className="-mt-4 md:-mt-16 "></div>
       <ThirdConvContent
         dispachitems={dispachitems}
-        theheader='Explore our support and resources sections to find the solutions and information you need.'
+        theheader="Explore our support and resources sections to find the solutions and information you need."
       />
-
       <SecoundConvFooter
-        title='Get started with our Solutions for free'
-        secondTitle='Join now and try our services to discover how we can help you'
-        button='Start for Free'
-        secondButton=' Explore our solutions'
+        title="Get started with our Solutions for free"
+        secondTitle="Join now and try our services to discover how we can help you"
+        button="Start for Free"
+        secondButton=" Explore our solutions"
         image={image3}
       />
-      <Question items={items} theheader='' />
+      <Question items={items} theheader="" />
     </Layout>
   );
 };
