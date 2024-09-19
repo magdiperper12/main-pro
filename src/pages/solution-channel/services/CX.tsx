@@ -1,7 +1,6 @@
 import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-
-import { FaImage } from "react-icons/fa6";
+import { FaImage } from "react-icons/fa";
 import image1 from "../../../images/header.jpg";
 import image2 from "../../../images/campaign.webp";
 import image3 from "../../../images/customer_support.webp";

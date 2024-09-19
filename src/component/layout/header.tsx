@@ -46,6 +46,7 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
       name: "Products",
       url: "/products",
       subMenu: [
+        { name: "Products", url: "/products" },
         {
           name: "Conversation",
           url: "/products",
@@ -81,6 +82,7 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
       name: "Solutions",
       url: "/solution",
       subMenu: [
+        { name: "Solutions", url: "/solution" },
         {
           name: "Conversational",
           url: "/solution-channel/Conversational-Solutions",
