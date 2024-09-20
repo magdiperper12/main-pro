@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { HiGlobeAlt } from "react-icons/hi";
 import { Link } from "gatsby";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
+import AImassage from "./AI-massage";
 
 interface MenuItem {
   name: string;
@@ -168,6 +169,7 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
 
   return (
     <div className={`${direction}`}>
+      <AImassage />
       <div className="w-full h-20 top-0"></div>
       <nav className="fixed top-0 z-50 w-full bg-zinc-50 shadow-lg sm:fixed flex justify-between items-center py-2 space-x-4 px-2">
         <div className="flex items-center">
@@ -205,13 +207,13 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
                     {item.subMenu.map((subItem, subIndex) => (
                       <li
                         key={subItem.name}
-                        className={`relative w-full opacity-0 animate-fadeIn hover:bg-blue-500`}
+                        className={`relative w-full opacity-0 animate-fadeIn duration-150 hover:bg-blue-500`}
                         style={{ animationDelay: `${subIndex * 150}ms` }}
                       >
                         {/* Check if subItem has menimenu */}
                         {subItem.menimenu ? (
                           <button
-                            className={`flex items-center justify-start gap-2 ps-5 text-md py-1 hover:bg-blue-500 hover:text-white w-full text-blue-900 font-bold ${
+                            className={`flex items-center justify-start gap-2 ps-5 text-md duration-150 py-1 hover:bg-blue-500 hover:text-white w-full text-blue-900 font-bold ${
                               openSubMenus === subIndex
                                 ? "bg-blue-500 text-white"
                                 : ""
@@ -225,7 +227,7 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
                           </button>
                         ) : (
                           <Link
-                            className="flex items-center justify-start text-md ps-5 text-slate-500 py-1 w-full block text-blue-800 hover:text-white font-bold"
+                            className="flex items-center duration-150 justify-start text-md ps-5 text-slate-500 py-1 w-full block text-blue-800 hover:text-white font-bold"
                             to={subItem.url}
                           >
                             {subItem.name}
@@ -237,13 +239,13 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
                             {subItem.menimenu.map((meniItem, meniIndex) => (
                               <li
                                 key={meniItem.name}
-                                className={`relative w-full opacity-0 animate-fadeIn hover:bg-slate-500`}
+                                className={`relative w-full opacity-0 animate-fadeIn duration-150 hover:bg-slate-500`}
                                 style={{
                                   animationDelay: `${meniIndex * 150}ms`,
                                 }}
                               >
                                 <Link
-                                  className="flex items-center justify-start text-md ps-5 py-1 w-full block text-slate-500 hover:text-white font-bold"
+                                  className="flex items-center duration-150 justify-start text-md ps-5 py-1 w-full block text-slate-500 hover:text-white font-bold"
                                   to={meniItem.url}
                                 >
                                   {meniItem.name}
