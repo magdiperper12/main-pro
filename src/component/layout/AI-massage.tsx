@@ -11,7 +11,6 @@ const AImessage: React.FC = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [inputValue, setInputValue] = useState("");
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
-  const [message, setMessage] = useState("");
   const [messages, setMessages] = useState<
     { text: string; type: string; time: string }[]
   >([]);
@@ -99,9 +98,9 @@ const AImessage: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-12 right-16">
+    <div className="">
       <div
-        className={`bg-blue-100 text-white rounded-full h-12 w-12 md:h-16 md:w-16 h-20 w-20 flex justify-center items-center cursor-pointer shadow-lg z-50 transition-transform duration-300 ease-in-out ${
+        className={`bg-blue-100 fixed bottom-10 end-8 md:bottom-12 md:end-16 text-white rounded-full h-12 w-12 md:h-16 md:w-16  flex justify-center items-center cursor-pointer shadow-lg z-50 transition-transform duration-300 ease-in-out ${
           isVisible ? "opacity-0" : "opacity-100"
         }`}
         onClick={handleToggle}
@@ -110,15 +109,15 @@ const AImessage: React.FC = () => {
         <img
           src="https://botbat.blr1.digitaloceanspaces.com/botbat.logo.io.svg"
           alt="Chat Icon"
-          className="h-8 w-8 md:h-12 md:w-12"
+          className="h-10 w-10 md:h-12 md:w-12"
         />
       </div>
 
       <div
-        className={`transition-transform duration-500 ease-in-out w-96 shadow-custom shadow-blue-200 rounded-2xl fixed ${
+        className={`z-50 transition-transform duration-500 ease-in-out w-10/12 md:w-96 shadow-custom shadow-blue-200 rounded-2xl fixed ${
           isVisible
-            ? "bottom-20 right-8 translate-y-0 opacity-100"
-            : "bottom-12 right-8 translate-y-full opacity-0 pointer-events-none"
+            ? "bottom-10 end-8 md:bottom-20 md:end-8 translate-y-0 opacity-100"
+            : " bottom-8 md:end-8 md:bottom-12 md:end-8 translate-y-full opacity-0 pointer-events-none"
         }`}
       >
         <div className="bg-blue-600 text-white px-7 py-3 flex justify-between items-center rounded-t-2xl">
@@ -162,44 +161,56 @@ const AImessage: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-2">
+          <div className="flex items-start space-x-5">
             <img
               src="https://botbat.blr1.digitaloceanspaces.com/botbat.logo.io.svg"
               alt="Bot Avatar"
               className="h-10 w-10"
             />
-            <div className="bg-gray-100 p-3 rounded-full text-gray-600 max-w-xs">
-              Welcome! What brings you here today..! How can I assist you today?
+            <div className="bg-gray-100 p-3  rounded-full rounded-tl text-gray-600 max-w-xs">
+              Welcome! can I assist you today.?
             </div>
           </div>
 
-          {messages.map((msg, index) => (
-            <div
-              key={index}
-              className={`flex px-3 ${
-                msg.type === "user" ? "justify-end" : "justify-start"
-              }`}
-            >
-              <div className="flex flex-col space-y-1 max-w-xs ">
-                <div
-                  className={`p-3 rounded-3xl inline-block break-words transition-all duration-300 ease-in-out ${
-                    msg.type === "user"
-                      ? "bg-blue-600 text-white w-auto rounded-tr "
-                      : "bg-gray-100 text-gray-700 rounded-tl"
-                  }`}
-                >
-                  {msg.text}
-                </div>
-                <div
-                  className={`text-xs text-gray-400 mt-2 mx-4  ${
-                    msg.type === "user" ? "self-end" : "self-start"
-                  }`}
-                >
-                  {msg.type === "bot" ? `botbat ${msg.time}` : msg.time}
-                </div>
+          <div className="space-y-4 ">
+            {messages.map((msg, index) => (
+              <div
+                key={index}
+                className={`flex px-3 ${
+                  msg.type === "user" ? "justify-end" : "justify-start"
+                }`}
+              >
+                {msg.type === "bot" && (
+                  <div className="flex items-start space-x-1 me-5 md:me-10">
+                    <img
+                      src="https://botbat.blr1.digitaloceanspaces.com/botbat.logo.io.svg"
+                      alt="Bot Avatar"
+                      className="h-10 w-10 "
+                    />
+                    <div className="flex flex-col space-y-1 max-w-xs">
+                      <div className="bg-gray-100 p-3 rounded-full rounded-tl text-gray-600 max-w-xs break-words">
+                        {msg.text}
+                      </div>
+                      <div className="text-xs text-gray-400 mt-2 mx-4 self-start">
+                        botbat {msg.time}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {msg.type === "user" && (
+                  <div className="flex flex-col space-y-1 max-w-xs ms-5 md:ms-10">
+                    <div className="p-3 rounded-3xl bg-blue-500 text-white w-auto rounded-tr break-words transition-all duration-300 ease-in-out">
+                      {msg.text}
+                    </div>
+                    <div className="text-xs text-gray-400 mt-2 mx-4 self-end">
+                      {msg.time}
+                    </div>
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
 
           {isTyping && (
             <div className="flex justify-start mx-3">
@@ -250,10 +261,10 @@ const AImessage: React.FC = () => {
           </div>
           <button
             onClick={handleSendMessage}
-            className="bg-blue-500 text-white rounded-full h-12 w-12 flex justify-center items-center transition-transform duration-300 ease-in-out hover:scale-110 ml-2 hover:text-blue-600 hover:bg-white"
+            className="bg-blue-500 text-white rounded-full h-10 w-10 md:h-12 md:w-12 flex justify-center items-center transition-transform duration-300 ease-in-out hover:scale-110 ml-2 hover:text-blue-600 hover:bg-white"
             aria-label="Send Message"
           >
-            <MdSend className="w-7 h-7 " />
+            <MdSend className="w-5 h-5 md:w-7 md:h-7 " />
           </button>
         </div>
       </div>
