@@ -1,7 +1,7 @@
 import ActionsDropdown from "./actions-dropdown";
 import LogoWithText from "./logo-text";
 import MobileNav from "./mobile-nav";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { HiGlobeAlt } from "react-icons/hi";
 import { Link } from "gatsby";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
@@ -318,11 +318,19 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
     },
   ];
 
+  const firstButtonRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    if (firstButtonRef.current) {
+      firstButtonRef.current.focus();
+    }
+  }, [openMenus]); // Auto focus when the menu opens
+
   return (
     <div className={`${direction}`}>
       <AImassage />
       <div className="w-full h-20 top-0"></div>
-      <nav className="fixed top-0 z-50 w-full bg-zinc-50 shadow-lg sm:fixed flex justify-between items-center py-3 space-x-4 px-2">
+      <nav className="fixed top-0 z-40 w-full bg-zinc-50 shadow-lg sm:fixed flex justify-between items-center py-3 space-x-4 px-2">
         <div className="flex items-center">
           <MobileNav />
           <LogoWithText />
@@ -356,7 +364,7 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
           </ul>
 
           <div
-            className={`fixed  md:top-16 lg:top-20 overflow-hidden w-full md:w-3/4 md:h-1/2 flex flex-col md:flex-row transition-all ease-in-out duration-500 bg-white text-black  shadow-custom shadow-blue-100 rounded-xl transform ${
+            className={`fixed   md:top-16 lg:top-20 overflow-hidden w-full md:w-3/4 md:h-1/2 flex flex-col md:flex-row transition-all ease-in-out duration-500 bg-white text-black  shadow-custom shadow-gray-300 rounded-xl transform ${
               openMenus !== null ? "top-0 opacity-100" : "-top-96 opacity-0"
             }`}
           >
@@ -365,38 +373,34 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
                 {/* Left side: Submenu items */}
                 <ul className="absolute flex flex-col overflow-hidden md:w-1/4">
                   {menuItems[openMenus]?.subMenu?.map((subItem, subIndex) => (
-                    <li key={subItem.name}>
+                    <li
+                      key={subItem.name}
+                      className="hover:bg-gray-200 hover:text-blue-700 focus:bg-gray-200 focus:text-black/80 rounded-xl transition-colors duration-300 ease-in-out"
+                    >
                       {subItem.menimenu ? (
                         <button
-                          className={`hover:bg-gray-100 flex flex-row gap-2 py-4 hover:text-blue-800 w-full text-start rounded-xl ps-5 transition-colors duration-300 ease-in-out ${
-                            openSubMenus === subIndex
-                              ? "bg-gray-100 text-black/80"
-                              : ""
-                          }`}
+                          ref={subIndex === 0 ? firstButtonRef : null} // Attach ref to the first button
+                          className="flex flex-row gap-2 py-4 w-full text-start focus:bg-gray-200 focus:text-black/80 ps-5 rounded-xl"
                           onClick={() => setOpenSubMenus(subIndex)}
                         >
-                          {subItem.icon && (
-                            <subItem.icon className="text-lg text-blue-600" />
-                          )}
+                          <subItem.icon className="text-lg text-blue-600" />
                           {subItem.name}
-                          <span className="ml-auto text-gray-500">&rarr;</span>
                         </button>
                       ) : (
                         <Link
-                          className="flex flex-row gap-2 hover:text-blue-800 py-4 hover:underline w-full text-start rounded-xl ps-5 transition-colors duration-300 ease-in-out"
+                          className="flex flex-row gap-2 py-4 hover:underline w-full text-start ps-5"
                           to={subItem.url!}
                         >
-                          {subItem.icon && (
-                            <subItem.icon className="text-lg text-blue-600" />
-                          )}
+                          <subItem.icon className="text-lg text-blue-600" />
                           {subItem.name}
                         </Link>
                       )}
                     </li>
                   ))}
                 </ul>
+
                 {openMenus !== null && (
-                  <div className="md:w-2/4 bg-gray-100 h-80 overflow-hidden absolute start-1/4 p-4 rounded-lg z-10">
+                  <div className="md:w-2/4 bg-gray-200 h-80 overflow-hidden absolute start-1/4 p-4 rounded-lg z-10">
                     <ul className="block  w-full bg-white p-3 text-center overflow-hidden mb-5">
                       {menuItems[openMenus]?.subMenu && (
                         <div
@@ -409,22 +413,21 @@ const Header: React.FC<Props> = ({ direction, toggleDirection }) => {
                       )}
                     </ul>
                     {openSubMenus !== null && (
-                      <div className=" h-64 overflow-scroll">
+                      <div className=" h-64 overflow-hidden flex flex-col flex-wrap gap-x-10 gap-y-7">
                         {menuItems[openMenus]?.subMenu[
                           openSubMenus
                         ]?.menimenu?.map((meniItem) => (
                           <div
                             key={meniItem.name}
-                            className="transition-colors duration-300 ease-in-out rounded"
+                            className="transition-colors duration-300 ease-in-out rounded p-3 bg-gray-50 shadow-lg rounded-md"
                           >
-                            <div className="p-3 bg-white shadow-sm rounded-md ">
-                              <Link
-                                className="text-blue-500 underline"
-                                to={meniItem.url}
-                              >
-                                {`Learn more about ${meniItem.name}`}
-                              </Link>
-                            </div>
+                            <Link
+                              className="text-gray-600 flex flex-row gap-3"
+                              to={meniItem.url}
+                            >
+                              <meniItem.icon className="text-lg text-blue-600" />
+                              {` ${meniItem.name}`}
+                            </Link>
                           </div>
                         ))}
                       </div>

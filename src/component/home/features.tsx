@@ -1,50 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-interface FeaturesProps {
-  data: {
-    strapi: {
-      featuresHeadlines: {
-        data: Array<{
-          id: string;
-          attributes: {
-            features: {
-              data: Array<{
-                id: string;
-                attributes: {
-                  header: string;
-                  dicription: string;
-                  subtitle: string;
-                  mediaUrl: {
-                    data: {
-                      attributes: {
-                        previewUrl: string;
-                        url: string;
-                        width: number;
-                      };
-                    };
-                  };
-                };
-              }>;
-            };
-          };
-        }>;
-      };
-    };
-  };
-}
 
 // Component
 const Features: React.FC<FeaturesProps> = () => {
-  const [discription, setDiscription] = useState("");
-  // const features = data?.strapi?.featuresHeadlines?.data[0];
+  const [description, setDescription] = useState<string>("");
+  const [subtitle, setSubtitle] = useState<string>("");
+  const [title, setTitle] = useState<string>("");
+
   const myData = useStaticQuery(graphql`
-    query MyQauery {
+    query MyfeatureQuery {
       strapi {
         home {
           data {
             id
             attributes {
-              sections {
+              journeySection {
                 data {
                   id
                   attributes {
@@ -62,25 +32,34 @@ const Features: React.FC<FeaturesProps> = () => {
   `);
 
   useEffect(() => {
-    console.log(
-      "ffff",
-      myData.strapi.home.data.attributes.sections.data[0].attributes
-        .description[0].children[0].text
-    );
-    setDiscription(
-      myData.strapi.home.data.attributes.sections.data[0].attributes
-        .description[0].children[0].text
-    );
-  }, []);
+    const journeySectionAttributes =
+      myData.strapi.home.data.attributes.journeySection.data.attributes;
+
+    if (journeySectionAttributes) {
+      setDescription(
+        journeySectionAttributes.description
+          .map((desc: { children: any[] }) =>
+            desc.children.map((child) => child.text).join(" ")
+          )
+          .join(" ")
+      );
+    }
+    setTitle(journeySectionAttributes.header);
+    setSubtitle(journeySectionAttributes.subTitle);
+  }, [myData]);
+
   return (
     <div>
       <div className="text-center mt-4 md:my-12">
-        <p className="text-lg md:text-xl lg:text-2xl font-extrabold">Journey</p>
+        <p className="text-lg md:text-xl lg:text-2xl font-extrabold">
+          {" "}
+          {subtitle || "Subtitle here"}
+        </p>
         <h1 className="text-xl md:text-3xl lg:text-4xl font-extrabold mt-2 md:mt-5 leading-tight">
-          Your Success Journey with Botbat
+          {title || "Title here"}
         </h1>
         <p className="text-base md:text-lg lg:text-xl mt-5 flex w-3/4 m-auto">
-          {discription}
+          {description || "Description here"}
         </p>
       </div>
     </div>

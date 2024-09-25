@@ -2257,10 +2257,11 @@ type STRAPI_Features = {
   readonly header: Scalars['String'];
   readonly locale: Maybe<Scalars['String']>;
   readonly localizations: Maybe<STRAPI_FeaturesRelationResponseCollection>;
-  readonly mediaUrl: Maybe<STRAPI_UploadFileRelationResponseCollection>;
+  readonly mediaUrls: Maybe<Scalars['String']>;
   readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
   readonly subtitle: Maybe<Scalars['String']>;
   readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly url: Maybe<Scalars['String']>;
 };
 
 
@@ -2268,13 +2269,6 @@ type STRAPI_Features_localizationsArgs = {
   filters: InputMaybe<STRAPI_FeaturesFiltersInput>;
   pagination?: InputMaybe<STRAPI_PaginationArg>;
   publicationState?: InputMaybe<STRAPI_PublicationState>;
-  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
-};
-
-
-type STRAPI_Features_mediaUrlArgs = {
-  filters: InputMaybe<STRAPI_UploadFileFiltersInput>;
-  pagination?: InputMaybe<STRAPI_PaginationArg>;
   sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
 };
 
@@ -2300,11 +2294,13 @@ type STRAPI_FeaturesFiltersInput = {
   readonly id: InputMaybe<STRAPI_IDFilterInput>;
   readonly locale: InputMaybe<STRAPI_StringFilterInput>;
   readonly localizations: InputMaybe<STRAPI_FeaturesFiltersInput>;
+  readonly mediaUrls: InputMaybe<STRAPI_StringFilterInput>;
   readonly not: InputMaybe<STRAPI_FeaturesFiltersInput>;
   readonly or: InputMaybe<ReadonlyArray<InputMaybe<STRAPI_FeaturesFiltersInput>>>;
   readonly publishedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
   readonly subtitle: InputMaybe<STRAPI_StringFilterInput>;
   readonly updatedAt: InputMaybe<STRAPI_DateTimeFilterInput>;
+  readonly url: InputMaybe<STRAPI_StringFilterInput>;
 };
 
 type STRAPI_FeaturesHeadline = {
@@ -2380,9 +2376,10 @@ type STRAPI_FeaturesHeadlineRelationResponseCollection = {
 type STRAPI_FeaturesInput = {
   readonly dicription: InputMaybe<Scalars['STRAPI_JSON']>;
   readonly header: InputMaybe<Scalars['String']>;
-  readonly mediaUrl: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly mediaUrls: InputMaybe<Scalars['String']>;
   readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
   readonly subtitle: InputMaybe<Scalars['String']>;
+  readonly url: InputMaybe<Scalars['String']>;
 };
 
 type STRAPI_FeaturesRelationResponseCollection = {
@@ -2428,7 +2425,7 @@ type STRAPI_Footer = {
   readonly footer_items: Maybe<STRAPI_FooterItemRelationResponseCollection>;
   readonly locale: Maybe<Scalars['String']>;
   readonly localizations: Maybe<STRAPI_FooterRelationResponseCollection>;
-  readonly logo: Maybe<STRAPI_UploadFileEntityResponse>;
+  readonly logoUrl: Maybe<Scalars['String']>;
   readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
   readonly social_facebook: Maybe<Scalars['String']>;
   readonly social_instagram: Maybe<Scalars['String']>;
@@ -2466,7 +2463,7 @@ type STRAPI_FooterInput = {
   readonly description: InputMaybe<Scalars['String']>;
   readonly description2: InputMaybe<Scalars['String']>;
   readonly footer_items: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
-  readonly logo: InputMaybe<Scalars['ID']>;
+  readonly logoUrl: InputMaybe<Scalars['String']>;
   readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
   readonly social_facebook: InputMaybe<Scalars['String']>;
   readonly social_instagram: InputMaybe<Scalars['String']>;
@@ -2620,28 +2617,33 @@ type STRAPI_HeroRelationResponseCollection = {
 };
 
 type STRAPI_Home = {
+  readonly animatedSection: Maybe<STRAPI_FeaturesHeadlineEntityResponse>;
+  readonly blogs: Maybe<STRAPI_BlogRelationResponseCollection>;
+  readonly chanelsSection: Maybe<STRAPI_FeaturesHeadlineEntityResponse>;
   readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
+  readonly featuresSection: Maybe<STRAPI_FeaturesHeadlineEntityResponse>;
   readonly introHero: Maybe<STRAPI_HeroEntityResponse>;
+  readonly journeySection: Maybe<STRAPI_FeaturesHeadlineEntityResponse>;
   readonly lastHero: Maybe<STRAPI_HeroEntityResponse>;
   readonly locale: Maybe<Scalars['String']>;
   readonly localizations: Maybe<STRAPI_HomeRelationResponseCollection>;
   readonly name: Maybe<Scalars['String']>;
   readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
-  readonly sections: Maybe<STRAPI_FeaturesHeadlineRelationResponseCollection>;
+  readonly testimonialSection: Maybe<STRAPI_FeaturesHeadlineEntityResponse>;
   readonly updatedAt: Maybe<Scalars['STRAPI_DateTime']>;
+};
+
+
+type STRAPI_Home_blogsArgs = {
+  filters: InputMaybe<STRAPI_BlogFiltersInput>;
+  pagination?: InputMaybe<STRAPI_PaginationArg>;
+  publicationState?: InputMaybe<STRAPI_PublicationState>;
+  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
 };
 
 
 type STRAPI_Home_localizationsArgs = {
   publicationState?: InputMaybe<STRAPI_PublicationState>;
-};
-
-
-type STRAPI_Home_sectionsArgs = {
-  filters: InputMaybe<STRAPI_FeaturesHeadlineFiltersInput>;
-  pagination?: InputMaybe<STRAPI_PaginationArg>;
-  publicationState?: InputMaybe<STRAPI_PublicationState>;
-  sort?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
 };
 
 type STRAPI_HomeEntity = {
@@ -2654,11 +2656,16 @@ type STRAPI_HomeEntityResponse = {
 };
 
 type STRAPI_HomeInput = {
+  readonly animatedSection: InputMaybe<Scalars['ID']>;
+  readonly blogs: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly chanelsSection: InputMaybe<Scalars['ID']>;
+  readonly featuresSection: InputMaybe<Scalars['ID']>;
   readonly introHero: InputMaybe<Scalars['ID']>;
+  readonly journeySection: InputMaybe<Scalars['ID']>;
   readonly lastHero: InputMaybe<Scalars['ID']>;
   readonly name: InputMaybe<Scalars['String']>;
   readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
-  readonly sections: InputMaybe<ReadonlyArray<InputMaybe<Scalars['ID']>>>;
+  readonly testimonialSection: InputMaybe<Scalars['ID']>;
 };
 
 type STRAPI_HomeRelationResponseCollection = {
@@ -3085,11 +3092,11 @@ type STRAPI_ProductsInput = {
 };
 
 type STRAPI_ProductsPage = {
-  readonly conversationFeature: Maybe<STRAPI_FeaturesEntityResponse>;
+  readonly conversationSection: Maybe<STRAPI_FeaturesHeadlineEntityResponse>;
   readonly createdAt: Maybe<Scalars['STRAPI_DateTime']>;
   readonly locale: Maybe<Scalars['String']>;
   readonly localizations: Maybe<STRAPI_ProductsPageRelationResponseCollection>;
-  readonly messagingFeature: Maybe<STRAPI_FeaturesEntityResponse>;
+  readonly messagingSection: Maybe<STRAPI_FeaturesHeadlineEntityResponse>;
   readonly productsFirstHero: Maybe<STRAPI_HeroEntityResponse>;
   readonly productsIntroHero: Maybe<STRAPI_HeroEntityResponse>;
   readonly publishedAt: Maybe<Scalars['STRAPI_DateTime']>;
@@ -3111,8 +3118,8 @@ type STRAPI_ProductsPageEntityResponse = {
 };
 
 type STRAPI_ProductsPageInput = {
-  readonly conversationFeature: InputMaybe<Scalars['ID']>;
-  readonly messagingFeature: InputMaybe<Scalars['ID']>;
+  readonly conversationSection: InputMaybe<Scalars['ID']>;
+  readonly messagingSection: InputMaybe<Scalars['ID']>;
   readonly productsFirstHero: InputMaybe<Scalars['ID']>;
   readonly productsIntroHero: InputMaybe<Scalars['ID']>;
   readonly publishedAt: InputMaybe<Scalars['STRAPI_DateTime']>;
@@ -4580,15 +4587,15 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: st
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
 
-type MyaaueryQueryVariables = Exact<{ [key: string]: never; }>;
+type MyfeatureQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type MyaaueryQuery = { readonly strapi: { readonly home: { readonly data: { readonly id: string | null, readonly attributes: { readonly sections: { readonly data: ReadonlyArray<{ readonly id: string | null, readonly attributes: { readonly header: string | null, readonly description: any | null, readonly subTitle: string | null, readonly features: { readonly data: ReadonlyArray<{ readonly id: string | null, readonly attributes: { readonly header: string, readonly subtitle: string | null, readonly dicription: any | null, readonly mediaUrl: { readonly data: ReadonlyArray<{ readonly id: string | null, readonly attributes: { readonly url: string } | null }> } | null } | null }> } | null } | null }> } | null } | null } | null } | null } };
+type MyfeatureQueryQuery = { readonly strapi: { readonly home: { readonly data: { readonly id: string | null, readonly attributes: { readonly journeySection: { readonly data: { readonly id: string | null, readonly attributes: { readonly description: any | null, readonly header: string | null, readonly subTitle: string | null } | null } | null } | null } | null } | null } | null } };
 
-type MyQaueryQueryVariables = Exact<{ [key: string]: never; }>;
+type MyjournyQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type MyQaueryQuery = { readonly strapi: { readonly home: { readonly data: { readonly id: string | null, readonly attributes: { readonly sections: { readonly data: ReadonlyArray<{ readonly id: string | null, readonly attributes: { readonly description: any | null, readonly header: string | null, readonly subTitle: string | null } | null }> } | null } | null } | null } | null } };
+type MyjournyQueryQuery = { readonly strapi: { readonly home: { readonly data: { readonly id: string | null, readonly attributes: { readonly journeySection: { readonly data: { readonly id: string | null, readonly attributes: { readonly features: { readonly data: ReadonlyArray<{ readonly id: string | null, readonly attributes: { readonly subtitle: string | null, readonly header: string, readonly dicription: any | null, readonly mediaUrls: string | null } | null }> } | null } | null } | null } | null } | null } | null } | null } };
 
 
 }
